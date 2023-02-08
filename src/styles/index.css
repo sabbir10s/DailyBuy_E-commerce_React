@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .txtHover {
+    @apply hover:text-primary-600 duration-200 transition cursor-pointer;
+  }
+}

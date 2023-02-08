@@ -1,10 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import TopBar from "../components/shared/TopBar";
 
 const Layout = () => {
   return (
     <div>
-      <header>Header</header>
+      <header>
+        <TopBar />
+      </header>
 
       {/* main */}
       <main>
