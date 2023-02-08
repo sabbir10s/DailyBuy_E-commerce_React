@@ -1,12 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import TopBar from "../components/shared/TopBar";
+import TopSearchBar from "../components/shared/TopSearchBar";
 
 const Layout = () => {
   return (
     <div>
       <header>
         <TopBar />
+        <TopSearchBar />
       </header>
 
       {/* main */}
