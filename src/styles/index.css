@@ -36,6 +36,9 @@ body {
 
 @layer components {
   .txtHover {
-    @apply hover:text-primary-600 duration-200 transition cursor-pointer;
+    @apply hover:text-primary-600 duration-300 transition cursor-pointer;
+  }
+  .active {
+    @apply text-primary-600 font-bold;
   }
 }

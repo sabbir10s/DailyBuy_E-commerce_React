@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { RouterProvider } from "react-router-dom";
-import ThemeSuspense from "./components/theme/ThemeSuspense.js";
+import ThemeSuspense from "./components/theme/ThemeSuspense";
 import router from "./routes";
 
 function App() {

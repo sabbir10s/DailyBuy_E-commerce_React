@@ -4,10 +4,10 @@ import logo from "../../assets/logo/big_logo.png";
 
 const TopSearchBar = () => {
   return (
-    <div className="hidden lg:block border border-gray-100/80">
+    <div className="hidden lg:block border border-gray-100/60">
       <div className="container ">
         <div className="flex justify-between py-5 items-center">
-          <div className="w-[140px] h-10 -ml-1">
+          <div className="w-[150px] h-11 -ml-1 -mt-1">
             <Link to="/">
               {" "}
               <img className="w-full h-full cursor-pointer" src={logo} alt="" />
@@ -19,7 +19,7 @@ const TopSearchBar = () => {
               type="text"
               className="py-3 px-5 border border-gray-200/80 w-[92%] focus:outline-primary-600 rounded-l-md bg-gray-50"
             />
-            <button className="bg-primary-600 text-white p-3 w-[8%] rounded-r-md absolute top-0 right-2">
+            <button className="bg-primary-600 text-white p-3 w-[8%] h-full rounded-r-md absolute top-0 right-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
