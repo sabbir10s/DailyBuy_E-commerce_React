@@ -8,14 +8,14 @@ const Banner = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
       <div className="bg-gray-50 py-[35px] px-8 slider_bg">
         <p className="bg-primary-100 px-4 py-2 rounded mb-5 text-primary-600 inline-block font-semibold text-sm">SUMMER SALE UPTO 60%</p>
-        <div className="space-y-3 text-black/75">
-          <h2 className="font-bold text-4xl">Make your life</h2>
-          <h2 className="font-bold text-4xl">easy with us</h2>
+        <div className=" space-y-2 lg:space-y-3 text-black/75">
+          <h2 className="font-bold text-2xl lg:text-4xl">Make your life</h2>
+          <h2 className="font-bold text-2xl lg:text-4xl">easy with us</h2>
           <p className="text-base text-gray-500">
             Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit
           </p>
         </div>
-        <div className="mt-10">
+        <div className=" mt-5 lg:mt-10">
           <Link to="/products">
             <PrimaryButton title="Shop Now" />
           </Link>

@@ -5,8 +5,8 @@ import Navbar from "./Navbar";
 const Hero = () => {
   return (
     <div className="container mt-2">
-      <div className="grid grid-cols-5 gap-8">
-        <div className="shadow-custom_secondary rounded-b-md">
+      <div className="grid grid-cols-4 lg:grid-cols-5 gap-8">
+        <div className="shadow-custom_secondary hidden lg:block rounded-b-md">
           <ul>
             <h2 className="uppercase text-xl py-3  text-center bg-primary-600 text-white rounded-t-md cursor-pointer space-x-2 font-semibold">
               <span>
