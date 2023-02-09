@@ -44,7 +44,7 @@ const TopBar = () => {
               </Link>
             </li>
             <li className="txtHover text-base border-r pr-3">
-              <Link to="/order_track">
+              <Link to="/support">
                 <span className="mr-1">💁‍♂️</span>
                 <span>Support Center</span>
               </Link>

@@ -13,6 +13,9 @@ module.exports = {
         "2xl": "1496px",
       },
     },
+    boxShadow: {
+      custom: "rgba(0, 0, 0, 0.1) 0px 4px 12px;",
+    },
     colors: {
       transparent: "transparent",
       white: "#ffffff",

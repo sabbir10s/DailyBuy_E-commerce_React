@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Footer from "../components/shared/Footer";
 import TopBar from "../components/shared/TopBar";
 import TopSearchBar from "../components/shared/TopSearchBar";
 
@@ -17,7 +18,9 @@ const Layout = () => {
       </main>
 
       {/* footer */}
-      <footer>footer</footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
