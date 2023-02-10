@@ -12,7 +12,7 @@ export const PrimaryButton = ({ title }) => {
 export const SecondaryButton = ({ title, w }) => {
   return (
     <button
-      className={`rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-primary-600 text-primary-600 ${(w =
+      className={`rounded-md px-3.5 py-2 overflow-hidden relative group cursor-pointer border-2 font-medium border-primary-600 text-primary-600 ${(w =
         "full" ? "w-full" : "")}`}
     >
       <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-primary-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
