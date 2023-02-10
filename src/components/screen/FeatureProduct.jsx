@@ -3,7 +3,7 @@ import Products from "../shared/Products";
 
 const FeatureProduct = () => {
   return (
-    <div className="mt-16">
+    <div className=" mt-8 lg:mt-16">
       <div className="flex justify-between items-center mb-8 container">
         <h2 className="text-4xl font-semibold">Featured Product</h2>
         <button className="text-gray-500 uppercase txtHover">

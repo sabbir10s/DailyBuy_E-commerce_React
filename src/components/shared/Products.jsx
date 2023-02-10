@@ -11,7 +11,7 @@ const Products = () => {
         {Array.from({ length: 4 }).map((_, idx) => (
           <div
             key={idx}
-            className="shadow-custom relative rounded-lg bg-gray-50 group p-3 w-full cursor-pointer hover:bg-white duration-300 transition ease-in"
+            className="shadow-custom relative rounded-lg bg-gray-50 group p-3 w-full cursor-pointer hover:bg-white duration-300 transition ease-in border border-gray-200/60"
           >
             <div>
               <div className="w-[300px] mx-auto h-[250px]">
