@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Products from "../shared/Products";
+import { PrimaryButton } from "../theme/Button";
 
-const FeatureProduct = () => {
+const BestSales = () => {
   return (
     <div className=" mt-8 lg:mt-16">
       <div className="flex justify-between items-center mb-8 container">
-        <h2 className="text-4xl font-semibold">Featured Product</h2>
+        <h2 className="text-4xl font-semibold">Best Sellers</h2>
         <button className="text-gray-500 uppercase txtHover">
           <span>View More</span>
           <span>
@@ -24,13 +26,18 @@ const FeatureProduct = () => {
       </div>
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {Array.from({ length: 4 }).map((_, idx) => (
+          {Array.from({ length: 8 }).map((_, idx) => (
             <Products key={idx} />
           ))}
+        </div>
+        <div className="mt-8 text-center">
+          <Link to="/products">
+            <PrimaryButton title="Shop Now" />
+          </Link>
         </div>
       </div>
     </div>
   );
 };
 
-export default FeatureProduct;
+export default BestSales;
