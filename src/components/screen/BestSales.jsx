@@ -30,9 +30,24 @@ const BestSales = () => {
             <Products key={idx} />
           ))}
         </div>
-        <div className="mt-8 text-center">
+        <div className="mt-12 text-center">
           <Link to="/products">
-            <PrimaryButton title="Shop Now" />
+            {" "}
+            <button className="bg-primary-600 hover:bg-primary-500 duration-300 transition hover:shadow-custom hover:scale-110 space-x-2 text-white px-8 font-semibold py-4 rounded-md uppercase ease-in-out">
+              <span>Shop Now</span>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 inline-block -mt-1"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                </svg>
+              </span>
+            </button>
           </Link>
         </div>
       </div>
