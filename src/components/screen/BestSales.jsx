@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Products from "../shared/Products";
-import { PrimaryButton } from "../theme/Button";
 
 const BestSales = () => {
   return (
