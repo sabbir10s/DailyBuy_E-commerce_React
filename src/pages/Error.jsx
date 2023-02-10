@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/logo/big_logo.png";
-import notFoundImg from "../assets/error/notfound.svg";
+import notFoundImg from "../assets/error/notfound.png";
 import { Link } from "react-router-dom";
 
 const Error = () => {
