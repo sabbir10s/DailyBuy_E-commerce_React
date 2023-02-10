@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="shadow-custom_secondary hidden lg:block rounded-b-md">
           <ul>
             <h2 className="uppercase text-xl py-3  text-center bg-primary-600 text-white rounded-t-md cursor-pointer space-x-2 font-semibold">
-              <span>
+              <span className="lg:hidden xl:inline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -22,7 +22,7 @@ const Hero = () => {
                 </svg>
               </span>
               <span>Categories</span>
-              <span>
+              <span className="lg:hidden xl:inline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

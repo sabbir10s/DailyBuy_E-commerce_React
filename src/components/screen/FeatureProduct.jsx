@@ -4,9 +4,11 @@ import Products from "../shared/Products";
 const FeatureProduct = () => {
   return (
     <div className=" mt-8 lg:mt-16">
-      <div className="flex justify-between items-center mb-8 container">
-        <h2 className="text-4xl font-semibold">Featured Product</h2>
-        <button className="text-gray-500 uppercase txtHover">
+      <div className="flex justify-center lg:justify-between items-center mb-8 container">
+        <h2 className="text-4xl font-semibold text-center lg:text-left mt-8 lg:mt-0 ">
+          Featured <br className="block lg:hidden" /> Product
+        </h2>
+        <button className="text-gray-500 uppercase txtHover hidden lg:block">
           <span>View More</span>
           <span>
             <svg

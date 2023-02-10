@@ -5,7 +5,7 @@ import { PrimaryButton } from "../theme/Button";
 
 const Banner = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 lg:mt-8">
       <div className="bg-gray-50 py-[35px] px-8 slider_bg">
         <p className="bg-primary-100 px-4 py-2 rounded mb-5 text-primary-600 inline-block font-semibold text-sm">SUMMER SALE UPTO 60%</p>
         <div className=" space-y-2 lg:space-y-3 text-black/75">
@@ -21,7 +21,7 @@ const Banner = () => {
           </Link>
         </div>
       </div>
-      <div className="space-y-8">
+      <div className="space-y-8 hidden md:block">
         <div className="bg-gray-50  py-[31px] px-8 group_bg1">
           <div className="space-y-2 text-black/75">
             <h2 className="font-bold text-2xl">Fresh Grocery</h2>
