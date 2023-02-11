@@ -1,13 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import { SecondaryButton } from "../theme/Button";
 import productImg from "../../assets/products/product.png";
 import { Link } from "react-router-dom";
 
 const Products = () => {
+  const [wishlist, setWishlist] = useState(false);
   const id = 4;
   return (
     <div className="shadow-custom relative rounded-lg bg-gray-50 group p-3 w-full cursor-pointer hover:bg-white duration-300 transition ease-in border border-gray-200/60">
       <div>
+        <div className="bg-secondary-300 inline-block py-2 px-3 rounded-tl-2xl rounded-br-2xl text-white absolute top-3 left-3">
+          <p>-20% OFF</p>
+        </div>
+        <div
+          onClick={() => setWishlist(!wishlist)}
+          className="bg-white  inline-block p-2 border border-gray-100 rounded-[50%] text-white absolute top-3 right-3 hover:scale-110 duration-300 transition"
+        >
+          {!wishlist && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-7 h-7 text-gray-500"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
+          )}{" "}
+          {wishlist && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#FF5555"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-7 h-7 text-[#FF5555]"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
+          )}
+        </div>
         <div className="w-[300px] mx-auto h-[250px]">
           <img src={productImg} className="w-full h-full object-center object-fill" alt="" />
         </div>
