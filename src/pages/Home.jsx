@@ -5,6 +5,7 @@ import FoodCategory from "../components/screen/FoodCategory";
 import Hero from "../components/screen/Hero";
 import OfferTimerBanner from "../components/screen/OfferTimerBanner";
 import PosterOffer from "../components/screen/PosterOffer";
+import ProcessingSteps from "../components/screen/ProcessingSteps";
 
 const Home = () => {
   return (
@@ -14,7 +15,8 @@ const Home = () => {
       <PosterOffer />
       <BestSales />
       <OfferTimerBanner />
-      <FoodCategory/>
+      <FoodCategory />
+      <ProcessingSteps />
     </div>
   );
 };
