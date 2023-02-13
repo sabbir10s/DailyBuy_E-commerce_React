@@ -16,7 +16,7 @@ const Banner = () => {
           </p>
         </div>
         <div className=" mt-5 lg:mt-10">
-          <Link to="/products">
+          <Link to="/categories">
             <PrimaryButton title="Shop Now" />
           </Link>
         </div>
@@ -28,7 +28,7 @@ const Banner = () => {
             <p className="text-base text-gray-500">Weekend discount up to 35%</p>
           </div>
           <div className="mt-5">
-            <Link to="/products">
+            <Link to="/categories">
               <PrimaryButton title="Shop Now" />
             </Link>
           </div>
@@ -39,7 +39,7 @@ const Banner = () => {
             <p className="text-base text-gray-500">Weekend discount up to 40%</p>
           </div>
           <div className="mt-5">
-            <Link to="/products">
+            <Link to="/categories">
               <PrimaryButton title="Shop Now" />
             </Link>
           </div>

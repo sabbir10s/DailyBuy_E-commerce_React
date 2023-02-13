@@ -36,7 +36,7 @@ const OfferTimerBanner = () => {
               </div>
             </div>
             <div className="mt-16 text-center lg:text-left">
-              <Link to="/products">
+              <Link to="/categories">
                 {" "}
                 <button className="bg-primary-600 hover:bg-primary-700 duration-300 transition hover:shadow-custom hover:scale-105 space-x-2 text-white px-12 font-semibold py-5 rounded-md uppercase ease-in-out">
                   <span>Shop Now</span>

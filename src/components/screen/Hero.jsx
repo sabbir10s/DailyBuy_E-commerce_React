@@ -22,7 +22,7 @@ const Hero = () => {
                 </svg>
               </span>
               <span>Categories</span>
-              <span className="lg:hidden xl:inline">
+              {/*  <span className="lg:hidden xl:inline">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -33,7 +33,7 @@ const Hero = () => {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
-              </span>
+              </span> */}
             </h2>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Fruits & Vegetable</li>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Meats & Fish</li>

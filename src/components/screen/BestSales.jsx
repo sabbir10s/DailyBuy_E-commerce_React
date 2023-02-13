@@ -30,7 +30,7 @@ const BestSales = () => {
           ))}
         </div>
         <div className="mt-12 text-center">
-          <Link to="/products">
+          <Link to="/categories">
             {" "}
             <button className="bg-primary-600 hover:bg-primary-500 duration-300 transition hover:shadow-custom hover:scale-110 space-x-2 text-white px-8 font-semibold py-4 rounded-md uppercase ease-in-out">
               <span>Shop Now</span>
