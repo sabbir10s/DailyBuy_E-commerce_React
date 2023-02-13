@@ -7,7 +7,7 @@ const Products = () => {
   const [wishlist, setWishlist] = useState(false);
   const id = 4;
   return (
-    <div className="shadow-custom relative rounded-lg bg-gray-50 group p-3 w-full cursor-pointer hover:bg-white duration-300 transition ease-in border border-gray-200/60">
+    <div className="shadow-custom relative rounded-lg bg-gray-50 group p-3 w-full cursor-pointer hover:bg-white duration-300 transition ease-in border border-gray-200/60 overflow-hidden">
       <div>
         <div className="bg-secondary-300 inline-block py-2 px-3 rounded-tl-2xl rounded-br-2xl text-white absolute top-3 left-3">
           <p>-20% OFF</p>
