@@ -44,7 +44,7 @@ const MenuBar = () => {
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Clothes & Shoes</li>
           </div>
         </div>
-        <li className="txtHover active font-medium  pl-5">Home</li>
+        <li className="txtHover active font-medium  pl-4">Home</li>
         <li className="txtHover font-medium">Blog</li>
         <li className="txtHover font-medium">About us</li>
         <li className="txtHover font-medium">Contact us</li>
