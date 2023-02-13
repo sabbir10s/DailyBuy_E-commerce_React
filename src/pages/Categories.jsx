@@ -7,14 +7,14 @@ import MenuBar from "../components/shared/MenuBar";
 
 const Categories = () => {
   return (
-    <div>
+    <div className=" mt-12 lg:mt-0">
       <MenuBar />
       {/* categories main section */}
       <section className="grid grid-cols-4 lg:grid-cols-5 gap-8 container mt-8">
-        <div className="">
+        <div className="hidden lg:block">
           <CategoriesFilter />
         </div>
-        <div className="col-span-4 ml-4">
+        <div className="col-span-4 ml-0 md:ml-12">
           <CategoriesBanner />
           <CategoriesProduct />
         </div>

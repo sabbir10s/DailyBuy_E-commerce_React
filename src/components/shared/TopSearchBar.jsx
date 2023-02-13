@@ -7,12 +7,11 @@ const TopSearchBar = () => {
     <div className="hidden lg:block border border-gray-100/60">
       <div className="container ">
         <div className="flex justify-between py-5 items-center">
-          <div className="w-[150px] h-11 -ml-1 -mt-1">
-            <Link to="/">
-              {" "}
-              <img className="w-full h-full cursor-pointer" src={logo} alt="" />
-            </Link>
-          </div>
+          <Link to="/">
+            <div className="cursor-pointer w-[200px] h-14">
+              <img src={logo} className="w-full h-full" alt="" />
+            </div>
+          </Link>
           <div className=" lg:w-[550px] xl:w-[778px] relative">
             <input
               placeholder="I'm looking for..."

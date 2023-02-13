@@ -2,7 +2,7 @@ import React from "react";
 
 const CategoriesBanner = () => {
   return (
-    <div className="bg-primary-50 grid grid-cols-2 items-center rounded-lg">
+    <div className="bg-primary-50 hidden lg:grid grid-cols-2 items-center rounded-lg">
       <div className="">
         <img src="https://i.ibb.co/wyTZRdn/category-banner.png" alt="" />
       </div>
