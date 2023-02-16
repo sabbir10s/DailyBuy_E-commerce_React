@@ -9,7 +9,7 @@ const About = () => {
     return (
         <>
         <MenuBar/>
-        <div className='container mt-[80px] mb-[20px] lg:mt-[20px] lg:mb-[20px]'>
+        <div className='container mt-[80px] lg:mt-[20px] mb-[20px] lg:mb-[20px]'>
            <div className='flex flex-col lg:flex-row items-center gap-[48px] '>
                 <img className='w-full lg:w-[450px] rounded-[10px]' src={img_one} alt="" />
                 <div>
