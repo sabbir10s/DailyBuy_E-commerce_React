@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AboutUs from "../pages/AboutUs";
 import AboutUsV2 from "../pages/AboutUsV2";
 import ContactUs from "../pages/ContactUs";
+import FAQ from "../pages/FAQ";
 const Categories = lazy(() => import("../pages/Categories"));
 const Layout = lazy(() => import("../layouts/Layout"));
 const Home = lazy(() => import("../pages/Home"));
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactUs />,
+      },
+      {
+        path: "/faq",
+        element: <FAQ />,
       },
     ],
   },
