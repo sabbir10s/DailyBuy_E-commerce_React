@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import AboutUs from "../pages/AboutUs";
 import AboutUsV2 from "../pages/AboutUsV2";
+import BlogDetails from "../pages/BlogDetails";
 import BlogPage from "../pages/BlogPage";
 import ContactUs from "../pages/ContactUs";
 import FAQ from "../pages/FAQ";
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <BlogPage />,
+      },
+      {
+        path: "/blog/:blogId",
+        element: <BlogDetails />,
       },
       {
         path: "/about",
