@@ -1,12 +1,12 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-const AboutUs= lazy(() => import("../pages/AboutUs"));
-const AboutUsV2=lazy(() => import("../pages/AboutUsV2"));
-const BlogDetails=lazy(() => import("../pages/BlogDetails"));
-const BlogPage=lazy(() => import("../pages/BlogPage"));
-const ContactUs=lazy(() => import("../pages/ContactUs"));
-const FAQ=lazy(() => import("../pages/FAQ"));
+const AboutUs = lazy(() => import("../pages/AboutUs"));
+const AboutUsV2 = lazy(() => import("../pages/AboutUsV2"));
+const BlogDetails = lazy(() => import("../pages/BlogDetails"));
+const BlogPage = lazy(() => import("../pages/BlogPage"));
+const ContactUs = lazy(() => import("../pages/ContactUs"));
+const FAQ = lazy(() => import("../pages/FAQ"));
 const Cart = lazy(() => import("../pages/Cart"));
 const Checkout = lazy(() => import("../pages/Checkout"));
 const ForgotPassword = lazy(() => import("../pages/ForgotPassword"));
@@ -41,7 +41,6 @@ const router = createBrowserRouter([
         element: <ProductDetails />,
       },
       {
-
         path: "/blog",
         element: <BlogPage />,
       },
@@ -64,7 +63,8 @@ const router = createBrowserRouter([
       {
         path: "/faq",
         element: <FAQ />,
-
+      },
+      {
         path: "/cart",
         element: <Cart />,
       },
