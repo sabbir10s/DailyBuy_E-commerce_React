@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Cart from "../pages/Cart";
 import Checkout from "../pages/Checkout";
+import SignIn from "../pages/SignIn";
 const Categories = lazy(() => import("../pages/Categories"));
 const Layout = lazy(() => import("../layouts/Layout"));
 const Home = lazy(() => import("../pages/Home"));
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/checkout",
         element: <Checkout />,
+      },
+      {
+        path: "/signIn",
+        element: <SignIn />,
       },
     ],
   },
