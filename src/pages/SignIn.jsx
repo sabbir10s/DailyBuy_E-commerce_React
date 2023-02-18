@@ -6,7 +6,7 @@ const SignIn = () => {
     <div className="pt-20 px-3 lg:mb-10">
       <div className="lg:w-[970px] lg:h-[600px] mx-auto rounded-lg shadow-custom grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
         <div className="w-full h-full">
-          <img className="w-full h-full" src={error} alt="" />
+          <img className="w-full h-full rounded-l-lg" src={error} alt="" />
         </div>
         <div className="pr-3">
           <h2 className="text-2xl font-semibold text-center mb-10">Login</h2>
