@@ -1,5 +1,10 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
+import Cart from "../pages/Cart";
+import Checkout from "../pages/Checkout";
+import ForgotPassword from "../pages/ForgotPassword";
+import SignIn from "../pages/SignIn";
+import SignUp from "../pages/SignUp";
 const Categories = lazy(() => import("../pages/Categories"));
 const Layout = lazy(() => import("../layouts/Layout"));
 const Home = lazy(() => import("../pages/Home"));
@@ -27,6 +32,26 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <ProductDetails />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />,
+      },
+      {
+        path: "/signIn",
+        element: <SignIn />,
+      },
+      {
+        path: "/signUp",
+        element: <SignUp />,
+      },
+      {
+        path: "/forgotPassword",
+        element: <ForgotPassword />,
       },
     ],
   },

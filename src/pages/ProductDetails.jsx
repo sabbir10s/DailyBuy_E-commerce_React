@@ -6,6 +6,7 @@ import bigImg from "../assets/product-details/cup/big_product1.png";
 import SmallProductImg from "../components/screen/SmallProductImg";
 import { PrimaryButton, SecondaryButton } from "../components/theme/Button";
 import ProcessingSteps from "../components/screen/ProcessingSteps";
+import { Link } from "react-router-dom";
 
 const ProductDetails = () => {
   // const { id } = useParams();
@@ -158,10 +159,15 @@ const ProductDetails = () => {
                   </div>
                 </div>
                 <div>
-                  <PrimaryButton title="Add to cart" />
+                  <Link to="/cart">
+                    {" "}
+                    <PrimaryButton title="Add to cart" />
+                  </Link>
                 </div>{" "}
                 <div>
-                  <SecondaryButton title="Buy Now" />
+                  <Link to="/cart">
+                    <SecondaryButton title="Buy Now" />
+                  </Link>
                 </div>
               </div>
             </div>
