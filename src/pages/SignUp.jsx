@@ -12,7 +12,7 @@ const SignUp = () => {
         </div>
         <div className="pr-3">
           <h2 className="text-2xl font-semibold text-center mb-10">SignUp</h2>
-          <form action="#" className="space-y-5 pl-2 lg:pl-0 lg:px-2">
+          <form onSubmit={(e) => e.preventDefault()} action="#" className="space-y-5 pl-2 lg:pl-0 lg:px-2">
             <div className="text-center">
               <input
                 className="px-4 py-3  rounded-lg w-full focus:border-primary-600 outline-none border lg:w-5/6"

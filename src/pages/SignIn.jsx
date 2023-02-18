@@ -11,7 +11,7 @@ const SignIn = () => {
         </div>
         <div className="pr-3">
           <h2 className="text-2xl font-semibold text-center mb-10">Login</h2>
-          <form action="#" className="space-y-5 pl-2 lg:pl-0 lg:px-2">
+          <form onSubmit={(e) => e.preventDefault()} action="#" className="space-y-5 pl-2 lg:pl-0 lg:px-2">
             <div className="text-center">
               <input
                 className="px-4 py-3  rounded-lg w-full focus:border-primary-600 outline-none border lg:w-5/6"
@@ -27,7 +27,9 @@ const SignIn = () => {
               />
             </div>
             <div className="text-end  lg:w-5/6 mx-auto">
-              <p className="inline-block text-secondary-600 font-semibold cursor-pointer hover:underline">Forgot password?</p>
+              <Link to="/forgotPassword" className="inline-block text-secondary-600 font-semibold cursor-pointer hover:underline">
+                Forgot password?
+              </Link>
             </div>
             <div className="text-center pb-10">
               <button type="submit" className="px-5  w-full text-xl lg:w-5/6 py-2.5 relative rounded group font-medium text-white inline-block">

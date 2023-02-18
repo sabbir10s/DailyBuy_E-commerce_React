@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Cart from "../pages/Cart";
 import Checkout from "../pages/Checkout";
+import ForgotPassword from "../pages/ForgotPassword";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 const Categories = lazy(() => import("../pages/Categories"));
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/signUp",
         element: <SignUp />,
+      },
+      {
+        path: "/forgotPassword",
+        element: <ForgotPassword />,
       },
     ],
   },
