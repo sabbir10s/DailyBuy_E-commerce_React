@@ -1,13 +1,15 @@
-import React from 'react';
-import Blogs from '../components/screen/Blog/Blogs';
-import ProcessingSteps from '../components/screen/ProcessingSteps';
+import React from "react";
+import Blogs from "../components/screen/Blog/Blogs";
+import ProcessingSteps from "../components/screen/ProcessingSteps";
+import MenuBar from "../components/shared/MenuBar";
 
 const BlogPage = () => {
-    return (
-        <>
-            <Blogs/>
-            <ProcessingSteps/>
-        </>
-    );
+  return (
+    <>
+      <MenuBar />
+      <Blogs />
+      <ProcessingSteps />
+    </>
+  );
 };
 export default BlogPage;
