@@ -1,7 +1,6 @@
 import blog1 from '.././assets/blog/blog1.png'
 import blog2 from '.././assets/blog/blog2.png'
 import blog3 from '.././assets/blog/blog3.png'
-import banner from '.././assets/blog/blog details banner.png'
 import writer from '.././assets/blog/writer img.png'
 export const BlogsData = [
     {
