@@ -1,10 +1,10 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Cart from "../pages/Cart";
-import Checkout from "../pages/Checkout";
-import ForgotPassword from "../pages/ForgotPassword";
-import SignIn from "../pages/SignIn";
-import SignUp from "../pages/SignUp";
+const Cart = lazy(() => import("../pages/Cart"));
+const Checkout = lazy(() => import("../pages/Checkout"));
+const ForgotPassword = lazy(() => import("../pages/ForgotPassword"));
+const SignIn = lazy(() => import("../pages/SignIn"));
+const SignUp = lazy(() => import("../pages/SignUp"));
 const Categories = lazy(() => import("../pages/Categories"));
 const Layout = lazy(() => import("../layouts/Layout"));
 const Home = lazy(() => import("../pages/Home"));
