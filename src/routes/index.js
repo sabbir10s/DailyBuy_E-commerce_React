@@ -5,6 +5,7 @@ const AboutUsV2 = lazy(() => import("../pages/AboutUsV2"));
 const BlogDetails = lazy(() => import("../pages/BlogDetails"));
 const BlogPage = lazy(() => import("../pages/BlogPage"));
 const ContactUs = lazy(() => import("../pages/ContactUs"));
+const Invoice = lazy(() => import("../pages/Invoice"));
 const FAQ = lazy(() => import("../pages/FAQ"));
 const TermsCondition = lazy(() => import("../pages/TermsCondition"));
 const Cart = lazy(() => import("../pages/Cart"));
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "/termsCondition",
         element: <TermsCondition />,
+      },
+      {
+        path: "/invoice",
+        element: <Invoice />,
       },
       {
         path: "/cart",
