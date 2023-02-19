@@ -5,21 +5,18 @@ import { PrimaryButton } from "../theme/Button";
 
 const Banner = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 lg:mt-8">
-      <div className="bg-gray-50 py-[35px] px-8 slider_bg">
-        <p className="bg-primary-100 px-4 py-2 rounded mb-5 text-primary-600 inline-block font-semibold text-sm">SUMMER SALE UPTO 60%</p>
-        <div className=" space-y-2 lg:space-y-3 text-black/75">
-          <h2 className="font-bold text-2xl lg:text-4xl">Make your life</h2>
-          <h2 className="font-bold text-2xl lg:text-4xl">easy with us</h2>
-          <p className="text-base text-gray-500">
-            Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit
-          </p>
-        </div>
-        <div className=" mt-5 lg:mt-10">
-          <Link to="/categories">
-            <PrimaryButton title="Shop Now" />
-          </Link>
-        </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16 lg:mt-8">
+      <div className="pl-[10px] md:pl-[15px] py-[35px] flex items-center slider_bg">
+       <div>
+       <p className="md:bg-primary-100 md:px-4 md:py-2 rounded text-primary-600 inline-block font-semibold text-[8px] md:text-[12px]">SUMMER SALE UPTO 60%</p>
+          <h2 className="mt-[4px] md:mt-[10px] mb-[13px] font-bold text-primary-900 text-[20px] md:text-[25px] lg:text-[32px] leading-[22px] md:leading-[35px] lg:leading-[48px]">Make your life <br /> easy with us</h2>
+          <p className="text-[10px] md:text-[16px] text-gray-500 leading-[15px] md:leading-[24px] md:mb-[30px] lg:mb-[40px]"> Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit</p>
+          <div className="hidden md:block">
+            <Link to="/categories">
+              <PrimaryButton title="Shop Now" />
+            </Link>
+          </div>
+       </div>
       </div>
       <div className="space-y-8 hidden md:block">
         <div className="bg-gray-50  py-[31px] px-8 group_bg1">
