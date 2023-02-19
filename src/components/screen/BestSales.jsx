@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Products from "../shared/Products";
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiChevronDown } from 'react-icons/fi';
 
 const BestSales = () => {
   return (
@@ -15,30 +14,16 @@ const BestSales = () => {
           <FiArrowRight/>
         </button>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+         <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {Array.from({ length: 8 }).map((_, idx) => (
             <Products key={idx} />
           ))}
         </div>
-        <div className="mt-12 text-center">
-          <Link to="/categories">
-            {" "}
-            <button className="bg-primary-600 hover:bg-primary-500 duration-300 transition hover:shadow-custom hover:scale-110 space-x-2 text-white px-8 font-semibold py-4 rounded-md uppercase ease-in-out">
-              <span>Shop Now</span>
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 inline-block -mt-1"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                </svg>
-              </span>
+        <div className="mt-12 flex justify-center">
+            <button className="bg-primary-600 hover:bg-primary-500 duration-300 transition hover:shadow-custom hover:scale-110 text-white font-semibold rounded-md uppercase ease-in-out px-[20px] py-[9px] flex items-center gap-1 text-[14px] md:text-[14px]">
+            <span>Shop Now</span>
+            <FiChevronDown className="text-xl"/>
             </button>
-          </Link>
         </div>
     </div>
   );
