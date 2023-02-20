@@ -1,7 +1,23 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Products from "../../shared/Products";
 
 const CategoriesProduct = () => {
+  const [productData, setProductData] = useState([]);
+  // console.log(data);
+  const fetchData = () => {
+    axios
+      .get("products.json")
+      .then((response) => {
+        setProductData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div className="mt-8 lg:mt-16">
       <div className="hidden lg:flex justify-between items-center">
@@ -73,8 +89,8 @@ const CategoriesProduct = () => {
       </div>
       {/* products */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-8">
-        {Array.from({ length: 15 }).map((_, idx) => (
-          <Products key={idx} />
+        {productData.map((product, idx) => (
+          <Products product={product} key={idx} />
         ))}
       </div>
     </div>
