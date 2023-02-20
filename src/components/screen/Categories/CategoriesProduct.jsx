@@ -72,7 +72,7 @@ const CategoriesProduct = () => {
         </button>
       </div>
       {/* products */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[10px] md:gap-[20px] mt-8">
         {Array.from({ length: 15 }).map((_, idx) => (
           <Products key={idx} />
         ))}
