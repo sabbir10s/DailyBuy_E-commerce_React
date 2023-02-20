@@ -7,9 +7,11 @@ import ProcessingSteps from "../components/screen/ProcessingSteps";
 import {Link} from "react-router-dom";
 import {HiStar} from 'react-icons/hi';
 import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai';
+import {FiArrowRight} from 'react-icons/fi';
 import Quantity from "../components/shared/Quantity";
 import ReviewCard from "../components/screen/Review/ReviewCard";
 import AddReview from "../components/screen/Review/AddReview";
+import Products from "../components/shared/Products";
 
 const ProductDetails = () => {
   const [activeImg,
@@ -223,6 +225,9 @@ const ProductDetails = () => {
               </div>
             )}
           </div>
+
+          {/* Add Review */}
+
           <div className="hidden lg:block mt-[40px]">
             <h2 className=" pt-[24px] text-[24px] font-semibold border-t border-#DFE3E">Add Review</h2>
             <AddReview/>
@@ -230,8 +235,30 @@ const ProductDetails = () => {
 
         </div>
         {/*==================================
-              =========description End=========
-              ==================================*/}
+          =========description End=========
+          ==================================*/}
+      </div>
+
+      {/* Related Product */}
+      <div className="hidden md:block">
+        <div
+          className="container flex justify-between items-center mt-[25px] md:mt-[35px] lg:mt-[50px] mb-[16px] lg:mb-[29px]">
+          <h2
+            className="text-sm md:text-2xl lg:text-4xl font-semibold text-center lg:text-left">
+            Related Product
+          </h2>
+          <button
+            className="text-gray-500 text-[10px] md:text-base uppercase flex items-center gap-1 hover:text-primary-600 duration-300">
+            <span>View More</span>
+            <FiArrowRight/>
+          </button>
+        </div>
+        <div
+          className="container grid grid-cols-2 lg:grid-cols-4 gap-[10px] md:gap-[20px]">
+          {Array
+            .from({length: 4})
+            .map((_, idx) => (<Products key={idx}/>))}
+        </div>
       </div>
       <ProcessingSteps/>
     </div>
