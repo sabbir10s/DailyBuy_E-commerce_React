@@ -1,195 +1,171 @@
-import React, { useState } from "react";
-// import { Link, useParams } from "react-router-dom";
+import React, {useState} from "react";
 import MenuBar from "../components/shared/MenuBar";
 import BreadCamp from "../components/theme/BreadCamp";
 import bigImg from "../assets/product-details/cup/big_product1.png";
 import SmallProductImg from "../components/screen/SmallProductImg";
-import { PrimaryButton, SecondaryButton } from "../components/theme/Button";
 import ProcessingSteps from "../components/screen/ProcessingSteps";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import {HiStar} from 'react-icons/hi';
+import {AiFillHeart, AiOutlineHeart} from 'react-icons/ai';
+import Quantity from "../components/shared/Quantity";
+import ReviewCard from "../components/screen/Review/ReviewCard";
+import AddReview from "../components/screen/Review/AddReview";
 
 const ProductDetails = () => {
-  // const { id } = useParams();
-  const [activeImg, setActiveImg] = useState(bigImg);
-  const [wishlist, setWishlist] = useState(false);
-  const [active, setActive] = useState("desc");
+  const [activeImg,
+    setActiveImg] = useState(bigImg);
+  const [wishlist,
+    setWishlist] = useState(false);
+  const [active,
+    setActive] = useState("desc");
+
+  const demoText = "   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum aperiam venia" +
+      "m est beatae fugiat at, quod quis doloremque voluptates non tenetur nihil volupt" +
+      "atum quibusdam a voluptas omnis velit, ut sint necessitatibus, eos placeat accus" +
+      "antium quidem! Accusantium nulla officia voluptatibus nisi repellat neque. Fugit" +
+      " perspiciatis id voluptatem alias mollitia placeat cumque dolore exercitationem." +
+      " Odit mollitia alias error repudiandae minima laborum quaerat perspiciatis ipsam" +
+      " soluta eius cupiditate voluptas eum exercitationem voluptate earum quia molesti" +
+      "as accusantium fuga laboriosam maxime officiis."
   return (
     <div className="mt-20 lg:mt-0">
-      <MenuBar />
-      <div className="container mt-0 lg:mt-5">
-        <BreadCamp />
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8 w-full lg:w-5/6 lg:mx-auto">
-          <div className="space-y-4 cursor-pointer">
+      <MenuBar/>
+      <div className="container mt-0 md:mt-[30px]">
+        <BreadCamp/>
+        <div className="md:mt-[32px] grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
+          <div className="space-y-4 cursor-pointer col-span-1">
             <div className=" w-full h-full lg:h-[400px]">
-              <img className="w-full h-full object-center object-fill rounded-2xl" src={activeImg} alt="" />
+              <img
+                className="w-full h-full object-center object-fill rounded-[24px]"
+                src={activeImg}
+                alt=""/>
             </div>
-            <SmallProductImg setActiveImg={setActiveImg} />
+            <div className="hidden lg:block">
+              <SmallProductImg setActiveImg={setActiveImg}/>
+            </div>
           </div>
-          <div className=" mt-24 lg:mt-0">
+          <div className="col-span-1 lg:col-span-2">
             <div>
-              <h2 className=" text-3xl lg:text-4xl font-semibold">Nestle Original Coffee-Mate Coffee Creamer</h2>
+              <h2 className=" text-[20px] md:text-[32px] font-semibold">Nestle Original Coffee-Mate Coffee Creamer</h2>
               {/* rating section */}
-              <div className="flex items-center justify-between lg:justify-start lg:space-x-8 mt-5 flex-wrap">
+              <div
+                className="flex items-center justify-between lg:justify-start lg:space-x-8 mt-5 flex-wrap">
                 <div className="flex space-x-2 items-center ">
                   <p className="text-black ">4.0</p>
-                  <div className="-mt-1">
-                    {Array.from({ length: 4 }).map((_, idx) => (
-                      <svg
-                        key={idx}
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="#FECA38"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-54 h-5 inline-block text-[#FECA38]"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
-                        />
-                      </svg>
-                    ))}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#D3D3D3"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-54 h-5 inline-block text-[#D3D3D3]"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
-                      />
-                    </svg>
+                  <div className="-mt-1 flex items-center">
+                    {Array
+                      .from({length: 4})
+                      .map((_, idx) => (<HiStar className="text-[#FECA38] text-xl"/>))}
+                    <HiStar className="text-[#D3D3D3] text-xl"/>
                   </div>
                   <p className="text-gray-500">(225)</p>
                 </div>
-                <div className="lg:border-l text-gray-500 lg:px-5 flex lg:space-x-2 items-center">
+                <div className="lg:border-l text-gray-500 lg:px-5 flex md:gap-2 items-center">
                   <div onClick={() => setWishlist(!wishlist)} className="cursor-pointer">
-                    {!wishlist && (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-7 h-7 text-gray-500"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                        />
-                      </svg>
-                    )}{" "}
-                    {wishlist && (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="#FF5555"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-7 h-7 text-[#FF5555]"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                        />
-                      </svg>
-                    )}
+                    {!wishlist && (<AiOutlineHeart className="text-[#999999]/40 text-3xl"/>)}{" "} {wishlist && (<AiFillHeart className="text-[#FF5555] text-3xl"/>)}
                   </div>
                   <div>
-                    <button onClick={() => setWishlist(!wishlist)} className="text-primary-600 font-bold">
+                    <button
+                      onClick={() => setWishlist(!wishlist)}
+                      className="text-primary-600 font-bold hidden md:block">
                       Add to wishlist
                     </button>
                   </div>
                 </div>
               </div>
               {/* price section */}
-              <div className="flex items-center space-x-5 mt-8">
-                <p className="text-5xl text-primary-600 font-bold">$10.00</p>
-                <div>
-                  <p className="text-secondary-300 uppercase text-sm font-bold">20% off</p>
-                  <p className="text-gray-500 text-2xl">
-                    <del>$12.00</del>
-                  </p>
-                </div>
-              </div>
-              {/* sort desc */}
-              <div className="mt-6">
-                <p className="flex space-x-4 items-center">
-                  <span>
-                    <b>SKU:</b> 12314
-                  </span>
-                  <span className="text-gray-600">✅ In Stock</span>
-                </p>
-                <p className="mt-3 text-gray-700">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                  ad minim veniam
-                </p>
-                <ul className="mt-3 text-gray-700">
-                  <li className="list-disc list-inside"> Direct Full Array</li>
-                  <li className="list-disc list-inside">Quantum Dot Technology</li>
-                  <li className="list-disc list-inside">Ambient Mode</li>
-                  <li className="list-disc list-inside">One Remote Control</li>
-                </ul>
-              </div>
-              {/* quantity section */}
-              <div className="flex mt-6 items-center justify-between flex-wrap space-y-4 lg:space-y-0 ">
-                <div className="flex items-center space-x-4">
-                  <label htmlFor="Quantity" className="">
-                    {" "}
-                    Quantity:
-                  </label>
 
-                  <div className="flex items-center border border-gray-50 p-1 rounded-lg">
-                    <button type="button" className="w-10 h-10 text-xl bg-gray-50 rounded-[50%] leading-10 text-gray-600 transition hover:opacity-75">
-                      &minus;
-                    </button>
-
-                    <span className="px-6 font-semibold">1</span>
-
-                    <button type="button" className="w-10 h-10 text-xl bg-gray-50 rounded-[50%] leading-10 text-gray-600 transition hover:opacity-75">
-                      &#43;
-                    </button>
+              <div
+                className="flex items-center justify-between lg:justify-start md:gap-10 mt-8">
+                <div className="flex items-center space-x-5 ">
+                  <p className="text-[32px] md:text-[48px] text-primary-600 font-bold">$10.00</p>
+                  <div>
+                    <p className="text-[12px] text-secondary-300 uppercase font-bold">20% off</p>
+                    <p className="text-[16px] md:text-[20px] text-gray-500">
+                      <del>$12.00</del>
+                    </p>
                   </div>
                 </div>
-                <div>
-                  <Link to="/cart">
-                    {" "}
-                    <PrimaryButton title="Add to cart" />
-                  </Link>
-                </div>{" "}
-                <div>
-                  <Link to="/cart">
-                    <SecondaryButton title="Buy Now" />
-                  </Link>
+
+                <div className="block lg:hidden">
+                  <Quantity/>
                 </div>
               </div>
+
+              <div className="flex flex-col">
+                {/*==========================
+              =========sort desc============
+              ==============================*/}
+                <div className="mt-10 lg:mt-6 order-2 lg:order-1">
+                  <p className="flex space-x-4 items-center">
+                    <span>
+                      <b>SKU:</b>
+                      12314
+                    </span>
+                    <span className="text-gray-600">✅ In Stock</span>
+                  </p>
+                  <p className="mt-3 text-gray-700">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                  </p>
+                  <ul className="mt-3 text-gray-700">
+                    <li className="list-disc list-inside">
+                      Direct Full Array</li>
+                    <li className="list-disc list-inside">Quantum Dot Technology</li>
+                    <li className="list-disc list-inside">Ambient Mode</li>
+                    <li className="list-disc list-inside">One Remote Control</li>
+                  </ul>
+                </div>
+                {/*============================
+              =========quantity section======
+              ==============================*/}
+                <div
+                  className=" mt-8 lg:mt-6 flex flex-col lg:flex-row lg:items-center gap-[32px] order-1 lg:order-2">
+                  <div className="hidden lg:block">
+                    <Quantity/>
+                  </div>
+                  <div className="flex items-center justify-between md:justify-start gap-[32px]">
+                    <div>
+                      <Link to="/cart">
+                        {" "}
+                        <button
+                          className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]">Add to cart</button>
+                      </Link>
+                    </div>{" "}
+                    <div>
+                      <Link to="/cart">
+                        <button
+                          className="text-primary-600 hover:text-primary-900 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-900 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]">Buy Now</button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-        {/* description */}
-        <div className="mt-8  px-8 py-10 border border-gray-100 rounded-2xl">
-          <div className="flex items-center space-x-8">
+
+        {/*==================================
+              =========description Start=========
+              ==================================*/}
+
+        <div
+          className="mt-8 lg:mt-[99px] p-6 lg:p-10 border border-gray-100 rounded-2xl">
+          <div
+            className="flex items-center justify-between md:justify-start md:space-x-8">
             <button
               onClick={() => setActive("desc")}
-              className={` border outline-none border-gray-100 rounded-3xl py-2 px-8 shadow-custom  font-semibold  duration-300 transition ease-in-out text-sm ${
-                active === "desc" ? "bg-primary-600 text-white" : "text-gray-600 bg-white"
-              } `}
-            >
+              className={` border outline-none border-gray-100 rounded-3xl py-2 px-8 shadow-custom font-semibold duration-300 transition ease-in-out text-sm ${active === "desc"
+              ? "bg-primary-600 text-white"
+              : "text-gray-600 bg-white"} `}>
               Description
             </button>
             <button
               onClick={() => setActive("review")}
-              className={` border outline-none border-gray-100 rounded-3xl py-2 px-8 shadow-custom  font-semibold  duration-300 transition ease-in-out text-sm ${
-                active === "review" ? "bg-primary-600 text-white" : "text-gray-600 bg-white"
-              } `}
-            >
+              className={` border outline-none border-gray-100 rounded-3xl py-2 px-8 shadow-custom font-semibold duration-300 transition ease-in-out text-sm ${active === "review"
+              ? "bg-primary-600 text-white"
+              : "text-gray-600 bg-white"} `}>
               Reviews
             </button>
           </div>
@@ -197,98 +173,67 @@ const ProductDetails = () => {
             {active === "desc" && (
               <div>
                 {" "}
-                <p className="text-sm leading-relaxed">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-                  ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                  aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                  est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
-                  et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-                  laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-                  nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-                </p>
-                <div>
-                  <h3 className="text-2xl font-semibold mt-5 mb-3"> Packaging & Delivery</h3>
+                <div className="text-sm leading-relaxed">
+                  <p className="hidden lg:block">{demoText}</p>
+                  <div>
+                    <p>{demoText.slice(0, 300)}...
+                      <span className="text-primary-600 font-semibold">More</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden lg:block">
+                  <h3 className="text-2xl font-semibold mt-5 mb-3">
+                    Packaging & Delivery</h3>
                   <p className="text-sm leading-relaxed">
                     {" "}
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos
-                    dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
-                    animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+                    excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
+                    officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+                    rerum facilis est et expedita
                   </p>{" "}
                 </div>{" "}
-                <div>
-                  <h3 className="text-2xl font-semibold mt-5 mb-3"> Other Ingredients</h3>
+                <div className="hidden lg:block">
+                  <h3 className="text-2xl font-semibold mt-5 mb-3">
+                    Other Ingredients</h3>
                   <p className="text-sm leading-relaxed">
                     {" "}
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos
-                    dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
-                    animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+                    excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
+                    officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+                    rerum facilis est et expedita
                   </p>{" "}
                 </div>
               </div>
             )}
             {active === "review" && (
               <div>
-                <h3 className="text-2xl font-semibold">Review (3)</h3>
-                {Array.from({ length: 3 }).map((_, idx) => (
-                  <div key={idx} className="p-3 rounded-2xl mt-5 border ">
-                    <p className="space-x-2">
-                      <span className="font-medium">Mohin Uddin</span>
-                      <span className="text-gray-500">On</span>
-                      <span className="text-gray-700 font-medium">21 Jan 2023</span>
-                    </p>
-                    {/* rating section */}
-                    <div className="">
-                      <div className="flex space-x-2 items-center ">
-                        <div className="-mt-1">
-                          {Array.from({ length: 4 }).map((_, idx) => (
-                            <svg
-                              key={idx}
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="#FECA38"
-                              viewBox="0 0 24 24"
-                              strokeWidth={1.5}
-                              stroke="currentColor"
-                              className="w-4 h-4 inline-block text-[#FECA38]"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
-                              />
-                            </svg>
-                          ))}
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="#D3D3D3"
-                            viewBox="0 0 24 24"
-                            strokeWidth={1.5}
-                            stroke="currentColor"
-                            className="w-4 h-4 inline-block text-[#D3D3D3]"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="mt-3">
-                      <h2 className="text-xl uppercase font-semibold text-gray-600">PRODUCT IS GOOD QUALITY</h2>
-                      <p className="text-gray-600 text-sm mt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+                <h3 className="text-2xl font-semibold hidden lg:block">Review (3)</h3>
+                <div className="hidden lg:block">
+                  {Array
+                    .from({length: 3})
+                    .map((_, idx) => (<ReviewCard key={idx}/>))}
+                </div>
+                <div className="block lg:hidden">
+                  {Array
+                    .from({length: 2})
+                    .map((_, idx) => (<ReviewCard key={idx}/>))}
+                </div>
               </div>
             )}
           </div>
+          <div className="hidden lg:block mt-[40px]">
+            <h2 className=" pt-[24px] text-[24px] font-semibold border-t border-#DFE3E">Add Review</h2>
+            <AddReview/>
+          </div>
+
         </div>
+        {/*==================================
+              =========description End=========
+              ==================================*/}
       </div>
-      <ProcessingSteps />
+      <ProcessingSteps/>
     </div>
   );
 };
