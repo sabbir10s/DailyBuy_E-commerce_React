@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { SecondaryButton } from "../theme/Button";
-import productImg from "../../assets/products/product.png";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/feature/cartSlice";
 
