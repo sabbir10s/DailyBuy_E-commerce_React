@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Checkbox from "../../theme/Checkbox";
 
 const CategoriesFilter = () => {
+  const [price, setPrice] = useState(10);
+
+  // Triggered when the value gets updated while scrolling the slider:
+  const handleInput = (e) => {
+    setPrice(e.target.value);
+  };
   return (
     <aside>
       <div>
@@ -60,6 +66,12 @@ const CategoriesFilter = () => {
         </ul>
         <hr className="my-6" />
       </div>{" "}
+      {/* filter price */}
+      <div>
+        <input step="10" className="w-full" min="0" max="300" type="range" value="10" onInput={handleInput} />
+        <h1>Price: ${price}.00</h1>
+        <hr className="my-6" />
+      </div>
       {/* color */}
       <div>
         <header className="font-bold text-base mb-3">Filter by Colors</header>
