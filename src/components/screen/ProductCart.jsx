@@ -18,7 +18,7 @@ const ProductCart = () => {
     dispatch(addToCart(cartItem));
   };
 
-  const total = cartItems.reduce((total, item) => total + item.price, 0);
+  const total = cartItems.reduce((total, item) => total + item.price * item.cartQuantity, 0);
   const shipping = 3;
   return (
     <>
@@ -96,7 +96,7 @@ const ProductCart = () => {
               <h1 className=" col-span-3  font-semibold py-5 uppercase">Product</h1>
               <h1 className="font-semibold py-5 uppercase text-center">Unite Price</h1>
               <h1 className="font-semibold py-5 uppercase text-center">Quantity</h1>
-              <h1 className="font-semibold py-5 uppercase text-center">Stock Price</h1>
+              <h1 className="font-semibold py-5 uppercase text-center">Total</h1>
               <h1 className="font-semibold py-5 uppercase text-center">Remove</h1>
             </div>
             {/* every product  cart details*/}
@@ -112,7 +112,7 @@ const ProductCart = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="text-primary-600 font-semibold text-center">${item?.price}.00</p>
+                    <p className="text-gray-600 text-center">${item?.price}.00</p>
                   </div>
                   <div>
                     <div className="flex items-center justify-center">
@@ -136,9 +136,7 @@ const ProductCart = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="text-gray-600 text-center pl-4">
-                      <del>${item?.del_price}.00</del>
-                    </p>
+                    <p className="text-primary-600 font-semibold text-center pl-4">${item?.price * item.cartQuantity}.00</p>
                   </div>
                   <div className="text-center">
                     <button onClick={() => handleRemoveItem(item)} className="">
