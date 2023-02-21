@@ -19,17 +19,19 @@ const ProductCart = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-8">
           <div className="lg:col-span-3  lg:px-3 lg:shadow-custom lg:bg-[#F9FAFB] lg:rounded-lg">
             {/* for mobile device */}
-            {Array.from({ length: 3 }).map((_, idx) => (
+            {cartItems.map((item, idx) => (
               <div key={idx} className="grid grid-cols-3 lg:hidden gap-2 mt-3 items-center border-b border-gray-100 pb-2">
                 <div className="flex space-x-2 items-center col-span-2">
                   <div className="w-[80px] h-[80px] bg-gray-50  rounded-2xl">
-                    <img src={cartImg} className="w-full h-full object-center object-fill" alt="product-img" />
+                    <img src={item?.main_img_url} className="w-full h-full object-center object-fill" alt="product-img" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm">{name.slice(0, 18)}...</p>
-                    <p className="text-gray-600">$10.00</p>
+                    <p className="font-semibold text-sm">{item?.product_name.slice(0, 18)}...</p>
+                    <p className="text-primary-600  font-semibold">${item?.price}.00</p>
                     <div className="flex items-center justify-between">
-                      <p className="text-primary-600 font-semibold">$20.00</p>
+                      <p className="text-gray-600">
+                        <del>${item?.del_price}.00</del>
+                      </p>
                       <div className="text-end">
                         <button className="">
                           {" "}
