@@ -66,7 +66,7 @@ const ProductDetails = () => {
                   <div className="flex items-center">
                   <ReactStars
                     count={5}
-                    size={15}
+                    size={25}
                     value={rating}
                     edit={false}
                 ></ReactStars>

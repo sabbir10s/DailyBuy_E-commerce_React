@@ -34,7 +34,7 @@ const FeatureProduct = () => {
         </button>
       </div>
       <div className="container">
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[10px] md:gap-[20px]">
           {productData.slice(0, 4).map((product) => (
             <ProductCard product={product} key={product._id} />
           ))}

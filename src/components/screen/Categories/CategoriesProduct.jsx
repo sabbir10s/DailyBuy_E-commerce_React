@@ -60,7 +60,7 @@ const CategoriesProduct = () => {
         </button>
       </div>
       {/* products */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-[10px] lg:gap-[11px] mt-8">
         {productData.map((product, idx) => (
           <ProductCard product={product} key={idx} />
         ))}
