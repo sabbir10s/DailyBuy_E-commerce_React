@@ -3,9 +3,14 @@ import MenuBar from "../shared/MenuBar";
 import ProcessingSteps from "./ProcessingSteps";
 import cartImg from "../../assets/products/product.png";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const ProductCart = () => {
   const name = "Nestle Original Coffee-Mate Coffee Creamer";
+  const { cartItems } = useSelector((state) => state.cart);
+
+  const total = cartItems.reduce((total, item) => total + item.price, 0);
+  const shipping = 3;
   return (
     <>
       <MenuBar />
@@ -13,6 +18,7 @@ const ProductCart = () => {
         <h2 className=" text-2xl lg:text-5xl font-semibold mt-4 ">Your Cart</h2>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-8">
           <div className="lg:col-span-3  lg:px-3 lg:shadow-custom lg:bg-[#F9FAFB] lg:rounded-lg">
+            {/* for mobile device */}
             {Array.from({ length: 3 }).map((_, idx) => (
               <div key={idx} className="grid grid-cols-3 lg:hidden gap-2 mt-3 items-center border-b border-gray-100 pb-2">
                 <div className="flex space-x-2 items-center col-span-2">
@@ -71,22 +77,22 @@ const ProductCart = () => {
               <h1 className=" col-span-3  font-semibold py-5 uppercase">Product</h1>
               <h1 className="font-semibold py-5 uppercase text-center">Unite Price</h1>
               <h1 className="font-semibold py-5 uppercase text-center">Quantity</h1>
-              <h1 className="font-semibold py-5 uppercase text-center">Total</h1>
+              <h1 className="font-semibold py-5 uppercase text-center">Stock Price</h1>
               <h1 className="font-semibold py-5 uppercase text-center">Remove</h1>
             </div>
             {/* every product  cart details*/}
-            {Array.from({ length: 2 }).map((_, idx) => (
+            {cartItems.map((item, idx) => (
               <div key={idx} className="hidden lg:grid grid-cols-7 gap-4  bg-white p-3 mb-3 rounded items-center">
                 <div className="col-span-3 ">
                   <div className="flex space-x-2 items-center">
                     <div className="w-[120px] h-[120px] bg-gray-50  rounded-2xl">
-                      <img src={cartImg} className="w-full h-full object-center object-fill" alt="product-img" />
+                      <img src={item?.main_img_url} className="w-full h-full object-center object-fill" alt="product-img" />
                     </div>
-                    <p className="font-semibold text-base">Nestle Original Coffee-Mate Coffee Creamer</p>
+                    <p className="font-semibold text-base">{item?.product_name}</p>
                   </div>
                 </div>
                 <div>
-                  <p className="text-gray-600 text-center">$10.00</p>
+                  <p className="text-primary-600 font-semibold text-center">${item?.price}.00</p>
                 </div>
                 <div>
                   <div className="flex items-center justify-center">
@@ -102,7 +108,9 @@ const ProductCart = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="text-primary-600 font-semibold text-center pl-4">$20.00</p>
+                  <p className="text-gray-600 text-center pl-4">
+                    <del>${item?.del_price}.00</del>
+                  </p>
                 </div>
                 <div className="text-center">
                   <button className="">
@@ -126,11 +134,12 @@ const ProductCart = () => {
               </div>
             ))}
           </div>
+          {/*  */}
           <div className="relative">
             <div className="lg:absolute space-y-5 top-0 left-0 w-full h-auto  lg:py-3 lg:px-4 lg:shadow-custom lg:border lg:rounded-lg">
               <div className="flex justify-between items-center">
                 <p className="text-gray-600 text-base">Subtotal:</p>
-                <p className="text-gray-700 font-semibold text-xl">$40.00</p>
+                <p className="text-gray-700 font-semibold text-xl">${total}.00</p>
               </div>
               <div className="flex justify-between items-center">
                 <p className="text-gray-600 text-base">Tax:</p>
@@ -138,12 +147,12 @@ const ProductCart = () => {
               </div>
               <div className="flex justify-between items-center">
                 <p className="text-gray-600 text-base">Shipping:</p>
-                <p className="text-gray-700 font-semibold text-xl">$3.00</p>
+                <p className="text-gray-700 font-semibold text-xl">${shipping}.00</p>
               </div>
               <hr className="" />
               <div className="flex justify-between items-center">
                 <p className="text-black font-medium text-base">Total:</p>
-                <p className="text-primary-600 font-bold text-xl">$43.00</p>
+                <p className="text-primary-600 font-bold text-xl">${total + shipping}.00</p>
               </div>
               <button className="px-5 w-full py-2.5 relative rounded group font-medium text-white  inline-block">
                 {" "}
