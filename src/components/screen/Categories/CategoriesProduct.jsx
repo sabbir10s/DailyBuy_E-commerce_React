@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Products from "../../shared/Products";
 import { CiFilter } from 'react-icons/ci';
 import { HiOutlineChartBar } from 'react-icons/hi';
+import ProductCard from "../../shared/ProductCard";
 
 const CategoriesProduct = () => {
   const [productData, setProductData] = useState([]);
@@ -62,7 +62,7 @@ const CategoriesProduct = () => {
       {/* products */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 mt-8">
         {productData.map((product, idx) => (
-          <Products product={product} key={idx} />
+          <ProductCard product={product} key={idx} />
         ))}
       </div>
     </div>
