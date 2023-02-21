@@ -7,7 +7,7 @@
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
     "price": 100,
     "del_price": 20,
-    "rating": 5,
+    "rating": 4.5,
     "review": 100,
     "discount": 20,
     "stock": false,

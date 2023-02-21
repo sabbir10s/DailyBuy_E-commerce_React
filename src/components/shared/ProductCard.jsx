@@ -3,6 +3,7 @@ import {SecondaryButton} from "../theme/Button";
 import {useDispatch} from "react-redux";
 import {addToCart} from "../../redux/feature/cartSlice";
 import {useNavigate} from "react-router-dom";
+import ReactStars from "react-stars";
 
 const ProductCard = ({product}) => {
   const [wishlist,
@@ -12,7 +13,7 @@ const ProductCard = ({product}) => {
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
   };
-  const {_id} = product
+  const {_id,discount,main_img_url,del_price,rating } = product
   const navigate = useNavigate()
   const handleProductDetails = () => {
     navigate(`/product/${_id}`)
@@ -25,8 +26,7 @@ const ProductCard = ({product}) => {
         <div>
           <div
             className="bg-secondary-300 inline-block py-2 px-3 rounded-tl-2xl rounded-br-2xl text-white absolute top-3 left-3">
-            <p>{product
-                ?.discount}% OFF</p>
+            <p>{discount}% OFF</p>
           </div>
           <div
             onClick={() => setWishlist(!wishlist)}
@@ -61,8 +61,7 @@ const ProductCard = ({product}) => {
           </div>
           <div className="w-[300px] mx-auto h-[250px]">
             <img
-              src={product
-              ?.main_img_url}
+              src={main_img_url}
               className="w-full h-full object-center object-fill"
               alt=""/>
           </div>
@@ -74,43 +73,19 @@ const ProductCard = ({product}) => {
                 <span className="text-primary-600 text-[12px] md:text-[18px] font-semibold">${product
                     ?.price}</span>
                 <span className="text-gray-500 text-base text-[11px] md:text-[18px]">
-                  <del>${product
-                      ?.del_price}</del>
+                  <del>${del_price}</del>
                 </span>
               </p>
               <div className="flex space-x-1 items-center">
                 <div className="flex items-center">
-                  {Array
-                    .from({length: 4})
-                    .map((_, idx) => (
-                      <svg
-                        key={idx}
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="#FECA38"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-54 h-5 inline-block text-[#FECA38]">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
-                      </svg>
-                    ))}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="#919EAB"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-54 h-5 inline-block text-[#919EAB]">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
-                  </svg>
+                <ReactStars
+                    count={5}
+                    size={15}
+                    value={rating}
+                    edit={false}
+                ></ReactStars>
                 </div>
-                <p className="text-gray-500 text-[12px] md:text-[18px]">(4.5)</p>
+                <p className="text-gray-500 text-[12px] md:text-[18px]">({rating})</p>
               </div>
             </div>
           </div>
