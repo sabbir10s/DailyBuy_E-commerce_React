@@ -1,45 +1,60 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo/big_logo.png";
+import logo from "../../assets/logo/logo.png";
 const MobileNavbar = () => {
   const [active, setActive] = useState(false);
+  const { cartItems } = useSelector((state) => state.cart);
   return (
     <>
       <header aria-label="Site Header" className="border-b border-gray-100 block lg:hidden fixed top-0 z-50 bg-white w-full">
         <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8">
           <div className="flex items-center">
-            <button onClick={() => setActive(true)} type="button" className="p-2 sm:mr-4 lg:hidden">
-              <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-
-            <div className="w-[150px] h-10 ml-1">
+            <div className=" mx-2">
               <Link to="/">
                 {" "}
                 <img className="w-full h-full cursor-pointer" src={logo} alt="" />
               </Link>
             </div>
+            <div className="w-full relative">
+              <input
+                placeholder="Search..."
+                type="text"
+                className="py-3 px-5 border border-gray-200/80 w-[72%] focus:outline-primary-600 rounded-l-md bg-gray-50"
+              />
+              <button className="bg-primary-600 text-white p-3 w-[28%] h-full rounded-r-md absolute top-0 right-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 inline-block"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+              </button>
+            </div>
           </div>
 
           <div className="flex flex-1 items-center justify-end">
-            <div className="ml-8 flex items-center">
+            <div className=" flex items-center">
               <div className="flex items-center divide-x divide-gray-100 border-x border-gray-100">
                 <span>
-                  <Link to="/cart" className="block relative border-b-4 border-transparent p-6 hover:border-red-700">
+                  <Link to="/cart" className="block relative border-b-4 border-transparent py-6 px-3 hover:border-red-700">
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                     </svg>
                     <span className="bg-primary-600 text-white w-4 text-[12px] font-bold h-4 top-3 right-2 rounded-[50%] absolute text-center">
-                      5
+                      {cartItems.length}
                     </span>
                     <span className="sr-only">Cart</span>
                   </Link>
                 </span>
 
                 <span>
-                  <Link to="/account" className="block border-b-4 border-transparent p-6 hover:border-red-700">
+                  <Link to="/account" className="block border-b-4 border-transparent py-6 px-3 hover:border-red-700">
                     <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path
                         strokeLinecap="round"

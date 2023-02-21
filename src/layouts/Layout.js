@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import BottomBar from "../components/shared/BottomBar";
 import Footer from "../components/shared/Footer";
 import MobileNavbar from "../components/shared/MobileNavbar";
 import TopBar from "../components/shared/TopBar";
@@ -21,6 +22,7 @@ const Layout = () => {
 
       {/* footer */}
       <footer>
+        <BottomBar />
         <Footer />
       </footer>
     </div>
