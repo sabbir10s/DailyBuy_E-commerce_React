@@ -1,8 +1,24 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Products from "../shared/Products";
 import {FiArrowRight} from 'react-icons/fi';
 
 const FeatureProduct = () => {
+  const [productData, setProductData] = useState([]);
+  // console.log(data);
+  const fetchData = () => {
+    axios
+      .get("products.json")
+      .then((response) => {
+        setProductData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div className="container">
       <div
@@ -17,11 +33,12 @@ const FeatureProduct = () => {
           <FiArrowRight/>
         </button>
       </div>
-      <div
-        className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[10px] md:gap-[20px]">
-        {Array
-          .from({length: 4})
-          .map((_, idx) => (<Products key={idx}/>))}
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {productData.slice(0, 4).map((product, idx) => (
+            <Products product={product} key={idx} />
+          ))}
+        </div>
       </div>
     </div>
   );

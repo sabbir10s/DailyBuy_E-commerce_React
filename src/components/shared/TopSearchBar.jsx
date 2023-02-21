@@ -1,8 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/big_logo.png";
 
 const TopSearchBar = () => {
+  const { cartItems } = useSelector((state) => state.cart);
   return (
     <div className="hidden lg:block border border-gray-100/60">
       <div className="container ">
@@ -51,7 +53,7 @@ const TopSearchBar = () => {
                   </svg>
                 </span>
                 <span className="w-5 h-5 text-sm inline-block rounded-[50%] bg-secondary-600 text-white text-center font-semibold absolute top-2  right-1">
-                  2
+                  {cartItems.length}
                 </span>
               </div>
             </Link>{" "}

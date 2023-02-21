@@ -9,14 +9,15 @@ export const PrimaryButton = ({ title }) => {
     </button>
   );
 };
-export const SecondaryButton = ({ title, w }) => {
+export const SecondaryButton = ({ title, w, handleAddToCart, product }) => {
+  // console.log(products)
   return (
     <button
-      className={` rounded-[5px] px-3.5 py-[3px] md:py-2 overflow-hidden relative group cursor-pointer border-[1px] md:border-[1.5px] font-semibold border-primary-600 text-primary-600 text-[10px] md:text-[14px] ${(w =
+      onClick={() => handleAddToCart(product)}
+      className={`rounded-md px-3.5 py-2 relative cursor-pointer border-2 font-medium border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white duration-300 ease-in-out ${(w =
         "full" ? "w-full" : "")}`}
     >
-      <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-primary-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-      <span className="relative text-primary-600 transition duration-300 group-hover:text-white ease">{title}</span>
+      {title}
     </button>
   );
 };
