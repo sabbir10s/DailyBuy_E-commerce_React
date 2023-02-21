@@ -1,7 +1,9 @@
+import React from "react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Products from "../shared/Products";
+import { FiArrowRight, FiChevronDown } from 'react-icons/fi';
 
 const BestSales = () => {
   const [productData, setProductData] = useState([]);
@@ -20,23 +22,14 @@ const BestSales = () => {
     fetchData();
   }, []);
   return (
-    <div className=" mt-8 lg:mt-16">
-      <div className="flex justify-between items-center mb-8 container">
-        <h2 className="text-4xl font-semibold">Best Sellers</h2>
-        <button className="text-gray-500 uppercase txtHover">
+    <div className=" mt-8 lg:mt-16 container">
+      <div className="flex justify-between items-center mt-[25px] md:mt-[35px] lg:mt-[50px] mb-[16px] lg:mb-[29px]">
+        <h2 className="text-sm md:text-2xl lg:text-4xl font-semibold text-center lg:text-left">
+          Best Seller
+        </h2>
+        <button className="text-gray-500 text-[10px] md:text-base uppercase flex items-center gap-1 hover:text-primary-600 duration-300">
           <span>View More</span>
-          <span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-5 h-5 inline-block -mt-1 ml-1"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </span>
+          <FiArrowRight/>
         </button>
       </div>
       <div className="container">
@@ -45,27 +38,12 @@ const BestSales = () => {
             <Products product={product} key={idx} />
           ))}
         </div>
-        <div className="mt-12 text-center">
-          <Link to="/categories">
-            {" "}
-            <button className="bg-primary-600 hover:bg-primary-500 duration-300 transition hover:shadow-custom hover:scale-110 space-x-2 text-white px-8 font-semibold py-4 rounded-md uppercase ease-in-out">
-              <span>Shop Now</span>
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6 inline-block -mt-1"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                </svg>
-              </span>
+        <div className="mt-12 flex justify-center">
+            <button className="bg-primary-600 hover:bg-primary-500 duration-300 transition hover:shadow-custom hover:scale-110 text-white font-semibold rounded-md uppercase ease-in-out px-[20px] py-[9px] flex items-center gap-1 text-[14px] md:text-[14px]">
+            <span>Shop Now</span>
+            <FiChevronDown className="text-xl"/>
             </button>
-          </Link>
         </div>
-      </div>
     </div>
   );
 };

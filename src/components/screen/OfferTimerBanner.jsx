@@ -1,57 +1,46 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import imgOffer from "../../assets/offer/offer_banner.png";
+import { FiArrowRight } from 'react-icons/fi';
 const OfferTimerBanner = () => {
   return (
-    <div className="bg-primary-50 mt-8 lg:mt-16">
+    <div className="bg-primary-50 pt-6 md:pt-0 mt-8 lg:mt-16">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className=" mt-16 lg:mt-0 mx-auto lg:mx-0">
-            <h2 className="text-[#454F5B] text-4xl lg:text-6xl text-center lg:text-left font-bold">Get -60% from</h2>
-            <h2 className="text-[#454F5B] text-4xl lg:text-6xl text-center lg:text-left font-bold mt-4">summer deal</h2>
-            <div className="mt-12 space-x-8 ">
+          <div className="mx-auto lg:mx-0">
+            <h2 className="text-[#454F5B] text-center lg:text-left font-bold text-[20px] md:text-[40px] lg:text-[64px] md:leading-[45px] lg:leading-[80px]">Get -60% from <br />summer deal</h2>
+            <div className=" my-6 md:my-10 lg:my-12 space-x-8 ">
               <div className="text-center inline-block">
-                <p className=" bg-white text-primary-500 rounded-lg shadow-custom w-12 h-12 lg:w-20 lg:h-[72px] pt-2  lg:pt-[18px] font-bold text-2xl lg:text-3xl">
+                <p className=" bg-white text-primary-500 shadow-custom p-4 h-[23px] md:h-[50px] lg:h-[72px] w-[26px] md:w-[52px] lg:w-[82px] rounded-[6px] lg:rounded-[8px] flex items-center justify-center font-bold text-[10px] md:text-[25px] lg:text-[32px]">
                   07
                 </p>
-                <p className="font-semibold mt-2">Day</p>
+                <p className="text-primary-900 text-[6px] md:text-[14px] lg:text-[18px] mt-2">Day</p>
               </div>
               <div className="text-center inline-block">
-                <p className=" bg-white text-primary-500 rounded-lg shadow-custom w-12 h-12 lg:w-20 lg:h-[72px] pt-2  lg:pt-[18px] font-bold text-2xl lg:text-3xl">
+                <p className=" bg-white text-primary-500 shadow-custom p-4 h-[23px] md:h-[50px] lg:h-[72px] w-[26px] md:w-[52px] lg:w-[82px] rounded-[6px] lg:rounded-[8px] flex items-center justify-center font-bold text-[10px] md:text-[25px] lg:text-[32px]">
                   11
                 </p>
-                <p className="font-semibold mt-2">Hours</p>
+                <p className="text-primary-900 text-[6px] md:text-[14px] lg:text-[18px] mt-2">Hours</p>
               </div>
               <div className="text-center inline-block">
-                <p className=" bg-white text-primary-500 rounded-lg shadow-custom w-12 h-12 lg:w-20 lg:h-[72px] pt-2  lg:pt-[18px] font-bold text-2xl lg:text-3xl">
+                <p className=" bg-white text-primary-500 shadow-custom p-4 h-[23px] md:h-[50px] lg:h-[72px] w-[26px] md:w-[52px] lg:w-[82px] rounded-[6px] lg:rounded-[8px] flex items-center justify-center font-bold text-[10px] md:text-[25px] lg:text-[32px]">
                   25
                 </p>
-                <p className="font-semibold mt-2">Minutes</p>
+                <p className="text-primary-900 text-[6px] md:text-[14px] lg:text-[18px] mt-2">Minutes</p>
               </div>
               <div className="text-center inline-block">
-                <p className=" bg-white text-primary-500 rounded-lg shadow-custom w-12 h-12 lg:w-20 lg:h-[72px] pt-2  lg:pt-[18px] font-bold text-2xl lg:text-3xl">
+                <p className=" bg-white text-primary-500 shadow-custom p-4 h-[23px] md:h-[50px] lg:h-[72px] w-[26px] md:w-[52px] lg:w-[82px] rounded-[6px] lg:rounded-[8px] flex items-center justify-center font-bold text-[10px] md:text-[25px] lg:text-[32px]">
                   06
                 </p>
-                <p className="font-semibold mt-2">Seconds</p>
+                <p className="text-primary-900 text-[6px] md:text-[14px] lg:text-[18px] mt-2">Seconds</p>
               </div>
             </div>
-            <div className="mt-16 text-center lg:text-left">
+            <div className="flex justify-center lg:justify-start">
               <Link to="/categories">
                 {" "}
-                <button className="bg-primary-600 hover:bg-primary-700 duration-300 transition hover:shadow-custom hover:scale-105 space-x-2 text-white px-12 font-semibold py-5 rounded-md uppercase ease-in-out">
+                <button className="bg-primary-600 hover:bg-primary-700 duration-300 transition hover:shadow-custom hover:scale-105 space-x-2 text-white font-semibold  uppercase ease-in-out flex items-center text-[10px] md:text-[14px] lg:text-[18px] py-[5px] md:py-[18px] lg:py-[28px] px-[12px] md:px-[40px] lg:px-[65px] rounded-[5px] lg:rounded-[10px]">
                   <span>Shop Now</span>
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6 inline-block -mt-1"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                    </svg>
-                  </span>
+                  <FiArrowRight className="text-xl"/>
                 </button>
               </Link>
             </div>
