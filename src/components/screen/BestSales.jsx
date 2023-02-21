@@ -9,7 +9,7 @@ const BestSales = () => {
   // console.log(data);
   const fetchData = () => {
     axios
-      .get("products.json")
+      .get("/products.json")
       .then((response) => {
         setProductData(response.data);
       })
