@@ -69,7 +69,7 @@ const CategoriesFilter = () => {
       {/* filter price */}
       <div>
         <header className="font-bold text-base mb-3">Filter by Price</header>
-        <input step="10" className="w-full" min="0" max="300" type="range" onInput={handleInput} />
+        <input step="10" className="w-full bg-primary-600" min="0" max="300" type="range" onInput={handleInput} />
         <h1>Price: ${price}.00</h1>
         <hr className="my-6" />
       </div>
