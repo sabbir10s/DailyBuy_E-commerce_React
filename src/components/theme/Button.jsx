@@ -14,7 +14,7 @@ export const SecondaryButton = ({ title, w, handleAddToCart, product }) => {
   return (
     <button
       onClick={() => handleAddToCart(product)}
-      className={`rounded-md px-3.5 py-2 relative cursor-pointer border-2 font-medium border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white duration-300 ease-in-out ${(w =
+      className={`rounded-[5px] py-[4px] md:py-[9px] text-[10px] md:text-[14px] relative cursor-pointer border-[1.5px] font-medium border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white duration-300 ease-in-out ${(w =
         "full" ? "w-full" : "")}`}
     >
       {title}

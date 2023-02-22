@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Products from "../shared/Products";
+import ProductCard from "../shared/ProductCard";
 import { FiArrowRight, FiChevronDown } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
@@ -30,9 +30,9 @@ const BestSales = () => {
         </button>
       </div>
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[10px] md:gap-[20px]">
           {productData.map((product, idx) => (
-            <Products product={product} key={idx} />
+            <ProductCard product={product} key={idx} />
           ))}
         </div>
         <div className="mt-12 flex justify-center">
