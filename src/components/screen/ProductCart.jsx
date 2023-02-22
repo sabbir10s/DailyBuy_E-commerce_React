@@ -166,43 +166,51 @@ const ProductCart = () => {
             )}
           </div>
           {/*  */}
-          <div className="relative">
-            <div className="lg:absolute space-y-5 top-0 left-0 w-full h-auto  lg:py-3 lg:px-4 lg:shadow-custom lg:border lg:rounded-lg">
-              <div className="flex justify-between items-center">
-                <p className="text-gray-600 text-base">Subtotal:</p>
-                <p className="text-gray-700 font-semibold text-xl">${total}.00</p>
-              </div>
-              <div className="flex justify-between items-center">
-                <p className="text-gray-600 text-base">Tax:</p>
-                <p className="text-gray-700 font-semibold text-xl">$0.00</p>
-              </div>
-              <div className="flex justify-between items-center">
-                <p className="text-gray-600 text-base">Shipping:</p>
-                <p className="text-gray-700 font-semibold text-xl">${shipping}.00</p>
-              </div>
-              <hr className="" />
-              <div className="flex justify-between items-center">
-                <p className="text-black font-medium text-base">Total:</p>
-                <p className="text-primary-600 font-bold text-xl">${total + shipping}.00</p>
-              </div>
-              <button className="px-5 w-full py-2.5 relative rounded group font-medium text-white  inline-block">
-                {" "}
-                <Link to="/checkout">
+          {cartItems.length > 0 && (
+            <div className="relative">
+              <div className="lg:absolute space-y-5 top-0 left-0 w-full h-auto  lg:py-3 lg:px-4 lg:shadow-custom lg:border lg:rounded-lg">
+                <div className="flex justify-between items-center">
+                  <p className="text-gray-600 text-base">Subtotal:</p>
+                  <p className="text-gray-700 font-semibold text-xl">${total}.00</p>
+                </div>
+                <div className="flex justify-between items-center">
+                  <p className="text-gray-600 text-base">Tax:</p>
+                  <p className="text-gray-700 font-semibold text-xl">$0.00</p>
+                </div>
+                <div className="flex justify-between items-center">
+                  <p className="text-gray-600 text-base">Shipping:</p>
+                  <p className="text-gray-700 font-semibold text-xl">${shipping}.00</p>
+                </div>
+                <hr className="" />
+                <div className="flex justify-between items-center">
+                  <p className="text-black font-medium text-base">Total:</p>
+                  <p className="text-primary-600 font-bold text-xl">${total + shipping}.00</p>
+                </div>
+                <button className="px-5 w-full py-2.5 relative rounded group font-medium text-white  inline-block">
                   {" "}
-                  <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
-                  <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
-                  <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-primary-600 to-primary-500"></span>
-                  <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-primary-600 from-primary-500"></span>
-                  <span className="relative">Check out</span>
-                </Link>{" "}
-              </button>
+                  <Link to="/checkout">
+                    {" "}
+                    <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
+                    <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
+                    <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-primary-600 to-primary-500"></span>
+                    <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-primary-600 from-primary-500"></span>
+                    <span className="relative">Check out</span>
+                  </Link>{" "}
+                </button>
+              </div>
             </div>
-          </div>
+          )}
         </div>
         {/* shipping button */}
-        <div className="mt-14">
+        <div className="mt-14 text-center lg:text-left">
           {" "}
-          <button className="px-5  py-2.5 relative rounded group font-medium text-white hidden  lg:inline-block">
+          <button
+            className={`${
+              cartItems.length > 0
+                ? "px-5  py-2.5 relative rounded group font-medium text-white hidden lg:inline-block"
+                : "px-5  py-2.5 relative rounded group font-medium text-white inline-block"
+            }`}
+          >
             <Link to="/categories">
               <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
               <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
