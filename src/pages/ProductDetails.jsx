@@ -63,8 +63,8 @@ const ProductDetails = () => {
     other_things_of_product,
   } = productInfo;
 
-  const product = cartItems.map((item, i) => item);
-  console.log(product);
+  const product_cart = cartItems.map((item, i) => item);
+  console.log(product_cart)
   return (
     <div className="mt-20 lg:mt-0">
       <MenuBar />
@@ -158,15 +158,15 @@ const ProductDetails = () => {
                     <div>
                       {" "}
                       <button
-                        onClick={() => handleAddToCart(product)}
+                        onClick={() => handleAddToCart(product_cart)}
                         className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]"
                       >
                         Add to cart
                       </button>
                     </div>{" "}
                     <div>
-                      <Link to="/cart">
-                        <button className="text-primary-600 hover:text-primary-900 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-900 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]">
+                      <Link to="/checkout">
+                        <button handleAddToCart={handleAddToCart} className="text-primary-600 hover:text-primary-900 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-900 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]">
                           Buy Now
                         </button>
                       </Link>
