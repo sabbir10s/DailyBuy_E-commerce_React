@@ -6,8 +6,17 @@ import peyMethod2 from "../assets/payment/peyment (2).png";
 import peyMethod3 from "../assets/payment/peyment (3).png";
 import cartImg from "../assets/products/product.png";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart } from "../redux/feature/cartSlice";
 
 const Checkout = () => {
+  const { cartItems } = useSelector((state) => state.cart);
+
+  const dispatch = useDispatch();
+  const handleRemoveItem = (cartItem) => {
+    dispatch(removeFromCart(cartItem));
+  };
+
   return (
     <>
       <MenuBar />
@@ -171,19 +180,19 @@ const Checkout = () => {
           </div>
           <div className=" relative lg:col-span-2">
             <div className="lg:absolute top-0 w-full p-3 border rounded-xl">
-              {Array.from({ length: 2 }).map((_, idx) => (
+              {cartItems.map((item, idx) => (
                 <div key={idx} className="relative mb-3 border-b py-2 lg:border-none lg:py-0">
                   <div className="flex space-x-2 items-center col-span-2 lg:border rounded-lg lg:p-2 border-gray-100">
                     <div className="w-[80px] h-[80px] bg-gray-50  rounded-2xl">
-                      <img src={cartImg} className="w-full h-full object-center object-fill" alt="product-img" />
+                      <img src={item?.main_img_url} className="w-full h-full object-center object-fill" alt="product-img" />
                     </div>
                     <div>
-                      <p className="font-semibold text-primary-600">Nestle Original Coffee-Mate Coffee Creamer</p>
-                      <p className="font-semibold">1 x $10.00</p>
+                      <p className="font-semibold text-primary-600">{item?.product_name}</p>
+                      <p className="font-semibold">1 x ${item?.price}.00</p>
                     </div>
                   </div>
                   <div className="absolute -top-1 lg:top-2 -right-1 lg:right-2">
-                    <button>
+                    <button onClick={() => handleRemoveItem(item)}>
                       {" "}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
