@@ -10,7 +10,6 @@ export const PrimaryButton = ({ title }) => {
   );
 };
 export const SecondaryButton = ({ title, w, handleAddToCart, product }) => {
-  console.log(product)
   return (
     <button
       onClick={() => handleAddToCart(product)}

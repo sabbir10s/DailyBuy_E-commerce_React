@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MenuBar from "../components/shared/MenuBar";
 import BreadCamp from "../components/theme/BreadCamp";
-import bigImg from "../assets/product-details/cup/big_product1.png";
 import SmallProductImg from "../components/screen/SmallProductImg";
 import ProcessingSteps from "../components/screen/ProcessingSteps";
 import { Link, useParams } from "react-router-dom";
@@ -12,20 +11,28 @@ import Quantity from "../components/shared/Quantity";
 import ReviewCard from "../components/screen/Review/ReviewCard";
 import AddReview from "../components/screen/Review/AddReview";
 import ProductCard from "../components/shared/ProductCard";
+import bigImg from "../assets/products/product (1).png";
 import axios from "axios";
 import ReactStars from "react-stars";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, decreaseCart, removeFromCart } from "../redux/feature/cartSlice";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/feature/cartSlice";
 
 const ProductDetails = () => {
   const [productData, setProductData] = useState([]);
-  const { itemId } = useParams();
 
-  const { cartItems } = useSelector((state) => state.cart);
+  const { itemId } = useParams();
   const dispatch = useDispatch();
+
+  const productInfo = productData.find((product) => product._id === parseInt(itemId));
+
+  const [activeImg, setActiveImg] = useState(bigImg);
+  const [wishlist, setWishlist] = useState(false);
+  const [active, setActive] = useState("desc");
+
   const handleAddToCart = (cartItem) => {
     dispatch(addToCart(cartItem));
   };
+
   const fetchData = () => {
     axios
       .get("/products.json")
@@ -40,16 +47,11 @@ const ProductDetails = () => {
     fetchData();
   }, [itemId]);
 
-  const productInfo = productData.find((product) => product._id === parseInt(itemId));
-
-  const [activeImg, setActiveImg] = useState(bigImg);
-  const [wishlist, setWishlist] = useState(false);
-  const [active, setActive] = useState("desc");
-
   if (!productInfo) {
     return <>Loading</>;
   }
   const {
+    small_img_url,
     product_name,
     price,
     rating,
@@ -63,8 +65,6 @@ const ProductDetails = () => {
     other_things_of_product,
   } = productInfo;
 
-  const product_cart = cartItems.map((item, i) => item);
-  console.log(product_cart)
   return (
     <div className="mt-20 lg:mt-0">
       <MenuBar />
@@ -72,11 +72,11 @@ const ProductDetails = () => {
         <BreadCamp />
         <div className="md:mt-[32px] grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
           <div className="space-y-4 cursor-pointer col-span-1">
-            <div className=" w-full h-full lg:h-[400px]">
+            <div className=" w-full h-full lg:h-[400px] border border-gray-100">
               <img className="w-full h-full object-center object-fill rounded-[24px]" src={activeImg} alt="" />
             </div>
             <div className="hidden lg:block">
-              <SmallProductImg setActiveImg={setActiveImg} />
+              <SmallProductImg small_img_url={small_img_url} setActiveImg={setActiveImg} />
             </div>
           </div>
           <div className="col-span-1 lg:col-span-2">
@@ -148,25 +148,27 @@ const ProductDetails = () => {
                   </ul>
                 </div>
                 {/*============================
-              =========quantity section======
+              =========button section======
               ==============================*/}
                 <div className=" mt-8 lg:mt-6 flex flex-col lg:flex-row lg:items-center gap-[32px] order-1 lg:order-2">
-                  <div className="hidden lg:block">
-                    <Quantity />
-                  </div>
                   <div className="flex items-center justify-between md:justify-start gap-[32px]">
                     <div>
                       {" "}
-                      <button
-                        onClick={() => handleAddToCart(product_cart)}
-                        className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]"
-                      >
-                        Add to cart
-                      </button>
+                      <Link to="/cart">
+                        <button
+                          onClick={() => handleAddToCart(productInfo)}
+                          className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]"
+                        >
+                          Add to cart
+                        </button>
+                      </Link>
                     </div>{" "}
                     <div>
                       <Link to="/checkout">
-                        <button handleAddToCart={handleAddToCart} className="text-primary-600 hover:text-primary-900 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-900 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]">
+                        <button
+                          onClick={() => handleAddToCart(productInfo)}
+                          className="text-primary-600 hover:text-primary-900 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-900 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]"
+                        >
                           Buy Now
                         </button>
                       </Link>

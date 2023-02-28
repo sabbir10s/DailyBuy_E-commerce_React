@@ -4,10 +4,10 @@ import MenuBar from "../components/shared/MenuBar";
 import peyMethod1 from "../assets/payment/peyment (1).png";
 import peyMethod2 from "../assets/payment/peyment (2).png";
 import peyMethod3 from "../assets/payment/peyment (3).png";
-import cartImg from "../assets/products/product.png";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../redux/feature/cartSlice";
+import { PrimaryButton } from "../components/theme/Button";
 
 const Checkout = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -17,6 +17,8 @@ const Checkout = () => {
     dispatch(removeFromCart(cartItem));
   };
 
+  const total = cartItems.reduce((total, item) => total + item.price * item.cartQuantity, 0);
+  const shipping = 3;
   return (
     <>
       <MenuBar />
@@ -178,70 +180,83 @@ const Checkout = () => {
               </div>{" "}
             </form>
           </div>
-          <div className=" relative lg:col-span-2">
-            <div className="lg:absolute top-0 w-full p-3 border rounded-xl">
-              {cartItems.map((item, idx) => (
-                <div key={idx} className="relative mb-3 border-b py-2 lg:border-none lg:py-0">
-                  <div className="flex space-x-2 items-center col-span-2 lg:border rounded-lg lg:p-2 border-gray-100">
-                    <div className="w-[80px] h-[80px] bg-gray-50  rounded-2xl">
-                      <img src={item?.main_img_url} className="w-full h-full object-center object-fill" alt="product-img" />
+          {cartItems.length > 0 ? (
+            <div className=" relative lg:col-span-2">
+              <div className="w-full p-3 border rounded-xl">
+                {cartItems.map((item, idx) => (
+                  <div key={idx} className="relative mb-3 border-b py-2 lg:border-none lg:py-0">
+                    <div className="flex space-x-2 items-center col-span-2 lg:border rounded-lg lg:p-2 border-gray-100">
+                      <div className="w-[80px] h-[80px] bg-gray-50  rounded-2xl">
+                        <img src={item?.main_img_url} className="w-full h-full object-center object-fill" alt="product-img" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-primary-600">{item?.product_name}</p>
+                        <p className="font-semibold">
+                          {item?.cartQuantity} x ${item?.price}.00
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-semibold text-primary-600">{item?.product_name}</p>
-                      <p className="font-semibold">1 x ${item?.price}.00</p>
+                    <div className="absolute -top-1 lg:top-2 -right-1 lg:right-2">
+                      <button onClick={() => handleRemoveItem(item)}>
+                        {" "}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          className="w-5 h-5 border p-1 rounded-full lg:border-none lg:p-0 lg:rounded-none text-black hover:text-primary-600"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
                     </div>
                   </div>
-                  <div className="absolute -top-1 lg:top-2 -right-1 lg:right-2">
-                    <button onClick={() => handleRemoveItem(item)}>
+                ))}
+                <div className="lg:mt-32 mt-5">
+                  <div className=" space-y-5   lg:py-3 ">
+                    <div className="flex justify-between items-center">
+                      <p className="text-gray-600 text-base">Subtotal:</p>
+                      <p className="text-gray-700 font-semibold text-xl">${total}.00</p>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <p className="text-gray-600 text-base">Tax:</p>
+                      <p className="text-gray-700 font-semibold text-xl">$0.00</p>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <p className="text-gray-600 text-base">Shipping:</p>
+                      <p className="text-gray-700 font-semibold text-xl">${shipping}.00</p>
+                    </div>
+                    <hr className="" />
+                    <div className="flex justify-between items-center">
+                      <p className="text-black font-medium text-base">Total:</p>
+                      <p className="text-primary-600 font-bold text-xl">${total + shipping}.00</p>
+                    </div>
+                    <button className="px-5 w-full py-2.5 relative rounded group font-medium text-white  inline-block">
                       {" "}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="w-5 h-5 border p-1 rounded-full lg:border-none lg:p-0 lg:rounded-none text-black hover:text-primary-600"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
+                      <Link to="/payment">
+                        {" "}
+                        <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
+                        <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
+                        <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-primary-600 to-primary-500"></span>
+                        <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-primary-600 from-primary-500"></span>
+                        <span className="relative">Place Order</span>
+                      </Link>{" "}
                     </button>
                   </div>
                 </div>
-              ))}
-              <div className="lg:mt-32 mt-5">
-                <div className=" space-y-5   lg:py-3 ">
-                  <div className="flex justify-between items-center">
-                    <p className="text-gray-600 text-base">Subtotal:</p>
-                    <p className="text-gray-700 font-semibold text-xl">$40.00</p>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <p className="text-gray-600 text-base">Tax:</p>
-                    <p className="text-gray-700 font-semibold text-xl">$0.00</p>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <p className="text-gray-600 text-base">Shipping:</p>
-                    <p className="text-gray-700 font-semibold text-xl">$3.00</p>
-                  </div>
-                  <hr className="" />
-                  <div className="flex justify-between items-center">
-                    <p className="text-black font-medium text-base">Total:</p>
-                    <p className="text-primary-600 font-bold text-xl">$43.00</p>
-                  </div>
-                  <button className="px-5 w-full py-2.5 relative rounded group font-medium text-white  inline-block">
-                    {" "}
-                    <Link to="/payment">
-                      {" "}
-                      <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
-                      <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
-                      <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-primary-600 to-primary-500"></span>
-                      <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-primary-600 from-primary-500"></span>
-                      <span className="relative">Place Order</span>
-                    </Link>{" "}
-                  </button>
-                </div>
               </div>
             </div>
-          </div>
+          ) : (
+            <div className=" relative lg:col-span-2">
+              <div className="p-32 text-secondary-600">
+                <p className="mb-10"> Please Add to Cart Your Product</p>
+                <Link to="/categories">
+                  <PrimaryButton title="Continue Shipping" />
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <ProcessingSteps />

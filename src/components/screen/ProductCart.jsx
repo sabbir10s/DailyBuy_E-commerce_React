@@ -36,7 +36,7 @@ const ProductCart = () => {
                       <img src={item?.main_img_url} className="w-full h-full object-center object-fill" alt="product-img" />
                     </div>
                     <div>
-                      <p className="font-semibold text-sm">{item?.product_name.slice(0, 18)}...</p>
+                      {/* <p className="font-semibold text-sm">{item?.product_name.slice(0, 18)}...</p> */}
                       <p className="text-primary-600  font-semibold">${item?.price}.00</p>
                       <div className="flex items-center justify-between">
                         <p className="text-gray-600">
