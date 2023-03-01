@@ -5,7 +5,8 @@ import { PrimaryButton } from "../theme/Button";
 
 const Banner = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16 lg:mt-8">
+   <>
+     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16 lg:mt-8">
       <div className="pl-[10px] md:pl-[15px] py-[35px] flex items-center slider_bg">
        <div>
        <p className="md:bg-primary-100 md:px-4 md:py-2 rounded text-primary-600 inline-block font-semibold text-[8px] md:text-[12px]">SUMMER SALE UPTO 60%</p>
@@ -43,6 +44,7 @@ const Banner = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 

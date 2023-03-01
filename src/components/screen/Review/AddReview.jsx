@@ -5,7 +5,7 @@ const AddReview = () => {
   const [starRating, setStarRating] = useState(null);
   const [hover, setHover] = useState(null);
   return (
-    <div>
+    <>
       <form className="flex flex-col gap-[20px] mt-[32px]" action="">
         <div className="flex flex-col lg:flex-row items-center gap-[32px]">
           <input
@@ -64,7 +64,7 @@ const AddReview = () => {
           Submit your review
         </button>
       </form>
-    </div>
+    </>
   );
 };
 

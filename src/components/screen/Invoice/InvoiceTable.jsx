@@ -17,13 +17,15 @@ const InvoiceTable = () => {
           <div className="py-[19px]">Amount</div>
         </div>
         {cartItems.map((order, index) => (
-          <div key={index} className="grid grid-cols-5 justify-items-center text-[#383838] border-t-[1px] border-l">
-            <div className="py-[19px]">{index + 1}</div>
-            <div className="py-[19px]">{order.product_name.slice(0, 25)}....</div>
-            <div className="py-[19px]">{order.cartQuantity}</div>
-            <div className="py-[19px]">${order.price}</div>
-            <div className="py-[19px]">${order.cartQuantity * order.price}</div>
-          </div>
+            <>
+            <div key={index} className="grid grid-cols-5 justify-items-center text-[#383838] border-t-[1px] border-l">
+              <div className="py-[19px]">{index + 1}</div>
+              <div className="py-[19px]">{order.product_name.slice(0, 25)}....</div>
+              <div className="py-[19px]">{order.cartQuantity}</div>
+              <div className="py-[19px]">${order.price}</div>
+              <div className="py-[19px]">${order.cartQuantity * order.price}</div>
+            </div>
+            </>
         ))}
         {/*  */}
         <div className="grid grid-cols-5 justify-items-center border-t">

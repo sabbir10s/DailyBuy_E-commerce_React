@@ -21,7 +21,8 @@ const CategoriesProduct = () => {
     fetchData();
   }, []);
   return (
-    <div className="mt-8 lg:mt-16">
+    <>
+      <div className="mt-8 lg:mt-16">
       <div className="hidden lg:flex justify-between items-center">
         <p>
           <small className="space-x-0 lg:space-x-4">
@@ -66,6 +67,7 @@ const CategoriesProduct = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
