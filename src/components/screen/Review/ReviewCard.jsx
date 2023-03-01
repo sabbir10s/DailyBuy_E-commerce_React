@@ -1,7 +1,10 @@
+import { useState } from "react";
 import ReactStars from "react-stars";
 
 const ReviewCard = ({review}) => {
     const {name,rating ,date,review_title, comments} = review
+    const shortComments = comments.slice(0,150)
+    const [click, setClick] = useState(true)
     return (
         <>
             <div className="p-3 rounded-2xl mt-5 border ">
@@ -21,7 +24,12 @@ const ReviewCard = ({review}) => {
                         {comments}
                       </p>
                        <div className='block lg:hidden'>
-                          <p>{comments.slice(0, 150)}... <span className="text-primary-600 font-semibold">More</span></p>
+                         {
+                          click &&  <p>{shortComments}... <span onClick={()=>setClick(false)}  className="text-primary-600 font-semibold">More</span></p>
+                         }
+                         {
+                          !click &&  <p>{comments} <span onClick={()=>setClick(true)}  className="text-primary-600 font-semibold">Less</span></p>
+                         }
                         </div>
                       </div>
                     </div>
