@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
+const TermsComponents = lazy(() => import("../components/screen/TermsComponents"));
 const AboutUs = lazy(() => import("../pages/AboutUs"));
 const AboutUsV2 = lazy(() => import("../pages/AboutUsV2"));
 const BlogDetails = lazy(() => import("../pages/BlogDetails"));
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
       {
         path: "/forgotPassword",
         element: <ForgotPassword />,
+      },
+      {
+        path: "/terms",
+        element: <TermsComponents />,
       },
     ],
   },

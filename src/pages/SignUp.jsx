@@ -47,7 +47,10 @@ const SignUp = () => {
                 <Checkbox />
               </span>
               <span>
-                I agree to <b className="text-primary-600 hover:underline cursor-pointer">terms and condition</b>
+                I agree to{" "}
+                <Link to="/terms">
+                  <b className="text-primary-600 hover:underline cursor-pointer">terms and condition</b>
+                </Link>
               </span>
             </p>
             <div className="text-center pb-10">

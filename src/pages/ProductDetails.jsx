@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MenuBar from "../components/shared/MenuBar";
 import BreadCamp from "../components/theme/BreadCamp";
-import bigImg from "../assets/product-details/cup/big_product1.png";
 import SmallProductImg from "../components/screen/SmallProductImg";
 import ProcessingSteps from "../components/screen/ProcessingSteps";
 import { Link, useParams } from "react-router-dom";
@@ -12,12 +11,28 @@ import Quantity from "../components/shared/Quantity";
 import ReviewCard from "../components/screen/Review/ReviewCard";
 import AddReview from "../components/screen/Review/AddReview";
 import ProductCard from "../components/shared/ProductCard";
+import bigImg from "../assets/products/product (1).png";
 import axios from "axios";
 import ReactStars from "react-stars";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/feature/cartSlice";
 
 const ProductDetails = () => {
   const [productData, setProductData] = useState([]);
-  const {itemId} = useParams()
+
+  const { itemId } = useParams();
+  const dispatch = useDispatch();
+
+  const productInfo = productData.find((product) => product._id === parseInt(itemId));
+
+  const [activeImg, setActiveImg] = useState(bigImg);
+  const [wishlist, setWishlist] = useState(false);
+  const [active, setActive] = useState("desc");
+
+  const handleAddToCart = (cartItem) => {
+    dispatch(addToCart(cartItem));
+  };
+
   const fetchData = () => {
     axios
       .get("/products.json")
@@ -32,16 +47,24 @@ const ProductDetails = () => {
     fetchData();
   }, [itemId]);
 
-  const productInfo = productData.find(product=>product._id === parseInt(itemId))
-  
-  const [activeImg, setActiveImg] = useState(bigImg);
-  const [wishlist, setWishlist] = useState(false);
-  const [active, setActive] = useState("desc");
+  if (!productInfo) {
+    return <>Loading</>;
+  }
+  const {
+    small_img_url,
+    product_name,
+    price,
+    rating,
+    review,
+    discount,
+    stock,
+    desc,
+    details_benefit,
+    full_description,
+    packaging_and_delivery,
+    other_things_of_product,
+  } = productInfo;
 
-    if(!productInfo){
-      return <>Loading</>
-    }
-    const {product_name, price, rating,review,discount,stock,desc,details_benefit,full_description, packaging_and_delivery,other_things_of_product} = productInfo
   return (
     <div className="mt-20 lg:mt-0">
       <MenuBar />
@@ -49,11 +72,11 @@ const ProductDetails = () => {
         <BreadCamp />
         <div className="md:mt-[32px] grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
           <div className="space-y-4 cursor-pointer col-span-1">
-            <div className=" w-full h-full lg:h-[400px]">
+            <div className=" w-full h-full lg:h-[400px] border border-gray-100">
               <img className="w-full h-full object-center object-fill rounded-[24px]" src={activeImg} alt="" />
             </div>
             <div className="hidden lg:block">
-              <SmallProductImg setActiveImg={setActiveImg} />
+              <SmallProductImg small_img_url={small_img_url} setActiveImg={setActiveImg} />
             </div>
           </div>
           <div className="col-span-1 lg:col-span-2">
@@ -64,12 +87,7 @@ const ProductDetails = () => {
                 <div className="flex space-x-2 items-center ">
                   <p className="font-semibold text-[18px]">{rating}</p>
                   <div className="flex items-center">
-                  <ReactStars
-                    count={5}
-                    size={25}
-                    value={rating}
-                    edit={false}
-                ></ReactStars>
+                    <ReactStars count={5} size={25} value={rating} edit={false}></ReactStars>
                   </div>
                   <p className="text-gray-500">({review})</p>
                 </div>
@@ -91,7 +109,7 @@ const ProductDetails = () => {
                 <div className="flex items-center space-x-5 ">
                   <p className="text-[32px] md:text-[48px] text-primary-600 font-bold">${price}</p>
                   <div>
-                    <p className="text-[12px] text-secondary-300 uppercase font-bold">{price*discount/100}% off</p>
+                    <p className="text-[12px] text-secondary-300 uppercase font-bold">{(price * discount) / 100}% off</p>
                     <p className="text-[16px] md:text-[20px] text-gray-500">
                       <del>{discount}</del>
                     </p>
@@ -113,42 +131,44 @@ const ProductDetails = () => {
                       <b>SKU:</b>
                       12314
                     </span>
-                    {
-                      stock && <span className="text-gray-600">✅ In Stock</span>
-                    }
-                    {
-                      !stock && <p className="text-gray-600 flex items-center gap-1"><ImWarning className="text-[#FF5555]"/> <span>Not Available</span></p>
-                    }
-                    
+                    {stock && <span className="text-gray-600">✅ In Stock</span>}
+                    {!stock && (
+                      <p className="text-gray-600 flex items-center gap-1">
+                        <ImWarning className="text-[#FF5555]" /> <span>Not Available</span>
+                      </p>
+                    )}
                   </div>
-                  <p className="mt-3 text-gray-700">
-                    {desc}
-                  </p>
+                  <p className="mt-3 text-gray-700">{desc}</p>
                   <ul className="mt-3 text-gray-700">
-                    {
-                      details_benefit.map((d, index)=><li key={index} className="list-disc list-inside">{d}</li>)
-                    }
+                    {details_benefit.map((d, index) => (
+                      <li key={index} className="list-disc list-inside">
+                        {d}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 {/*============================
-              =========quantity section======
+              =========button section======
               ==============================*/}
                 <div className=" mt-8 lg:mt-6 flex flex-col lg:flex-row lg:items-center gap-[32px] order-1 lg:order-2">
-                  <div className="hidden lg:block">
-                    <Quantity />
-                  </div>
                   <div className="flex items-center justify-between md:justify-start gap-[32px]">
                     <div>
+                      {" "}
                       <Link to="/cart">
-                        {" "}
-                        <button className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]">
+                        <button
+                          onClick={() => handleAddToCart(productInfo)}
+                          className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]"
+                        >
                           Add to cart
                         </button>
                       </Link>
                     </div>{" "}
                     <div>
-                      <Link to="/cart">
-                        <button className="text-primary-600 hover:text-primary-900 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-900 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]">
+                      <Link to="/checkout">
+                        <button
+                          onClick={() => handleAddToCart(productInfo)}
+                          className="text-primary-600 hover:text-primary-900 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-900 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px]"
+                        >
                           Buy Now
                         </button>
                       </Link>
@@ -191,20 +211,16 @@ const ProductDetails = () => {
                   <p className="hidden lg:block">{full_description}</p>
                   <p className="block lg:hidden">
                     {full_description.slice(0, 300)}...
-                      <span className="text-primary-600 font-semibold">More</span>
-                    </p>
+                    <span className="text-primary-600 font-semibold">More</span>
+                  </p>
                 </div>
                 <div className="hidden lg:block">
                   <h3 className="text-2xl font-semibold mt-5 mb-3">Packaging & Delivery</h3>
-                  <p className="text-sm leading-relaxed">
-                    {packaging_and_delivery}
-                  </p>{" "}
+                  <p className="text-sm leading-relaxed">{packaging_and_delivery}</p>{" "}
                 </div>{" "}
                 <div className="hidden lg:block">
                   <h3 className="text-2xl font-semibold mt-5 mb-3">Other Ingredients</h3>
-                  <p className="text-sm leading-relaxed">
-                    {other_things_of_product}
-                  </p>{" "}
+                  <p className="text-sm leading-relaxed">{other_things_of_product}</p>{" "}
                 </div>
               </div>
             )}
