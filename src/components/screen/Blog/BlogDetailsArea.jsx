@@ -1,12 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { BlogsData } from "../../../StaticData/BlogsData";
 import linkedIn from "../../../assets/icon/social_primary_color_lin.png";
 import facebook from "../../../assets/icon/social_primary_color_fb.png";
 import twitter from "../../../assets/icon/social_primary_color_tw.png";
+import useBlogs from "../../../hooks/useBlogs";
+import ThemeSuspense from "../../theme/ThemeSuspense";
 
 const BlogDetailsArea = ({ blogId }) => {
-  const blogInfo = BlogsData.find((blog) => blog._id === parseInt(blogId));
+  const[BLogs] = useBlogs(blogId)
+
+  if(!BLogs.length){
+    return <ThemeSuspense/>
+  }
+  const blogInfo = BLogs.find((blog) => blog._id === parseInt(blogId));
   const { blog_title, blog_details, banner_img, date, writer, writer_img } = blogInfo;
   return (
     <div className="mt-[80px] lg:mt-[20px]">
