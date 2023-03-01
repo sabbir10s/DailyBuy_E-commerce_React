@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../redux/feature/cartSlice";
 import { PrimaryButton } from "../components/theme/Button";
+import { Helmet } from "react-helmet";
 
 const Checkout = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -21,6 +22,10 @@ const Checkout = () => {
   const shipping = 3;
   return (
     <>
+      <Helmet>
+        <title>DailyBuy - Checkout</title>
+        <meta charSet="utf-8" name="description" content="DailyBuy Checkout Page" />
+      </Helmet>
       <MenuBar />
 
       <div className="container">

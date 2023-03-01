@@ -1,12 +1,17 @@
-import React from 'react';
-import FaqComponents from '../components/screen/FaqComponents';
+import React from "react";
+import { Helmet } from "react-helmet";
+import FaqComponents from "../components/screen/FaqComponents";
 
 const FAQ = () => {
-    return (
-        <div>
-            <FaqComponents/>
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>DailyBuy - FAQ</title>
+        <meta charSet="utf-8" name="description" content="DailyBuy FAQ Page" />
+      </Helmet>
+      <FaqComponents />
+    </div>
+  );
 };
 
 export default FAQ;
