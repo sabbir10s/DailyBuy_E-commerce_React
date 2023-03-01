@@ -8,7 +8,6 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { FiArrowRight } from "react-icons/fi";
 import { ImWarning } from "react-icons/im";
 import Quantity from "../components/shared/Quantity";
-import ReviewCard from "../components/screen/Review/ReviewCard";
 import AddReview from "../components/screen/Review/AddReview";
 import ProductCard from "../components/shared/ProductCard";
 import bigImg from "../assets/products/product (1).png";
@@ -17,6 +16,8 @@ import ReactStars from "react-stars";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/feature/cartSlice";
 import { Helmet } from "react-helmet";
+import Reviews from "../components/screen/Review/Reviews";
+import ThemeSuspense from "../components/theme/ThemeSuspense";
 
 const ProductDetails = () => {
   const [productData, setProductData] = useState([]);
@@ -49,7 +50,7 @@ const ProductDetails = () => {
   }, [itemId]);
 
   if (!productInfo) {
-    return <>Loading</>;
+    return <ThemeSuspense/>;
   }
   const {
     small_img_url,
@@ -231,17 +232,7 @@ const ProductDetails = () => {
             )}
             {active === "review" && (
               <div>
-                <h3 className="text-2xl font-semibold hidden lg:block">Review (3)</h3>
-                <div className="hidden lg:block">
-                  {Array.from({ length: 3 }).map((_, idx) => (
-                    <ReviewCard key={idx} />
-                  ))}
-                </div>
-                <div className="block lg:hidden">
-                  {Array.from({ length: 2 }).map((_, idx) => (
-                    <ReviewCard key={idx} />
-                  ))}
-                </div>
+                  <Reviews/>
               </div>
             )}
           </div>

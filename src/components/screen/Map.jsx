@@ -21,7 +21,6 @@ function Map() {
         center={center}
         zoom={10}
       >
-        { /* Child components, such as markers, info windows, etc. */ }
         <></>
       </GoogleMap>
     </LoadScript>

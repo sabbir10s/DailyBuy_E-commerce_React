@@ -22,18 +22,6 @@ const Hero = () => {
                 </svg>
               </span>
               <span>Categories</span>
-              {/*  <span className="lg:hidden xl:inline">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-5 inline-block"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                </svg>
-              </span> */}
             </h2>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Fruits & Vegetable</li>
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Meats & Fish</li>

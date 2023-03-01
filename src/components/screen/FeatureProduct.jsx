@@ -5,7 +5,6 @@ import ProductCard from "../shared/ProductCard";
 
 const FeatureProduct = () => {
   const [productData, setProductData] = useState([]);
-  // console.log(data);
   const fetchData = () => {
     axios
       .get("products.json")
@@ -20,7 +19,8 @@ const FeatureProduct = () => {
     fetchData();
   }, []);
   return (
-    <div className="container">
+    <>
+      <div className="container">
       <div
         className="flex justify-between items-center mt-[25px] md:mt-[35px] lg:mt-[50px] mb-[16px] lg:mb-[29px]">
         <h2
@@ -41,6 +41,7 @@ const FeatureProduct = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

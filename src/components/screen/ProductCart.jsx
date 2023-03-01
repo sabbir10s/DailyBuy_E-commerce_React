@@ -30,13 +30,13 @@ const ProductCart = () => {
             {/* for mobile device */}
             {cartItems.length > 0 ? (
               cartItems.map((item, idx) => (
+                <>
                 <div key={idx} className=" grid grid-cols-3 lg:hidden gap-2 mt-3 items-center border-b border-gray-100 pb-2">
                   <div className="flex space-x-2 items-center col-span-2">
                     <div className="w-[80px] h-[80px] bg-gray-50  rounded-2xl">
                       <img src={item?.main_img_url} className="w-full h-full object-center object-fill" alt="product-img" />
                     </div>
                     <div>
-                      {/* <p className="font-semibold text-sm">{item?.product_name.slice(0, 18)}...</p> */}
                       <p className="text-primary-600  font-semibold">${item?.price}.00</p>
                       <div className="flex items-center justify-between">
                         <p className="text-gray-600">
@@ -86,6 +86,7 @@ const ProductCart = () => {
                     </div>
                   </div>
                 </div>
+                </>
               ))
             ) : (
               <div className=" py-5 block lg:hidden text-3xl text-center text-primary-600 font-semibold">
@@ -102,6 +103,7 @@ const ProductCart = () => {
             {/* every product  cart details*/}
             {cartItems.length > 0 ? (
               cartItems.map((item, idx) => (
+                <>
                 <div key={idx} className="hidden lg:grid grid-cols-7 gap-4  bg-white p-3 mb-3 rounded items-center">
                   <div className="col-span-3 ">
                     <div className="flex space-x-2 items-center">
@@ -158,6 +160,7 @@ const ProductCart = () => {
                     </button>
                   </div>
                 </div>
+                </>
               ))
             ) : (
               <div className=" py-5 hidden lg:block text-3xl text-center text-primary-600 font-semibold">
@@ -167,7 +170,8 @@ const ProductCart = () => {
           </div>
           {/*  */}
           {cartItems.length > 0 && (
-            <div className="relative">
+           <>
+               <div className="relative">
               <div className="lg:absolute space-y-5 top-0 left-0 w-full h-auto  lg:py-3 lg:px-4 lg:shadow-custom lg:border lg:rounded-lg">
                 <div className="flex justify-between items-center">
                   <p className="text-gray-600 text-base">Subtotal:</p>
@@ -199,6 +203,7 @@ const ProductCart = () => {
                 </button>
               </div>
             </div>
+           </>
           )}
         </div>
         {/* shipping button */}
