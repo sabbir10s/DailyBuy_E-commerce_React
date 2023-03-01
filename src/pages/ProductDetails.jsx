@@ -16,6 +16,7 @@ import axios from "axios";
 import ReactStars from "react-stars";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/feature/cartSlice";
+import { Helmet } from "react-helmet";
 
 const ProductDetails = () => {
   const [productData, setProductData] = useState([]);
@@ -67,6 +68,10 @@ const ProductDetails = () => {
 
   return (
     <div className="mt-20 lg:mt-0">
+       <Helmet>
+        <title>DailyBuy - Product Details</title>
+        <meta charSet="utf-8" name="description" content="DailyBuy Product Details Page" />
+      </Helmet>
       <MenuBar />
       <div className="container mt-0 md:mt-[30px]">
         <BreadCamp />

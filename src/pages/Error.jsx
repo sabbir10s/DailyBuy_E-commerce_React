@@ -2,10 +2,15 @@ import React from "react";
 import logo from "../assets/logo/big_logo.png";
 import notFoundImg from "../assets/error/notfound.png";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Error = () => {
   return (
     <div>
+      <Helmet>
+        <title>404 - Page Not Found</title>
+        <meta charSet="utf-8" name="description" content="DailyBuy 404 not found Page" />
+      </Helmet>
       <div className="min-w-screen min-h-screen bg-blue-100 flex items-center p-5 lg:p-20 overflow-hidden relative">
         <div className="flex-1 min-h-full min-w-full rounded-3xl bg-white shadow-custom  p-10 lg:p-20 text-gray-800 relative md:flex items-center text-center md:text-left">
           <div className="w-full md:w-1/2">
