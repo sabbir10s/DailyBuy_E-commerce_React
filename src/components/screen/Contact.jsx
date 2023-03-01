@@ -1,16 +1,13 @@
 import React from 'react';
 import MenuBar from '../shared/MenuBar';
-import map from '../../assets/contact/map.png'
-import '../../styles/contact.css'
+import Map from './Map';
 
 const Contact = () => {
     return (
         <>
             <MenuBar/>
             <div className='mb-8 mt-[80px] lg:mt-[52px] flex flex-col gap-[25px] md:gap-[40px] lg:gap-[56px]'>
-               <div className='map w-full'>
-                  <img className='w-full' src={map} alt="" />
-               </div>
+               <Map/>
 
                <div className='container grid lg:grid-cols-3 items-end'>
 
