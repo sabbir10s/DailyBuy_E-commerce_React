@@ -8,29 +8,30 @@ const MobileNavbar = () => {
   const { cartItems } = useSelector((state) => state.cart);
   return (
     <>
-      <header aria-label="Site Header" className="border-b border-gray-100 block lg:hidden fixed top-0 z-50 bg-white w-full">
-        <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8">
-          <div className="flex items-center">
-            <div className=" mx-2">
+      <header aria-label="Site Header" className="block lg:hidden fixed top-0 z-50 bg-white w-full">
+       <div className="container">
+       <div className="flex h-20 max-w-screen-2xl items-center justify-between">
+          <div className="flex items-center gap-2 md:gap-5 w-full md:w-2/3">
+            <div>
               <Link to="/">
                 {" "}
-                <img className="w-full h-full cursor-pointer" src={logo} alt="" />
+                <img className="w-[110px] md:w-full h-full cursor-pointer" src={logo} alt="" />
               </Link>
             </div>
             <div className="w-full relative">
               <input
                 placeholder="Search..."
                 type="text"
-                className="py-3 px-5 border border-gray-200/80 w-[72%] focus:outline-primary-600 rounded-l-md bg-gray-50"
+                className="p-[6px] md:p-2 border border-gray-200/80 w-[76%] focus:outline-primary-600 rounded-l-[3px] bg-gray-50"
               />
-              <button className="bg-primary-600 text-white p-3 w-[28%] h-full rounded-r-md absolute top-0 right-2">
+              <button className="bg-primary-600 text-white p-[6px] md:p-2 w-[24%] h-full rounded-r-md absolute top-0 right-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 inline-block"
+                  className="w-5 h-5 inline-block"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                 </svg>
@@ -40,21 +41,21 @@ const MobileNavbar = () => {
 
           <div className="flex flex-1 items-center justify-end">
             <div className=" flex items-center">
-              <div className="flex items-center divide-x divide-gray-100 border-x border-gray-100">
-                <span>
-                  <Link to="/cart" className="block relative border-b-4 border-transparent py-6 px-3 hover:border-red-700">
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <div className="flex items-center gap-2 md:gap-5">
+                <div className="bg-secondary-50 w-10 h-10 rounded-[50%] flex items-center justify-center">
+                  <Link to="/cart" className="relative">
+                    <svg className="h-5 w-5 text-[#FF4646]" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                     </svg>
-                    <span className="bg-primary-600 text-white w-4 text-[12px] font-bold h-4 top-3 right-2 rounded-[50%] absolute text-center">
+                    <span className="text-[#FF4646] text-[12px] font-bold absolute top-[-7px] right-[-4px]">
                       {cartItems.length}
                     </span>
                     <span className="sr-only">Cart</span>
                   </Link>
-                </span>
+                </div>
 
-                <span>
-                  <Link to="/account" className="block border-b-4 border-transparent py-6 px-3 hover:border-red-700">
+                <div>
+                  <Link to="/account" className="bg-gray-50 w-10 h-10 rounded-[50%] flex items-center justify-center">
                     <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path
                         strokeLinecap="round"
@@ -66,21 +67,12 @@ const MobileNavbar = () => {
 
                     <span className="sr-only"> Account </span>
                   </Link>
-                </span>
-
-                <span className="hidden sm:block">
-                  <a href="/search" className="block border-b-4 border-transparent p-6 hover:border-red-700">
-                    <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-
-                    <span className="sr-only"> Search </span>
-                  </a>
-                </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+       </div>
       </header>
 
       {active && (

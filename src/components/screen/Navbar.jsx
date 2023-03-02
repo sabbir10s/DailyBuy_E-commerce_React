@@ -10,10 +10,6 @@ const Navbar = () => {
         </li>
         <li className="txtHover font-medium">
           {" "}
-          <Link to="/products">Products</Link>
-        </li>
-        <li className="txtHover font-medium">
-          {" "}
           <Link to="/blog">Blog</Link>
         </li>
         <li className="txtHover font-medium">
