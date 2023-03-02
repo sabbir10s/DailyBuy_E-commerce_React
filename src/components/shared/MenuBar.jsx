@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../screen/Navbar";
+import {BiChevronDown} from "react-icons/bi";
 
 const MenuBar = () => {
   return (
-    <nav className="container hidden lg:block">
-      <ul className="flex items-center py-3 space-x-8">
+    <div className="container hidden lg:flex items-center gap-10 w-full">
+      <ul className="flex items-center py-2 w-[300px]">
         <div className="relative group">
-          <li className="uppercase text-xl p-3 w-[267px]  text-center bg-primary-600 text-white rounded-t-md cursor-pointer space-x-2 font-semibold">
+          <li className=" flex items-center justify-center uppercase text-xl p-3 text-center bg-primary-600 text-white rounded-t-md cursor-pointer space-x-2 font-semibold">
             <span className="lg:hidden xl:inline">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -20,18 +22,7 @@ const MenuBar = () => {
               </svg>
             </span>
             <span>Categories</span>
-            <span className="lg:hidden xl:inline">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-5 h-5 inline-block"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-              </svg>
-            </span>
+            <BiChevronDown className="text-[25px]"/>
           </li>
           <div className="shadow-custom opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white hidden lg:block rounded-b-md absolute top-12 left-0 w-full transition duration-300 delay-100 ease-in-out">
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Fruits & Vegetable</Link></li>
@@ -45,23 +36,10 @@ const MenuBar = () => {
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Clothes & Shoes</Link></li>
           </div>
         </div>
-        <li className="txtHover active font-medium pl-0  md:pl-12">
-          <Link to="/">Home</Link>
-        </li>
-        <li className="txtHover font-medium">
-          {" "}
-          <Link to="/blog">Blog</Link>
-        </li>
-        <li className="txtHover font-medium">
-          {" "}
-          <Link to="/about">About us</Link>
-        </li>
-        <li className="txtHover font-medium">
-          {" "}
-          <Link to="/contact">Contact us</Link>
-        </li>
       </ul>
-    </nav>
+
+      <Navbar/>
+    </div>
   );
 };
 

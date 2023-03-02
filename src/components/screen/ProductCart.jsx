@@ -1,5 +1,4 @@
 import React from "react";
-import MenuBar from "../shared/MenuBar";
 import ProcessingSteps from "./ProcessingSteps";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,7 +21,6 @@ const ProductCart = () => {
   const shipping = 3;
   return (
     <>
-      <MenuBar />
       <div className="container">
         <h2 className=" text-2xl lg:text-5xl font-semibold mt-4 ">Your Cart</h2>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-8">

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="hidden lg:block">
-      <ul className="flex items-center pl-32 py-3 space-x-8 text-black">
+    <nav className="hidden lg:block w-full">
+      <ul className="flex items-center gap-10 pl-28 py-3 text-black">
         <li className="txtHover active font-medium">
           <Link to="/">Home</Link>
         </li>

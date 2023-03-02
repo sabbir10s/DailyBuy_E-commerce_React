@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Blogs from "../components/screen/Blog/Blogs";
 import ProcessingSteps from "../components/screen/ProcessingSteps";
-import MenuBar from "../components/shared/MenuBar";
 
 const BlogPage = () => {
   return (
@@ -11,7 +10,6 @@ const BlogPage = () => {
         <title>DailyBuy - Blog</title>
         <meta charSet="utf-8" name="description" content="DailyBuy Blog Page" />
       </Helmet>
-      <MenuBar />
       <Blogs />
       <ProcessingSteps />
     </>

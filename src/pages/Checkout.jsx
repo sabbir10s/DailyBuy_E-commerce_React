@@ -1,6 +1,5 @@
 import React from "react";
 import ProcessingSteps from "../components/screen/ProcessingSteps";
-import MenuBar from "../components/shared/MenuBar";
 import peyMethod1 from "../assets/payment/peyment (1).png";
 import peyMethod2 from "../assets/payment/peyment (2).png";
 import peyMethod3 from "../assets/payment/peyment (3).png";
@@ -26,7 +25,6 @@ const Checkout = () => {
         <title>DailyBuy - Checkout</title>
         <meta charSet="utf-8" name="description" content="DailyBuy Checkout Page" />
       </Helmet>
-      <MenuBar />
 
       <div className="container">
         <h2 className=" text-2xl lg:text-5xl font-semibold mt-4 ">Checkout</h2>
