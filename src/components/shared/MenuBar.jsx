@@ -34,15 +34,15 @@ const MenuBar = () => {
             </span>
           </li>
           <div className="shadow-custom opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white hidden lg:block rounded-b-md absolute top-12 left-0 w-full transition duration-300 delay-100 ease-in-out">
-            <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Fruits & Vegetable</li>
-            <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Meats & Fish</li>
-            <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Breads & Bakery</li>
-            <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Frozen Foods</li>
-            <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Breakfast & Dairy</li>
-            <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Biscuits & Snacks</li>
-            <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Beverages</li>
-            <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Grocery</li>
-            <li className="p-3 border-b border-gray-100 txtHover text-gray-600">Clothes & Shoes</li>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Fruits & Vegetable</Link></li>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Meats & Fish</Link></li>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Breads & Bakery</Link></li>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Frozen Foods</Link></li>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Breakfast & Dairy</Link></li>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Biscuits & Snacks</Link></li>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Beverages</Link></li>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Grocery</Link></li>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600"> <Link to='/categories'>Clothes & Shoes</Link></li>
           </div>
         </div>
         <li className="txtHover active font-medium pl-0  md:pl-12">
