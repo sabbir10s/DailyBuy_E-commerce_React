@@ -1,11 +1,9 @@
 import React from 'react';
-import MenuBar from '../shared/MenuBar';
 import Map from './Map';
 
 const Contact = () => {
     return (
         <>
-            <MenuBar/>
             <div className='mb-8 mt-[80px] lg:mt-[52px] flex flex-col gap-[25px] md:gap-[40px] lg:gap-[56px]'>
                <Map/>
 
