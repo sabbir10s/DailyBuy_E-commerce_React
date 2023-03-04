@@ -18,11 +18,11 @@ const YourWishlist = () => {
     fetchData();
   }, []);
   return (
-    <div>
+    <>
       <div className="container mt-[80px] lg:mt-1">
         <h2 className=" text-2xl lg:text-[48px] font-semibold mt-[30px] md:mt-[40px] ">Your Wishlist</h2>
         <div className="mt-8">
-          <div className="lg:px-6 lg:shadow-custom lg:bg-[#F9FAFB] lg:rounded-lg">
+          <div className="md:p-4 lg:shadow-custom bg-[#F9FAFB] lg:rounded-lg">
             {wishList.length > 0 && <div>
               <div className=" hidden lg:grid grid-cols-7 gap-4">
                 <h2 className="col-span-3  font-semibold py-5 uppercase">Product</h2>
@@ -49,7 +49,7 @@ const YourWishlist = () => {
 
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

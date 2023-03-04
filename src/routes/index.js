@@ -1,6 +1,5 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Wishlist from "../pages/Wishlist";
 const TermsComponents = lazy(() => import("../components/screen/TermsComponents"));
 const AboutUs = lazy(() => import("../pages/AboutUs"));
 const AboutUsV2 = lazy(() => import("../pages/AboutUsV2"));
@@ -11,6 +10,7 @@ const Invoice = lazy(() => import("../pages/Invoice"));
 const FAQ = lazy(() => import("../pages/FAQ"));
 const TermsCondition = lazy(() => import("../pages/TermsCondition"));
 const Cart = lazy(() => import("../pages/Cart"));
+const Wishlist = lazy(() => import("../pages/Wishlist"));
 const Checkout = lazy(() => import("../pages/Checkout"));
 const ForgotPassword = lazy(() => import("../pages/ForgotPassword"));
 const SignIn = lazy(() => import("../pages/SignIn"));
