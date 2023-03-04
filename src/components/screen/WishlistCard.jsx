@@ -32,10 +32,10 @@ const WishlistCard = ({item}) => {
                         !stock && <span className='bg-gray-100 px-[10px] py-[5px] rounded-lg text-[12px]'>Out of Stock</span>
                         }
                        </div>
-                        <button className='block md:hidden text-white bg-primary-600 font-semibold px-[10px] py-[5px] rounded text-sm w-full md:w-0 '><span className='block md:hidden w-full'>Add to cart</span></button>
+                        <button className='block md:hidden text-white bg-primary-600 font-semibold px-[10px] py-[5px] rounded text-sm w-full md:w-0 disabled:opacity-50' disabled={!stock}><span className='block md:hidden w-full'>Add to cart</span></button>
                     </div>
 
-                    <button className='hidden md:block text-white bg-primary-600 font-semibold px-[10px] py-[5px] rounded max-w-[120px] text-sm'>Add to cart</button>
+                    <button className='hidden md:block text-white bg-primary-600 font-semibold px-[10px] py-[5px] rounded max-w-[120px] text-sm disabled:opacity-50' disabled={!stock}>Add to cart</button>
                     
 
                     <button className='flex justify-center absolute md:static right-2 top-3'><AiOutlineDelete className=' text-secondary-600 text-xl'/></button>
