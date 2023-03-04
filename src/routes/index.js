@@ -10,6 +10,7 @@ const Invoice = lazy(() => import("../pages/Invoice"));
 const FAQ = lazy(() => import("../pages/FAQ"));
 const TermsCondition = lazy(() => import("../pages/TermsCondition"));
 const Cart = lazy(() => import("../pages/Cart"));
+const Wishlist = lazy(() => import("../pages/Wishlist"));
 const Checkout = lazy(() => import("../pages/Checkout"));
 const ForgotPassword = lazy(() => import("../pages/ForgotPassword"));
 const SignIn = lazy(() => import("../pages/SignIn"));
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
       {
         path: "/invoice",
         element: <Invoice />,
+      },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
       },
       {
         path: "/cart",
