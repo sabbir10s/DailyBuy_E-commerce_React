@@ -8,17 +8,14 @@ import TopBar from "../components/shared/TopBar";
 import TopSearchBar from "../components/shared/TopSearchBar";
 
 const Layout = () => {
-  const location = useLocation()
-  console.log(location);
+  const location = useLocation();
   return (
     <div>
       <header>
         <MobileNavbar />
         <TopBar />
         <TopSearchBar />
-        {
-          location.pathname !== "/" && <MenuBar />
-        }
+        {location.pathname !== "/" && <MenuBar />}
       </header>
 
       {/* main */}
