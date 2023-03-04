@@ -4,7 +4,7 @@ import Map from './Map';
 const Contact = () => {
     return (
         <>
-            <div className='mb-8 mt-[80px] lg:mt-[52px] flex flex-col gap-[25px] md:gap-[40px] lg:gap-[56px]'>
+            <div className='mb-8 mt-[80px] lg:mt-[52px] flex flex-col gap-[25px] md:gap-[40px] lg:gap-[56px] z-0'>
                <Map/>
 
                <div className='container grid lg:grid-cols-3 items-end'>
