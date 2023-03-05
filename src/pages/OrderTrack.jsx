@@ -21,19 +21,22 @@ const OrderTrack = () => {
 
         {/* section started */}
         <div className=" w-full lg:w-5/6 mx-auto rounded-md border">
-          <div className="lg:py-4 lg:px-8 flex justify-between bg-[#F7F8FA]">
-            <div className="flex flex-col lg:flex-row items-center font-semibold lg:space-x-3">
+          <div className="lg:py-4 lg:px-8 flex justify-between bg-[#F7F8FA] p-5">
+            <div className="flex flex-col lg:flex-row items-center font-semibold lg:space-x-3 space-y-4 lg:space-y-0">
               <h2 className=" text-[10px] lg:text-base">Order Status :</h2>
               <h2 className="text-white bg-secondary-600 rounded-3xl py-1 px-2 lg:px-3 text-[10px] lg:text-base">Order Processing</h2>
             </div>
-            <div className="flex flex-col lg:flex-row items-center font-semibold lg:space-x-3">
+            <div className="flex flex-col lg:flex-row items-center font-semibold lg:space-x-3 space-y-4 lg:space-y-0">
               <h2 className=" text-[10px] lg:text-base">Payment Status :</h2>
               <h2 className="text-white bg-primary-600 rounded-3xl py-1 px-2 lg:px-3 text-[10px] lg:text-base">Cash on Delivery</h2>
             </div>
           </div>
-          <div className="bg-white lg:py-4 lg:px-8">
+          <div className="text-center m-5 block md:hidden lg:hidden">
+            <button className="bg-primary-600 cursor-pointer rounded-md text-white py-2 px-5 w-full">Pay Now</button>
+          </div>
+          <div className="bg-white lg:py-4 lg:px-8 p-5">
             {/* order details box */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-8 mb-32">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-8 mb-32">
               <div className="p-5 border rounded-xl">
                 <h2 className="text-base font-medium">Oder Number</h2>
                 <p className="text-gray-700 text-sm">334983046149</p>
