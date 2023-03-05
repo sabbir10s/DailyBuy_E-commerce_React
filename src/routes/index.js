@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
+const OrderTrack = lazy(() => import("../pages/OrderTrack"));
 const TermsComponents = lazy(() => import("../components/screen/TermsComponents"));
 const AboutUs = lazy(() => import("../pages/AboutUs"));
 const AboutUsV2 = lazy(() => import("../pages/AboutUsV2"));
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
       {
         path: "/wishlist",
         element: <Wishlist />,
+      },
+      {
+        path: "/orders/:id",
+        element: <OrderTrack />,
       },
       {
         path: "/cart",
