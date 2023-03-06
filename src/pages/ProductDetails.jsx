@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import MenuBar from "../components/shared/MenuBar";
 import BreadCamp from "../components/theme/BreadCamp";
 import SmallProductImg from "../components/screen/SmallProductImg";
 import ProcessingSteps from "../components/screen/ProcessingSteps";
@@ -80,7 +79,6 @@ const ProductDetails = () => {
           name="description"
           content="DailyBuy Product Details Page"/>
       </Helmet>
-      <MenuBar/>
       <div className="container mt-0 md:mt-[30px]">
         <BreadCamp/>
         <div className="md:mt-[32px] grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">

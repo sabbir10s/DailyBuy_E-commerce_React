@@ -51,58 +51,61 @@ const Hero = () => {
         <Navbar/>
       </div>
       {active && <div>
-        <div className="flex items-center gap-8]">
+        <div className="flex items-center gap-[27px]">
           <div
             className="shadow-custom_secondary hidden lg:block rounded-b-[10px] w-[300px]">
             <ul>
-              <li className="py-3 border-b border-gray-100 txtHover text-gray-600">
+              <li className="p-3 border-b border-gray-100 txtHover text-gray-600">
                 <Link className="flex items-center gap-[8px]" to='/categories'>
                   <img className="w-[25px]" src={fruits} alt=""/>
                   <span>Fruits & Vegetable</span>
                 </Link>
               </li>
               <li
-                className="py-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+                className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
                 <Link className="flex items-center gap-[8px]" to='/categories'>
                   <img className="w-[25px]" src={meats} alt=""/>
                   <span>Meats & Fish</span>
                 </Link>
               </li>
               <li
-                className="py-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+                className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
                 <Link className="flex items-center gap-[8px]" to='/categories'>
                   <img className="w-[25px]" src={breads} alt=""/>
                   <span>Breads & Bakery</span>
                 </Link>
               </li>
               <li
-                className="py-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
-                <img className="w-[25px]" src={frozen} alt=""/>
-                <span>Frozen Foods</span>
+                className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+                <Link className="flex items-center gap-[8px]" to='/categories'>
+                  <img className="w-[25px]" src={frozen} alt=""/>
+                  <span>Frozen Foods</span>
+                </Link>
+
               </li>
               <li
-                className="py-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+                className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
                 <Link className="flex items-center gap-[8px]" to='/categories'>
                   <img className="w-[25px]" src={breakfast} alt=""/>
                   <span>Breakfast & Dairy</span>
                 </Link>
               </li>
               <li
-                className="py-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+                className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
                 <Link className="flex items-center gap-[8px]" to='/categories'>
                   <img className="w-[25px]" src={biscuits} alt=""/>
                   <span>Biscuits & Snacks</span>
                 </Link>
               </li>
               <li
-                className="py-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+                className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
                 <Link className="flex items-center gap-[8px]" to='/categories'>
                   <img className="w-[25px]" src={beverages} alt=""/>
                   <span>Beverages</span>
                 </Link>
               </li>
               <li
-                className="py-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+                className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
                 <Link className="flex items-center gap-[8px]" to='/categories'>
                   <img className="w-[25px]" src={grocery} alt=""/>
                   <span>Grocery</span>
