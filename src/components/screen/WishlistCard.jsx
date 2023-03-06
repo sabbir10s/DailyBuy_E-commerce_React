@@ -47,7 +47,7 @@ const WishlistCard = ({item}) => {
           className='hidden md:block text-white bg-primary-600 hover:bg-secondary-400 duration-300 disabled:hover:bg-primary-600 font-semibold px-[10px] py-[5px] rounded max-w-[120px] text-sm disabled:opacity-50'
           disabled={!stock}>Add to cart</button>
 
-        <button className='flex justify-center absolute md:static right-2 top-3'><AiOutlineDelete className=' text-gray-500 hover:text-secondary-600 duration-300 text-xl'/></button>
+          <button className='flex justify-center absolute md:static right-0 top-0 py-[12px] px-[8px]'><AiOutlineDelete className=' text-gray-500 hover:text-secondary-600 duration-300 text-xl'/></button>
       </div>
     </div>
   );

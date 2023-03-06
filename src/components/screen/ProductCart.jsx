@@ -21,17 +21,17 @@ const ProductCart = () => {
   const shipping = 3;
   return (
     <>
-      <div className="container">
+      <div className="container mt-[80px] lg:mt-[20px]">
         {
-          cartItems.length !==0 ? <h2 className=" text-2xl lg:text-5xl font-semibold mt-4 ">Your Cart</h2> : <></>
+          cartItems.length !==0 ? <h2 className=" text-xl lg:text-4xl font-semibold">Your Cart</h2> : <></>
         }
-        <div className={cartItems.length !==0 ? 'grid grid-cols-1 lg:grid-cols-4 gap-8 mt-8' : 'w-full'}>
+        <div className={cartItems.length !==0 ? 'grid grid-cols-1 lg:grid-cols-4 gap-8 mt-4' : 'w-full'}>
           <div className="lg:col-span-3  lg:px-3 lg:shadow-custom lg:bg-[#F9FAFB] lg:rounded-lg">
             {/* for mobile device */}
             {cartItems.length > 0 ? (
               cartItems.map((item, idx) => (
                 <>
-                <div key={idx} className="mt-[32px] grid grid-cols-3 lg:hidden gap-2 items-center border-b border-gray-100 pb-2">
+                <div key={idx} className="grid grid-cols-3 lg:hidden gap-2 items-center border-b border-gray-100 pb-2">
                   <div className="flex space-x-2 items-center col-span-2">
                     <div className="w-[80px] h-[80px] bg-gray-50  rounded-2xl">
                       <img src={item?.main_img_url} className="w-full h-full object-center object-fill" alt="product-img" />
@@ -42,7 +42,7 @@ const ProductCart = () => {
                         <p className="text-gray-600">
                           <del>${item?.del_price}.00</del>
                         </p>
-                        <div className="text-end">
+                        <div className="text-end pl-2">
                           <button onClick={() => handleRemoveItem(item)} className="">
                             {" "}
                             <svg
@@ -92,7 +92,7 @@ const ProductCart = () => {
               <div className="flex flex-col items-center gap-8 py-20 mt-[50px] lg:hidden ">
                 <img className="w-[200px]" src={emptyCart} alt="" />
                <div className="text-center">
-               <h2 className="text-xl text-gray-500 font-semibold mb-6">Your Cart is Empty!</h2>
+               <h2 className="text-xl text-gray-500 font-semibold mb-6">Your cart is empty!</h2>
                 <Link className="border border-primary-600 text-primary-600 hover:text-white hover:bg-primary-600 text-xl px-4 py-1 rounded " to='/categories'>Shop Now</Link>
                </div>
               </div>
@@ -170,7 +170,7 @@ const ProductCart = () => {
               <div className="hidden lg:flex flex-col items-center gap-8 py-20 mt-[32px] ">
                 <img className="w-[200px]" src={emptyCart} alt="" />
                <div className="text-center">
-               <h2 className="text-xl text-gray-500 font-semibold mb-6">Your Cart is Empty!</h2>
+               <h2 className="text-xl text-gray-500 font-semibold mb-6">Your cart is empty!</h2>
                 <Link className="border border-primary-600 text-primary-600 hover:text-white hover:bg-primary-600 text-xl px-4 py-1 rounded " to='/categories'>Shop Now</Link>
                </div>
               </div>
