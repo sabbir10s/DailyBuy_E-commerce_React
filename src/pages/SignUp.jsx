@@ -1,11 +1,11 @@
 import React from "react";
 import Checkbox from "../components/theme/Checkbox";
-import '.././styles/SignUp.css'
+import '.././styles/SignSignUp.css'
 const SignUp = ({setPath}) => {
   return (
     <div className="">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-items-center w-full">
-        <div className=" w-[400px] lg:w-[470px] h-full hidden md:block signUpBg">
+        <div className=" w-[400px] lg:w-[470px] h-full hidden md:block bgImg">
         </div>
         <div className="w-full p-4">
           <h2 className="text-2xl font-semibold text-center mb-10">SignUp</h2>

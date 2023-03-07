@@ -1,13 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import error from "../assets/auth/login.png";
-
+import '../styles/SignSignUp.css'
 const SignIn = ({setPath}) => {
   return (
     <div className="">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center h-[75vh] lg:h-full w-full  overflow-y-auto">
-        <div className="hidden md:block">
-          <img className="w-full lg:w-[450px] lg:rounded-l-[10px]" src={error} alt=""/>
+        <div className="w-[400px] lg:w-[430px] h-full hidden md:block bgImg">
         </div>
         <div className="p-6 w-full flex justify-center items-center">
           <div className="w-full">
