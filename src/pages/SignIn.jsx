@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import '../styles/SignSignUp.css'
 const SignIn = ({setPath}) => {
   return (
@@ -27,11 +26,11 @@ const SignIn = ({setPath}) => {
                   placeholder="Password"/>
               </div>
               <div className="text-end  lg:w-5/6 mx-auto">
-                <Link
-                  to="/forgotPassword"
+                <button
+                  onClick={()=>setPath("forgetPassword")}
                   className="inline-block text-secondary-600 font-semibold cursor-pointer hover:underline">
                   Forgot password?
-                </Link>
+                </button>
               </div>
               <div className="text-center pb-10">
                 <button

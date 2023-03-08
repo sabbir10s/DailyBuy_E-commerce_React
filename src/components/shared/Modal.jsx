@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ForgotPassword from '../../pages/ForgotPassword';
 import SignIn from '../../pages/SignIn';
 import SignUp from '../../pages/SignUp';
 import TermsCondition from '../../pages/TermsCondition';
@@ -17,6 +18,9 @@ const Modal = ({visible, onClose}) => {
           </div>
           {
             path === "signIn" && <SignIn setPath={setPath}/>
+          }
+          {
+            path ==='forgetPassword' && <ForgotPassword setPath={setPath} />
           }
           {
             path ==='signUp' && <SignUp setPath={setPath} />
