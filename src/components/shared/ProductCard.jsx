@@ -23,12 +23,12 @@ const ProductCard = ({ product }) => {
       <div>
         <div
           onClick={() => setWishlist(!wishlist)}
-          className="bg-white hidden md:inline-block p-2 border border-gray-100 rounded-[50%] text-white absolute top-3 right-3 hover:scale-110 duration-300 transition"
+          className="bg-white hidden md:inline-block p-2 border border-gray-100 rounded-[50%] text-white absolute top-2 right-3 hover:scale-110 duration-300 transition"
         >
           {!wishlist && <AiOutlineHeart className="text-[#999999]/40 text-3xl" />} {wishlist && <AiFillHeart className="text-[#FF5555] text-3xl" />}
         </div>
         <div>
-          <div className="bg-secondary-300 text-white text-[8px] md:text-[14px] font-semibold inline-block p-[4px] lg:px-[12px] lg:py-[6px] rounded-tl-[8px] lg:rounded-tl-[10px] rounded-br-[8px] lg:rounded-br-[10px] absolute top-3 left-3">
+          <div className="bg-secondary-300 mt-[2px] text-white text-[8px] md:text-[14px] font-semibold inline-block p-[4px] lg:px-[12px] lg:py-[6px] rounded-tl-[8px] lg:rounded-tl-[10px] rounded-br-[8px] lg:rounded-br-[10px] absolute top-3 left-3">
             <p>{discount}% OFF</p>
           </div>
 
