@@ -171,6 +171,9 @@ const ProductDetails = () => {
                 <div
                   className=" mt-8 lg:mt-6 flex flex-col lg:flex-row lg:items-center gap-[32px] order-1 lg:order-2">
                   <div className="flex items-center justify-between md:justify-start gap-[32px]">
+                  <div className="hidden lg:block">
+                  <Quantity/>
+                </div>
                     <div>
                       {" "}
                       <Link to="/cart">
