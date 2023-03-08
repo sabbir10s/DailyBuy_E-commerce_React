@@ -30,7 +30,7 @@ const TopSearchBar = () => {
               <input
                 placeholder="I'm looking for..."
                 type="text"
-                className=" py-1.5 md:py-3 px-2 md:px-5 border border-gray-200/80 w-[80%] md:w-[86%] lg:w-[92%] focus:outline-primary-600 rounded-l-md bg-gray-50"/>
+                className=" py-1.5 md:py-3 px-2 md:px-5 border border-gray-200/80 w-[80%] md:w-[86%] lg:w-[92%] focus:outline-primary-600 rounded-l-md bg-white"/>
               <button
                 className="bg-primary-600 text-white p-2 md:p-3 w-[20%] md:w-[14%] lg:w-[8%] h-full rounded-r-md absolute top-0 right-2">
                 <svg
