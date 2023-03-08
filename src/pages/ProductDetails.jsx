@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import MenuBar from "../components/shared/MenuBar";
 import BreadCamp from "../components/theme/BreadCamp";
 import SmallProductImg from "../components/screen/SmallProductImg";
 import ProcessingSteps from "../components/screen/ProcessingSteps";
@@ -80,7 +79,6 @@ const ProductDetails = () => {
           name="description"
           content="DailyBuy Product Details Page"/>
       </Helmet>
-      <MenuBar/>
       <div className="container mt-0 md:mt-[30px]">
         <BreadCamp/>
         <div className="md:mt-[32px] grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
@@ -173,6 +171,9 @@ const ProductDetails = () => {
                 <div
                   className=" mt-8 lg:mt-6 flex flex-col lg:flex-row lg:items-center gap-[32px] order-1 lg:order-2">
                   <div className="flex items-center justify-between md:justify-start gap-[32px]">
+                  <div className="hidden lg:block">
+                  <Quantity/>
+                </div>
                     <div>
                       {" "}
                       <Link to="/cart">

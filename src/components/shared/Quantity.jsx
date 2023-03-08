@@ -16,7 +16,7 @@ const Quantity = ({ handleDecreaseCart, handleIncreaseCart, item }) => {
             &minus;
           </button>
 
-          <span className="px-6 font-semibold">{item?.price}</span>
+          <span className="px-6 font-semibold">{0}</span>
 
           <button
             onClick={() => handleIncreaseCart(item)}
