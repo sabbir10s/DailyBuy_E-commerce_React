@@ -10,7 +10,7 @@ const OfferTimerBanner = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="mx-auto lg:mx-0">
-            <h2 className="text-[#454F5B] text-center lg:text-left font-bold text-[20px] md:text-[40px] lg:text-[64px] md:leading-[45px] lg:leading-[80px]">
+            <h2 className="text-[#454F5B] text-center lg:text-left font-bold text-[32px] uppercase md:text-[40px] lg:text-[64px] md:leading-[45px] lg:leading-[80px]">
               Get -60% from <br />
               summer deal
             </h2>
@@ -18,7 +18,7 @@ const OfferTimerBanner = () => {
             <div className="flex justify-center lg:justify-start">
               <Link to="/categories">
                 {" "}
-                <button className="bg-primary-600 hover:bg-primary-700 duration-300 transition hover:shadow-custom hover:scale-105 space-x-2 text-white font-semibold  uppercase ease-in-out flex items-center text-[10px] md:text-[14px] lg:text-[18px] py-[5px] md:py-[18px] lg:py-[28px] px-[12px] md:px-[40px] lg:px-[65px] rounded-[5px] lg:rounded-[10px]">
+                <button className="bg-primary-600 hover:bg-primary-700 duration-300 transition hover:shadow-custom hover:scale-105 space-x-2 text-white font-semibold  uppercase ease-in-out flex items-center text-[10px] md:text-[14px] lg:text-[18px] py-[10px] md:py-[18px] lg:py-[20px] px-[20px] md:px-[40px] lg:px-[65px] rounded-[5px] lg:rounded-[10px]">
                   <span>Shop Now</span>
                   <FiArrowRight className="text-xl" />
                 </button>
@@ -26,7 +26,7 @@ const OfferTimerBanner = () => {
             </div>
           </div>
           <div>
-            <div className=" h-full lg:h-[700px]">
+            <div className=" h-[400px] lg:h-[700px]">
               <img className="w-full h-full object-center object-fill" src={imgOffer} alt="" />
             </div>
           </div>
