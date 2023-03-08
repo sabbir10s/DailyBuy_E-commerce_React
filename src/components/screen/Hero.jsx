@@ -1,92 +1,81 @@
 import Banner from "./Banner";
 import Navbar from "./Navbar";
-import fruits from '../../assets/icon/category/Fruits & Vegetable.png'
-import meats from '../../assets/icon/category/Meats & Fish.png'
-import breads from '../../assets/icon/category/Breads & Bakery.png'
-import frozen from '../../assets/icon/category/Frozen Foods.png'
-import breakfast from '../../assets/icon/category/Breakfast & Dairy.png'
-import biscuits from '../../assets/icon/category/Biscuits & Snacks.png'
-import beverages from '../../assets/icon/category/Beverages.png'
-import grocery from '../../assets/icon/category/Grocery.png'
-import {Link} from "react-router-dom";
+import fruits from "../../assets/icon/category/Fruits & Vegetable.png";
+import meats from "../../assets/icon/category/Meats & Fish.png";
+import breads from "../../assets/icon/category/Breads & Bakery.png";
+import frozen from "../../assets/icon/category/Frozen Foods.png";
+import breakfast from "../../assets/icon/category/Breakfast & Dairy.png";
+import biscuits from "../../assets/icon/category/Biscuits & Snacks.png";
+import beverages from "../../assets/icon/category/Beverages.png";
+import grocery from "../../assets/icon/category/Grocery.png";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="container mt-2">
+    <div className="container mt-2 ">
       <div className="flex items-center gap-5 w-full">
-        <h2
-          className=" hidden lg:block w-[240px] py-3 uppercase text-xl text-center bg-primary-600 text-white rounded-t-md font-semibold">
+        <h2 className=" hidden lg:block w-[240px] py-3 uppercase text-xl text-center bg-primary-600 text-white rounded-t-md font-semibold">
           Categories
         </h2>
-        <Navbar/>
+        <Navbar />
       </div>
-      <div className="flex items-center gap-[25px]">
-        <div
-          className="hidden lg:block rounded-b-[10px] w-[300px]">
-          <ul>
+      <div className="flex items-center bg-white">
+        <div className="hidden lg:block rounded-b-[10px] w-[300px] shadow-custom_secondary lg:mr-8 -ml-1">
+          <ul className="lg:space-y-2">
             <li className="p-3 border-b border-gray-100 txtHover text-gray-600">
-              <Link className="flex items-center gap-[8px]" to='/categories'>
-                <img className="w-[25px]" src={fruits} alt=""/>
+              <Link className="flex items-center gap-[8px]" to="/categories">
+                <img className="w-[25px]" src={fruits} alt="" />
                 <span>Fruits & Vegetable</span>
               </Link>
             </li>
-            <li
-              className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
-              <Link className="flex items-center gap-[8px]" to='/categories'>
-                <img className="w-[25px]" src={meats} alt=""/>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+              <Link className="flex items-center gap-[8px]" to="/categories">
+                <img className="w-[25px]" src={meats} alt="" />
                 <span>Meats & Fish</span>
               </Link>
             </li>
-            <li
-              className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
-              <Link className="flex items-center gap-[8px]" to='/categories'>
-                <img className="w-[25px]" src={breads} alt=""/>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+              <Link className="flex items-center gap-[8px]" to="/categories">
+                <img className="w-[25px]" src={breads} alt="" />
                 <span>Breads & Bakery</span>
               </Link>
             </li>
-            <li
-              className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
-              <Link className="flex items-center gap-[8px]" to='/categories'>
-                <img className="w-[25px]" src={frozen} alt=""/>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+              <Link className="flex items-center gap-[8px]" to="/categories">
+                <img className="w-[25px]" src={frozen} alt="" />
                 <span>Frozen Foods</span>
               </Link>
-
             </li>
-            <li
-              className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
-              <Link className="flex items-center gap-[8px]" to='/categories'>
-                <img className="w-[25px]" src={breakfast} alt=""/>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+              <Link className="flex items-center gap-[8px]" to="/categories">
+                <img className="w-[25px]" src={breakfast} alt="" />
                 <span>Breakfast & Dairy</span>
               </Link>
             </li>
-            <li
-              className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
-              <Link className="flex items-center gap-[8px]" to='/categories'>
-                <img className="w-[25px]" src={biscuits} alt=""/>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+              <Link className="flex items-center gap-[8px]" to="/categories">
+                <img className="w-[25px]" src={biscuits} alt="" />
                 <span>Biscuits & Snacks</span>
               </Link>
             </li>
-            <li
-              className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
-              <Link className="flex items-center gap-[8px]" to='/categories'>
-                <img className="w-[25px]" src={beverages} alt=""/>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+              <Link className="flex items-center gap-[8px]" to="/categories">
+                <img className="w-[25px]" src={beverages} alt="" />
                 <span>Beverages</span>
               </Link>
             </li>
-            <li
-              className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
-              <Link className="flex items-center gap-[8px]" to='/categories'>
-                <img className="w-[25px]" src={grocery} alt=""/>
+            <li className="p-3 border-b border-gray-100 txtHover text-gray-600 flex items-center gap-[8px]">
+              <Link className="flex items-center gap-[8px]" to="/categories">
+                <img className="w-[25px]" src={grocery} alt="" />
                 <span>Grocery</span>
               </Link>
             </li>
           </ul>
         </div>
         <div className="w-full">
-          <Banner/>
+          <Banner />
         </div>
       </div>
-
     </div>
   );
 };

@@ -6,7 +6,7 @@ import ProcessingSteps from "../components/screen/ProcessingSteps";
 const BlogPage = () => {
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>DailyBuy - Blog</title>
         <meta charSet="utf-8" name="description" content="DailyBuy Blog Page" />
       </Helmet>

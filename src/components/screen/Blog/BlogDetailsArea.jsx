@@ -7,10 +7,10 @@ import useBlogs from "../../../hooks/useBlogs";
 import ThemeSuspense from "../../theme/ThemeSuspense";
 
 const BlogDetailsArea = ({ blogId }) => {
-  const[BLogs] = useBlogs(blogId)
+  const [BLogs] = useBlogs(blogId);
 
-  if(!BLogs.length){
-    return <ThemeSuspense/>
+  if (!BLogs.length) {
+    return <ThemeSuspense />;
   }
   const blogInfo = BLogs.find((blog) => blog._id === parseInt(blogId));
   const { blog_title, blog_details, banner_img, date, writer, writer_img } = blogInfo;
