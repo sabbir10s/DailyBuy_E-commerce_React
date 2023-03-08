@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "../screen/Navbar";
 import {BiChevronDown} from "react-icons/bi";
 import fruits from '../../assets/icon/category/Fruits & Vegetable.png'
@@ -12,12 +12,11 @@ import beverages from '../../assets/icon/category/Beverages.png'
 import grocery from '../../assets/icon/category/Grocery.png'
 
 const MenuBar = () => {
-  const {pathname} = useLocation()
   return (
-    <div className="container hidden lg:flex items-center gap-10">
-      <ul className={pathname === '/signIn' || pathname === '/signUp' || pathname === '/forgotPassword'  || pathname === '/blog' || pathname === '/about' || pathname === '/contact' ? "hidden" : "flex items-center py-2 w-[300px]"}>
+    <div className="container hidden lg:flex items-center gap-5 mt-2">
+      <ul className="flex items-center">
         <div className="relative group">
-          <li className=" flex items-center justify-center uppercase text-xl p-3 text-center bg-primary-600 text-white rounded-t-md cursor-pointer space-x-2 font-semibold">
+          <li className="w-[240px] py-3 flex items-center justify-center uppercase text-xl text-center bg-primary-600 text-white rounded-t-md cursor-pointer space-x-2 font-semibold">
             <span className="lg:hidden xl:inline">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
