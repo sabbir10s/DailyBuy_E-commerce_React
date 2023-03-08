@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
     navigate(`/product/${_id}`);
   };
   return (
-    <div className="shadow-custom rounded-lg bg-gray-50 p-3 w-full hover:bg-white duration-300 transition ease-in border border-gray-200/60 overflow-hidden relative cursor-pointer">
+    <div className="hover:shadow-custom rounded-lg hover:bg-gray-50 px-3 py-8 w-full bg-white duration-300 transition ease-in border  overflow-hidden relative cursor-pointer border-gray-100/50">
       <div>
         <div
           onClick={() => setWishlist(!wishlist)}
