@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
+import { Link } from 'react-router-dom';
 import WishlistCard from './WishlistCard';
+import emptyWishlist from '../../assets/icon/empty-wishlist.png'
+
 const YourWishlist = () => {
   const [wishList,
     setWishList] = useState([])
@@ -39,9 +42,12 @@ const YourWishlist = () => {
             </div>
 }
             {wishList.length === 0 && <div>
-              <div
-                className=" py-5 block text-3xl text-center text-primary-600 font-semibold">
-                <p>Your Cart is Empty</p>
+              <div className="flex flex-col items-center gap-8 py-16 mt-[32px] ">
+                <img className="w-[250px]" src={emptyWishlist} alt="" />
+               <div className="text-center">
+               <h2 className="text-xl text-gray-500 font-semibold mb-6">Your wishlist is empty!</h2>
+                <Link className="border border-primary-600 text-primary-600 hover:text-white hover:bg-primary-600 text-xl px-4 py-1 rounded " to='/categories'>Add wishlist</Link>
+               </div>
               </div>
             </div>
 }
