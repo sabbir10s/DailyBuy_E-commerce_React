@@ -20,7 +20,7 @@ const Layout = lazy(() => import("../layouts/Layout"));
 const Home = lazy(() => import("../pages/Home"));
 const Error = lazy(() => import("../pages/Error"));
 const ProductDetails = lazy(() => import("../pages/ProductDetails"));
-
+const Profile = lazy(() => import("../pages/Profile"));
 const router = createBrowserRouter([
   {
     path: "/",
@@ -98,6 +98,10 @@ const router = createBrowserRouter([
       {
         path: "/signUp",
         element: <SignUp />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
       },
       {
         path: "/forgotPassword",
