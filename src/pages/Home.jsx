@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import BestSales from "../components/screen/BestSales";
 import FeatureProduct from "../components/screen/FeatureProduct";
-import FoodCategory from "../components/screen/FoodCategory";
+import FoodCategoryV2 from "../components/screen/FoodCategoryV2";
+// import FoodCategory from "../components/screen/FoodCategory";
 import Hero from "../components/screen/Hero";
 import OfferTimerBanner from "../components/screen/OfferTimerBanner";
 import PosterOffer from "../components/screen/PosterOffer";
@@ -20,7 +21,8 @@ const Home = () => {
       <PosterOffer />
       <BestSales />
       <OfferTimerBanner />
-      <FoodCategory />
+      {/* <FoodCategory /> */}
+      <FoodCategoryV2/>
       <ProcessingSteps />
       <ScrollBottom />
       <ScrollCart />
