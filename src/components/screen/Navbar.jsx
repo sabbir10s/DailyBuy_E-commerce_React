@@ -1,24 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ActiveLink from "../../hooks/ActiveLink";
 
 const Navbar = () => {
   return (
     <nav className="hidden lg:block ml-36 ">
       <ul className="flex items-center gap-10 py-3 text-black">
         <li className="txtHover active font-medium">
-          <Link to="/">Home</Link>
+          <ActiveLink to="/">Home</ActiveLink>
         </li>
         <li className="txtHover font-medium">
           {" "}
-          <Link to="/blog">Blog</Link>
+          <ActiveLink to="/blog">Blog</ActiveLink>
         </li>
         <li className="txtHover font-medium">
           {" "}
-          <Link to="/about">About us</Link>
+          <ActiveLink to="/about">About us</ActiveLink>
         </li>
         <li className="txtHover font-medium">
           {" "}
-          <Link to="/contact">Contact us</Link>
+          <ActiveLink to="/contact">Contact us</ActiveLink>
         </li>
       </ul>
     </nav>
