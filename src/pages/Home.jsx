@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BestSales from "../components/screen/BestSales";
 import FeatureProduct from "../components/screen/FeatureProduct";
 import FoodCategory from "../components/screen/FoodCategory";
@@ -10,6 +10,9 @@ import ScrollBottom from "../components/shared/ScrollBottom";
 import ScrollCart from "../components/shared/ScrollCart";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Hero />
