@@ -27,7 +27,7 @@ const MyAccount = () => {
         <div className='container'>
             <div className='border rounded-[10px] mt-[26px]'>
                 <div className='px-5 pt-5 pb-3 flex items-center justify-between border-b'>
-                    <p className='font-semibold text-sm lg:text-lg'>Account Information</p>
+                    <p className='font-semibold text-sm lg:text-lg'>Account Information </p>
                     {!active && <button
                         onClick={() => setActive(true)}
                         className='flex items-center gap-1 text-[#999999]'><FiEdit/>
