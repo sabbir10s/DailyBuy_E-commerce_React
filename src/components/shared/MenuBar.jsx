@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../screen/Navbar";
 import {BiChevronDown} from "react-icons/bi";
-import fruits from '../../assets/icon/category/Fruits & Vegetable.png'
-import meats from '../../assets/icon/category/Meats & Fish.png'
-import breads from '../../assets/icon/category/Breads & Bakery.png'
-import frozen from '../../assets/icon/category/Frozen Foods.png'
-import breakfast from '../../assets/icon/category/Breakfast & Dairy.png'
-import biscuits from '../../assets/icon/category/Biscuits & Snacks.png'
-import beverages from '../../assets/icon/category/Beverages.png'
-import grocery from '../../assets/icon/category/Grocery.png'
+import fruits from '../../assets/icon/categoryGrayIcon.png'
+import meats from '../../assets/icon/categoryGrayIcon (2).png'
+import breads from '../../assets/icon/categoryGrayIcon (3).png'
+import frozen from '../../assets/icon/categoryGrayIcon (4).png'
+import breakfast from '../../assets/icon/categoryGrayIcon (5).png'
+import biscuits from '../../assets/icon/categoryGrayIcon (6).png'
+import beverages from '../../assets/icon/categoryGrayIcon (7).png'
+import grocery from '../../assets/icon/categoryGrayIcon (8).png'
 
 const MenuBar = () => {
   return (
