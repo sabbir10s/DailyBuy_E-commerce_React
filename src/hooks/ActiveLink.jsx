@@ -12,7 +12,7 @@ function ActiveLink({ children, to, ...props }) {
         {children}
       </Link>
     </>
-  );
+  );    
 }
 
 export default ActiveLink;
