@@ -6,7 +6,7 @@ import peyMethod3 from "../assets/payment/peyment (3).png";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../redux/feature/cartSlice";
-import { PrimaryButton } from "../components/theme/Button";
+import { FullWidthButton, PrimaryButton } from "../components/theme/Button";
 import { Helmet } from "react-helmet";
 
 const Checkout = () => {
@@ -235,17 +235,9 @@ const Checkout = () => {
                       <p className="text-black font-medium text-base">Total:</p>
                       <p className="text-primary-600 font-bold text-xl">${total + shipping}.00</p>
                     </div>
-                    <button className="px-5 w-full py-2.5 relative rounded group font-medium text-white  inline-block">
-                      {" "}
-                      <Link to="/orders/12651564asdf">
-                        {" "}
-                        <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
-                        <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
-                        <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-primary-600 to-primary-500"></span>
-                        <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-primary-600 from-primary-500"></span>
-                        <span className="relative">Place Order</span>
+                      <Link className="block mt-[20px]" to="/orders/12651564asdf">
+                        <FullWidthButton title='Place Order'/>
                       </Link>{" "}
-                    </button>
                   </div>
                 </div>
               </div>

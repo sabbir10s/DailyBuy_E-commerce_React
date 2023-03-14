@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, decreaseCart, removeFromCart } from "../../redux/feature/cartSlice";
 import emptyCart from "../../assets/icon/emptyCart.png";
+import { FullWidthButton, PrimaryButton, SecondaryButton } from "../theme/Button";
 const ProductCart = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -95,7 +96,7 @@ const ProductCart = () => {
                     className="border border-primary-600 text-primary-600 hover:text-white hover:bg-primary-600 text-xl px-4 py-1 rounded "
                     to="/categories"
                   >
-                    Shop Now
+                    SHOP NOW
                   </Link>
                 </div>
               </div>
@@ -175,10 +176,9 @@ const ProductCart = () => {
                 <div className="text-center">
                   <h2 className="text-xl text-gray-500 font-semibold mb-6">Your cart is empty!</h2>
                   <Link
-                    className="border border-primary-600 text-primary-600 hover:text-white hover:bg-primary-600 text-xl px-4 py-1 rounded "
                     to="/categories"
                   >
-                    Shop Now
+                    <SecondaryButton title="SHOP NOW"/>
                   </Link>
                 </div>
               </div>
@@ -206,17 +206,11 @@ const ProductCart = () => {
                     <p className="text-black font-medium text-base">Total:</p>
                     <p className="text-primary-600 font-bold text-xl">${total + shipping}.00</p>
                   </div>
-                  <button className="px-5 w-full py-2.5 relative rounded group font-medium text-white  inline-block">
-                    {" "}
-                    <Link to="/checkout">
-                      {" "}
-                      <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
-                      <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
-                      <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-primary-600 to-primary-500"></span>
-                      <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-primary-600 from-primary-500"></span>
-                      <span className="relative">Check out</span>
-                    </Link>{" "}
-                  </button>
+
+                  <Link className="mt-[20px] block" to="/checkout">
+                 
+                  <FullWidthButton title=' Check out'/>
+                  </Link>{" "}
                 </div>
               </div>
             </>
@@ -225,11 +219,7 @@ const ProductCart = () => {
         {/* shipping button */}
         <div className={cartItems.length === 0 ? "hidden" : "mt-14 text-center lg:text-left"}>
           <Link to="/categories" className="px-5  py-2.5 relative rounded group font-medium text-white hidden lg:inline-block">
-            <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
-            <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
-            <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-primary-600 to-primary-500"></span>
-            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-primary-600 from-primary-500"></span>
-            <span className="relative">Continue Shipping</span>
+          <PrimaryButton title='Continue Shopping'/>
           </Link>
         </div>
       </div>
