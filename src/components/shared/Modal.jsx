@@ -14,7 +14,7 @@ const Modal = ({visible, onClose}) => {
       <div className='relative'>
         <div className='bg-white rounded-[10px]'>
           <div className='flex justify-end absolute top-2 right-2'>
-            <button className='bg-black text-white w-8 h-8 rounded-full' onClick={onClose}>X</button>
+            <button className='bg-gray-200 text-gray-800 w-8 h-8 rounded-full text-sm' onClick={onClose}>X</button>
           </div>
           {
             path === "signIn" && <SignIn setPath={setPath}/>

@@ -3,7 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import BottomBar from "../components/shared/BottomBar";
 import Footer from "../components/shared/Footer";
 import MenuBar from "../components/shared/MenuBar";
-import TopBar from "../components/shared/TopBar";
+// import TopBar from "../components/shared/TopBar";
 import TopSearchBar from "../components/shared/TopSearchBar";
 
 const Layout = () => {
@@ -11,7 +11,7 @@ const Layout = () => {
   return (
     <div>
       <header>
-        <TopBar />
+        {/* <TopBar /> */}
         <TopSearchBar />
         {location.pathname !== "/" && <MenuBar />}
       </header>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, decreaseCart, removeFromCart } from "../../redux/feature/cartSlice";
 import emptyCart from "../../assets/icon/emptyCart.png";
+import { FullWidthButton, PrimaryButton, SecondaryButton } from "../theme/Button";
 const ProductCart = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -21,8 +22,8 @@ const ProductCart = () => {
   const shipping = 3;
   return (
     <>
-      <div className="container mt-[80px] lg:mt-[20px]">
-        {cartItems.length !== 0 ? <h2 className=" text-xl lg:text-4xl font-semibold">Your Cart</h2> : <></>}
+      <div className="container ">
+        {cartItems.length !== 0 ? <h2 className=" text-[18px] md:text-[25px] lg:text-[48px] font-semibold mt-[100px] lg:mt-[40px] mb-[15px] lg:mb-[32px]">Your Cart</h2> : <></>}
         <div className={cartItems.length !== 0 ? "grid grid-cols-1 lg:grid-cols-4 gap-8 mt-4" : "w-full"}>
           <div className="lg:col-span-3  lg:px-3 lg:shadow-custom lg:bg-[#F9FAFB] lg:rounded-lg">
             {/* for mobile device */}
@@ -95,17 +96,17 @@ const ProductCart = () => {
                     className="border border-primary-600 text-primary-600 hover:text-white hover:bg-primary-600 text-xl px-4 py-1 rounded "
                     to="/categories"
                   >
-                    Shop Now
+                    SHOP NOW
                   </Link>
                 </div>
               </div>
             )}
             <div className={cartItems.length === 0 ? "hidden" : "hidden lg:grid grid-cols-7 gap-4"}>
-              <h1 className=" col-span-3  font-semibold py-5 uppercase">Product</h1>
-              <h1 className="font-semibold py-5 uppercase text-center">Unite Price</h1>
-              <h1 className="font-semibold py-5 uppercase text-center">Quantity</h1>
-              <h1 className="font-semibold py-5 uppercase text-center">Total</h1>
-              <h1 className="font-semibold py-5 uppercase text-center">Remove</h1>
+              <h1 className=" col-span-3  font-semibold py-5 uppercase text-[12px]">Product</h1>
+              <h1 className="font-semibold py-5 uppercase text-center text-[12px]">Unite Price</h1>
+              <h1 className="font-semibold py-5 uppercase text-center text-[12px]">Quantity</h1>
+              <h1 className="font-semibold py-5 uppercase text-center text-[12px]">Total</h1>
+              <h1 className="font-semibold py-5 uppercase text-center text-[12px]">Remove</h1>
             </div>
             {/* every product  cart details*/}
             {cartItems.length > 0 ? (
@@ -114,10 +115,10 @@ const ProductCart = () => {
                   <div key={idx} className="mt-[32px] hidden lg:grid grid-cols-7 gap-4  bg-white p-3 mb-3 rounded items-center">
                     <div className="col-span-3 ">
                       <div className="flex space-x-2 items-center">
-                        <div className="w-[120px] h-[120px] bg-gray-50  rounded-2xl">
-                          <img src={item?.main_img_url} className="w-full h-full object-center object-fill" alt="product-img" />
+                        <div className="w-[100px] h-[100px] bg-gray-50 rounded-2xl">
+                          <img src={item?.main_img_url} className="w-full h-full object-cover object-center" alt="product-img" />
                         </div>
-                        <p className="font-semibold text-base">{item?.product_name}</p>
+                        <p className="font-semibold text-[14px]">{item?.product_name}</p>
                       </div>
                     </div>
                     <div>
@@ -175,10 +176,9 @@ const ProductCart = () => {
                 <div className="text-center">
                   <h2 className="text-xl text-gray-500 font-semibold mb-6">Your cart is empty!</h2>
                   <Link
-                    className="border border-primary-600 text-primary-600 hover:text-white hover:bg-primary-600 text-xl px-4 py-1 rounded "
                     to="/categories"
                   >
-                    Shop Now
+                    <SecondaryButton title="SHOP NOW"/>
                   </Link>
                 </div>
               </div>
@@ -190,33 +190,27 @@ const ProductCart = () => {
               <div className="relative">
                 <div className="lg:absolute space-y-5 top-0 left-0 w-full h-auto  lg:py-3 lg:px-4 lg:shadow-custom lg:border lg:rounded-lg">
                   <div className="flex justify-between items-center">
-                    <p className="text-gray-600 text-base">Subtotal:</p>
-                    <p className="text-gray-700 font-semibold text-xl">${total}.00</p>
+                    <p className="text-gray-600 text-[14px]">Subtotal:</p>
+                    <p className="text-gray-700 font-semibold text-[16px]">${total}.00</p>
                   </div>
                   <div className="flex justify-between items-center">
-                    <p className="text-gray-600 text-base">Tax:</p>
-                    <p className="text-gray-700 font-semibold text-xl">$0.00</p>
+                    <p className="text-gray-600 text-[14px]">Tax:</p>
+                    <p className="text-gray-700 font-semibold text-[16px]">$0.00</p>
                   </div>
                   <div className="flex justify-between items-center">
-                    <p className="text-gray-600 text-base">Shipping:</p>
-                    <p className="text-gray-700 font-semibold text-xl">${shipping}.00</p>
+                    <p className="text-gray-600 text-[14px]">Shipping:</p>
+                    <p className="text-gray-700 font-semibold text-[16px]">${shipping}.00</p>
                   </div>
                   <hr className="" />
                   <div className="flex justify-between items-center">
-                    <p className="text-black font-medium text-base">Total:</p>
-                    <p className="text-primary-600 font-bold text-xl">${total + shipping}.00</p>
+                    <p className="text-black font-medium text-[14px]">Total:</p>
+                    <p className="text-primary-600 font-bold text-[16px]">${total + shipping}.00</p>
                   </div>
-                  <button className="px-5 w-full py-2.5 relative rounded group font-medium text-white  inline-block">
-                    {" "}
-                    <Link to="/checkout">
-                      {" "}
-                      <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
-                      <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
-                      <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-primary-600 to-primary-500"></span>
-                      <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-primary-600 from-primary-500"></span>
-                      <span className="relative">Check out</span>
-                    </Link>{" "}
-                  </button>
+
+                  <Link className="mt-[20px] block" to="/checkout">
+                 
+                  <FullWidthButton title=' Check out'/>
+                  </Link>{" "}
                 </div>
               </div>
             </>
@@ -224,12 +218,8 @@ const ProductCart = () => {
         </div>
         {/* shipping button */}
         <div className={cartItems.length === 0 ? "hidden" : "mt-14 text-center lg:text-left"}>
-          <Link to="/categories" className="px-5  py-2.5 relative rounded group font-medium text-white hidden lg:inline-block">
-            <span className="absolute top-0 left-0 w-full h-full rounded opacity-50 filter blur-sm bg-gradient-to-br from-primary-600 to-primary-500"></span>
-            <span className="h-full w-full inset-0 absolute mt-0.5 ml-0.5 bg-gradient-to-br filter group-active:opacity-0 rounded opacity-50 from-primary-600 to-primary-500"></span>
-            <span className="absolute inset-0 w-full h-full transition-all duration-200 ease-out rounded bg-gradient-to-br filter group-active:opacity-0 group-hover:blur-sm from-primary-600 to-primary-500"></span>
-            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-primary-600 from-primary-500"></span>
-            <span className="relative">Continue Shipping</span>
+          <Link to="/categories" className="hidden lg:block">
+          <PrimaryButton title='Continue Shopping'/>
           </Link>
         </div>
       </div>

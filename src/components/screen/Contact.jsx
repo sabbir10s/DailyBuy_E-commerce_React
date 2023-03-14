@@ -1,6 +1,7 @@
 import React from 'react';
 import Map from './Map';
 import '../../styles/backgroundImg.css'
+import { FullWidthButton } from '../theme/Button';
 const Contact = () => {
     return (
         <div>
@@ -89,8 +90,7 @@ const Contact = () => {
                             rows="6"
                             placeholder='Message'></textarea>
                     </div>
-                    <button
-                        className=' bg-primary-600 text-white text-lg w-full py-[13px] rounded-[5px]'>Submit Now</button>
+                        <FullWidthButton title='Submit Now'/>
                 </form>
             </div>
 

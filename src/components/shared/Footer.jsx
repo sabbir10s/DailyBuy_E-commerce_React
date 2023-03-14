@@ -19,10 +19,10 @@ const Footer = () => {
               <img src={logo} className="w-full h-full" alt="" />
             </div>
           </Link>
-          <p className="p-3 text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          <p className="py-3 text-gray-600">
+          Daily Buy is an online marketplace that provides a wide range of high-quality products at affordable prices.
           </p>
-          <div className="flex items-center space-x-2 px-3">
+          <div className="flex items-center space-x-2">
             <img src={social3} className="cursor-pointer" alt="" />
             <img src={social2} className="cursor-pointer" alt="" />
             <img src={social4} className="cursor-pointer" alt="" />
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
         <div className="">
           <h2 className="text-2xl font-semibold mt-3 mb-5">QUICK LINKS</h2>
-          <ul className="space-y-4 p-3">
+          <ul className="space-y-4 py-3">
             <li className="txtHover">Home</li>
             <li className="txtHover">Products</li>
             <li className="txtHover">Blog</li>
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>{" "}
         <div className="">
           <h2 className="text-2xl font-semibold mt-3 mb-5">CUSTOMER AREA</h2>
-          <ul className="space-y-4 p-3">
+          <ul className="space-y-4 py-3">
             <li className="txtHover">My Account</li>
             <li className="txtHover">Order</li>
             <li className="txtHover">Terms</li>
@@ -51,8 +51,8 @@ const Footer = () => {
         </div>{" "}
         <div className="">
           <h2 className="text-2xl font-semibold mt-3 mb-5">CONTACT</h2>
-          <p className="p-3 text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          <p className="py-3 text-gray-600">
+          We'd love to hear from you! If you have any questions or concerns, please don't hesitate to contact us. 
           </p>
           <div className="p-3 flex space-x-3 items-center">
             <img src={contactIcon} alt="" />

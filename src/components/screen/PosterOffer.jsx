@@ -16,7 +16,7 @@ const PosterOffer = () => {
             </div>
             <div className="mt-5">
               <Link to="/categories">
-                <PrimaryButton title="Shop Now" />
+                <PrimaryButton title="SHOP NOW" />
               </Link>
             </div>
           </div>
@@ -31,7 +31,7 @@ const PosterOffer = () => {
               </div>
               <div className="mt-5">
                 <Link to="/categories">
-                  <PrimaryButton title="Shop Now" />
+                  <PrimaryButton title="SHOP NOW" />
                 </Link>
               </div>
             </div>
