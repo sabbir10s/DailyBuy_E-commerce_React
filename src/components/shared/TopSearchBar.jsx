@@ -5,8 +5,6 @@ import logo from "../../assets/logo/big_logo.png";
 import smallLogo from "../../assets/logo/logo.png";
 import Modal from "./Modal";
 import {AiOutlineSearch} from 'react-icons/ai';
-import {BsHandbag} from 'react-icons/bs';
-import {HiOutlineUser} from 'react-icons/hi';
 const TopSearchBar = () => {
     const {cartItems} = useSelector((state) => state.cart);
     const [showModal,
