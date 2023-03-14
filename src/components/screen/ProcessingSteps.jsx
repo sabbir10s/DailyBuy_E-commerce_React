@@ -6,7 +6,7 @@ import stepImg4 from "../../assets/icon/steps (4).png";
 
 const ProcessingSteps = () => {
   return (
-    <div className="container mt-8 lg:mt-16 pb-8">
+    <div className="container mt-16 lg:mt-20 pb-8">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 items-center w-full lg:w-5/6 mx-0 lg:mx-auto">
         <div className="bg-primary-50/60 lg:bg-white rounded p-3 lg:p-0 block lg:flex items-center lg:space-x-3 lg:border-r ">
           <img src={stepImg1} alt="" />
