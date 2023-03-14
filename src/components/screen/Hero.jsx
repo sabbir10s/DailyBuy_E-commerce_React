@@ -1,13 +1,13 @@
 import Banner from "./Banner";
 import Navbar from "./Navbar";
-import fruits from '../../assets/icon/categoryGrayIcon.png'
-import meats from '../../assets/icon/categoryGrayIcon (2).png'
-import breads from '../../assets/icon/categoryGrayIcon (3).png'
-import frozen from '../../assets/icon/categoryGrayIcon (4).png'
-import breakfast from '../../assets/icon/categoryGrayIcon (5).png'
-import biscuits from '../../assets/icon/categoryGrayIcon (6).png'
-import beverages from '../../assets/icon/categoryGrayIcon (7).png'
-import grocery from '../../assets/icon/categoryGrayIcon (8).png'
+import fruits from "../../assets/icon/categoryGrayIcon.png";
+import meats from "../../assets/icon/categoryGrayIcon (2).png";
+import breads from "../../assets/icon/categoryGrayIcon (3).png";
+import frozen from "../../assets/icon/categoryGrayIcon (4).png";
+import breakfast from "../../assets/icon/categoryGrayIcon (5).png";
+import biscuits from "../../assets/icon/categoryGrayIcon (6).png";
+import beverages from "../../assets/icon/categoryGrayIcon (7).png";
+import grocery from "../../assets/icon/categoryGrayIcon (8).png";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
