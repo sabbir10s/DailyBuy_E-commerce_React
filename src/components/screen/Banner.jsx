@@ -19,7 +19,7 @@ const Banner = () => {
           </div>
        </div>
       </div>
-      <div className="space-y-8 hidden md:block">
+      <div className="space-y-8 hidden lg:block">
         <div className="bg-gray-50  py-[31px] px-8 group_bg1">
           <div className="space-y-2 text-black/75">
             <h2 className="font-bold text-2xl">Fresh Grocery</h2>

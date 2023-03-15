@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <div className="container mt-2 ">
       <div className="flex items-center gap-5 w-full">
-        <h2 className=" hidden lg:block w-[240px] py-3 uppercase text-xl text-center bg-primary-600 text-white rounded-t-md font-semibold">
+        {/* <h2 className=" hidden lg:block w-[240px] py-3 uppercase text-xl text-center bg-primary-600 text-white rounded-t-md font-semibold">
           Categories
         </h2>
         <Navbar />
@@ -71,7 +71,7 @@ const Hero = () => {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="w-full">
           <Banner />
         </div>

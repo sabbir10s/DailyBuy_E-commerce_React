@@ -8,7 +8,7 @@ function ActiveLink({ children, to, ...props }) {
     return (
         <>
             <Link
-                className={match ? 'text-primary-600' : "text-black"}
+                className={match ? 'text-primary-600' : "text-gray-700 hover:text-primary-600 duration-300"}
                 to={to}
                 {...props}
             >
