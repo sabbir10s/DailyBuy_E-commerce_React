@@ -19,14 +19,20 @@ import Reviews from "../components/screen/Review/Reviews";
 import ThemeSuspense from "../components/theme/ThemeSuspense";
 
 const ProductDetails = () => {
+
+
+
+
   const [productData,
     setProductData] = useState([]);
 
   const {itemId} = useParams();
   const dispatch = useDispatch();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const productInfo = productData.find((product) => product._id === parseInt(itemId));
-
   const [activeImg,
     setActiveImg] = useState(bigImg);
   const [wishlist,
@@ -37,6 +43,8 @@ const ProductDetails = () => {
   const handleAddToCart = (cartItem) => {
     dispatch(addToCart(cartItem));
   };
+
+
 
   const fetchData = () => {
     axios
@@ -69,6 +77,8 @@ const ProductDetails = () => {
     packaging_and_delivery,
     other_things_of_product
   } = productInfo;
+
+
 
   return (
     <div className="mt-20 lg:mt-0">
