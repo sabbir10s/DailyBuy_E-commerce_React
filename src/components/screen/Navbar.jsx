@@ -17,15 +17,11 @@ const Navbar = () => {
         </li>
         <li className="txtHover font-medium">
           {" "}
-          <ActiveLink to="/about">About</ActiveLink>
+          <ActiveLink to="/about">About us</ActiveLink>
         </li>
         <li className="txtHover font-medium">
           {" "}
-          <ActiveLink to="/contact">Contact</ActiveLink>
-        </li>
-        <li className="txtHover font-medium">
-          {" "}
-          <ActiveLink to="/faq">FAQ</ActiveLink>
+          <ActiveLink to="/contact">Contact us</ActiveLink>
         </li>
       </ul>
     </nav>

@@ -17,7 +17,7 @@ const Bottom = () => {
     <div className="container hidden lg:flex items-center gap-5 mt-2">
       <ul className="flex items-center">
         <div className="relative group">
-          <li className="w-[240px] py-3 flex items-center justify-center uppercase text-xl text-center bg-primary-600 text-white rounded-t-md cursor-pointer space-x-2 font-semibold">
+          <li className="w-[240px] py-[10px] flex items-center justify-center uppercase text-[16px] text-center bg-primary-600 text-white rounded-t-md cursor-pointer space-x-2 font-semibold">
             <span className="lg:hidden xl:inline">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
