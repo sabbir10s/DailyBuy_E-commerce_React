@@ -1,17 +1,16 @@
 import React, {useState} from 'react';
 import ActiveLink from '../../../hooks/ActiveLink';
-import {RiShoppingBagLine, RiHeartLine, RiUser3Line, RiSearchLine} from 'react-icons/ri';
+import { RiHeartLine, RiUser3Line} from 'react-icons/ri';
 import Modal from '../Modal';
 import {Link} from 'react-router-dom';
 
-const Sidebar = ({visible, onClose, handleCloseSidebar}) => {
+const Sidebar = ({visible, handleCloseSidebar}) => {
     const [showModal,
         setShowModal] = useState(false);
     const handleOnClose = () => {
         setShowModal(false);
     };
     const handleCloseModal = (e)=>{
-        // console.log(e.target.id);
             if(e.target.id === 'container') handleCloseSidebar()
     }
 
@@ -32,7 +31,7 @@ const Sidebar = ({visible, onClose, handleCloseSidebar}) => {
                             <button className="" onClick={() => setShowModal(true)}>
                                 <RiUser3Line className="text-[20px] hover:text-black duration-300"/>
                             </button>{" "}
-                            <Link className="" to='/wishlist'>
+                            <Link onClick={handleCloseSidebar} className="" to='/wishlist'>
                                 <button className="relative flex items-center" type="button">
                                     <RiHeartLine className="text-[20px] hover:text-black duration-300"/>
                                     <span

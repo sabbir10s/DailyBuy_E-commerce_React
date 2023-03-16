@@ -43,7 +43,7 @@ const MyNav = () => {
                     <div className=" grid grid-cols-3 lg:flex justify-between items-center py-5 ">
                         <button
                             onClick={() => setShowSidebar(true)}
-                            className="block lg:hidden text-gray-700">
+                            className="block lg:hidden text-black">
                             <CgMenuLeftAlt className="text-2xl lg:text-4xl"/>
                         </button>
                         <Link className="hidden lg:block " to="/">
@@ -63,30 +63,30 @@ const MyNav = () => {
                             </button>
                         </div>
 
-                        <div className=" flex items-center justify-end gap-4 lg:gap-6 text-gray-700">
+                        <div className=" flex items-center justify-end gap-4 lg:gap-8 text-black">
                             <button onClick={handleShowSearch} className="block lg:hidden">
                                 <RiSearchLine className="text-2xl lg:text-3xl"/>
                             </button>
                             <Link className="hidden lg:block" to='/wishlist'>
                                 <button className="relative flex items-center" type="button">
-                                    <RiHeartLine className="text-[20px] hover:text-black duration-300"/>
+                                    <RiHeartLine className="text-[24px]"/>
                                     <span
-                                        className="absolute top-[-10px] left-[18px] text-[14px] font-semibold text-secondary-600">
+                                        className="absolute top-[-10px] left-[18px] text-[11px] text-white bg-primary-600 rounded-full h-[20px] w-[18px] flex items-center justify-center">
                                         {0}
                                     </span>
                                 </button>
                             </Link>
                             <Link to="/cart">
                                 <button className="relative flex items-center" type="button">
-                                    <RiShoppingBagLine className="text-[20px] hover:text-black duration-300"/>
+                                    <RiShoppingBagLine className="text-[24px]"/>
                                     <span
-                                        className="absolute top-[-10px] left-[18px] text-[14px] font-semibold text-secondary-600">
+                                        className="absolute top-[-10px] left-[18px] text-[11px] text-white bg-primary-600 rounded-full h-[20px] w-[18px] flex items-center justify-center">
                                         {cartItems.length}
                                     </span>
                                 </button>
                             </Link>
                             <button className="hidden lg:block" onClick={() => setShowModal(true)}>
-                                <RiUser3Line className="text-[20px] hover:text-black duration-300"/>
+                                <RiUser3Line className="text-[24px]"/>
                             </button>{" "}
 
                         </div>
