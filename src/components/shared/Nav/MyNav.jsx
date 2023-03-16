@@ -10,6 +10,7 @@ import {AiFillCloseCircle} from 'react-icons/ai';
 // import Top from "./Top";
 import Bottom from "./Bottom";
 import Sidebar from "./Sidebar";
+import Top from "./Top";
 
 const MyNav = () => {
     const {cartItems} = useSelector((state) => state.cart);
@@ -35,6 +36,7 @@ const MyNav = () => {
 
     return (
         <div>
+            <Top/>
             <div
                 className="border border-gray-100/60 fixed lg:static top-0 z-50 bg-white w-full">
                 <div className="container ">
@@ -92,7 +94,7 @@ const MyNav = () => {
                 </div>
             </div>
             {showSearch && <div
-                className="w-full flex items-center justify-center gap-4 bg-white/70 backdrop-blur-sm h-[10vh] top-[65px] fixed z-50 ">
+                className="lg:hidden w-full flex items-center justify-center gap-4 bg-white/70 backdrop-blur-sm h-[10vh] top-[65px] fixed z-50 ">
                 <div className="border relative w-3/4">
                     <input
                         placeholder="Search"
@@ -108,7 +110,7 @@ const MyNav = () => {
 }
             <Bottom/>
             <Modal onClose={handleOnClose} visible={showModal}/>
-            <Sidebar onClose={handleCloseSidebar} visible={showSidebar}/>
+            <Sidebar handleCloseSidebar={handleCloseSidebar} visible={showSidebar}/>
         </div>
     );
 };

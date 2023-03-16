@@ -8,17 +8,24 @@ const Navbar = () => {
         <li className="txtHover active font-medium">
           <ActiveLink to="/">Home</ActiveLink>
         </li>
+        <li className="txtHover active font-medium">
+          <ActiveLink to="/categories">Shop</ActiveLink>
+        </li>
         <li className="txtHover font-medium">
           {" "}
           <ActiveLink to="/blog">Blog</ActiveLink>
         </li>
         <li className="txtHover font-medium">
           {" "}
-          <ActiveLink to="/about">About us</ActiveLink>
+          <ActiveLink to="/about">About</ActiveLink>
         </li>
         <li className="txtHover font-medium">
           {" "}
-          <ActiveLink to="/contact">Contact us</ActiveLink>
+          <ActiveLink to="/contact">Contact</ActiveLink>
+        </li>
+        <li className="txtHover font-medium">
+          {" "}
+          <ActiveLink to="/faq">FAQ</ActiveLink>
         </li>
       </ul>
     </nav>

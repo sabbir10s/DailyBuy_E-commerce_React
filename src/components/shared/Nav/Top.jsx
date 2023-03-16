@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 const Top = () => {
   return (
-    <div className="border border-gray-100 hidden lg:block">
-      <div className="container py-3 ">
+    <div className="hidden bg-gray-100 lg:block">
+      <div className="container py-1 ">
         <div className="flex justify-between items-center">
-          <ul className="flex space-x-8">
-            <li className="txtHover text-base">
+          <ul className="flex space-x-8 text-sm">
+            <li className="txtHover">
               <Link to="/offer">
                 <span className="mr-1">🔥</span>
                 <span>Offer</span>
               </Link>
             </li>
-            <li className="txtHover text-base">
+            <li className="txtHover">
               <Link to="/wishlist">
                 <span>
                   <svg
@@ -36,20 +36,20 @@ const Top = () => {
             </li>
           </ul>
 
-          <ul className="flex space-x-8">
-            <li className="txtHover text-base border-r pr-3">
+          <ul className="flex space-x-8 text-sm">
+            <li className="txtHover border-r pr-3">
               <Link to="/orders/1sdfgfsf1454">
                 <span className="mr-1">🛒</span>
                 <span>Order Tracking</span>
               </Link>
             </li>
-            <li className="txtHover text-base border-r pr-3">
+            <li className="txtHover border-r pr-3">
               <Link to="/support">
                 <span className="mr-1">💁‍♂️</span>
                 <span>Support Center</span>
               </Link>
             </li>
-            <li className="txtHover text-base border-r pr-3">
+            <li className="txtHover border-r pr-3">
               <select name="lang" id="" className="focus:outline-none cursor-pointer">
                 <option value="English">English</option>
                 <option value="Hindi">Hindi</option>
@@ -58,7 +58,7 @@ const Top = () => {
                 <option value="Urdu">Urdu</option>
               </select>
             </li>{" "}
-            <li className="txtHover text-base">
+            <li className="txtHover">
               <span>USD</span>
             </li>
           </ul>
