@@ -1,20 +1,20 @@
 import Banner from "./Banner";
-import Navbar from "./Navbar";
-import fruits from "../../assets/icon/categoryGrayIcon.png";
-import meats from "../../assets/icon/categoryGrayIcon (2).png";
-import breads from "../../assets/icon/categoryGrayIcon (3).png";
-import frozen from "../../assets/icon/categoryGrayIcon (4).png";
-import breakfast from "../../assets/icon/categoryGrayIcon (5).png";
-import biscuits from "../../assets/icon/categoryGrayIcon (6).png";
-import beverages from "../../assets/icon/categoryGrayIcon (7).png";
-import grocery from "../../assets/icon/categoryGrayIcon (8).png";
-import { Link } from "react-router-dom";
+// import Navbar from "./Navbar";
+// import fruits from '../../assets/icon/categoryGrayIcon.png'
+// import meats from '../../assets/icon/categoryGrayIcon (2).png'
+// import breads from '../../assets/icon/categoryGrayIcon (3).png'
+// import frozen from '../../assets/icon/categoryGrayIcon (4).png'
+// import breakfast from '../../assets/icon/categoryGrayIcon (5).png'
+// import biscuits from '../../assets/icon/categoryGrayIcon (6).png'
+// import beverages from '../../assets/icon/categoryGrayIcon (7).png'
+// import grocery from '../../assets/icon/categoryGrayIcon (8).png'
+// import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <div className="container mt-2 ">
       <div className="flex items-center gap-5 w-full">
-        <h2 className=" hidden lg:block w-[240px] py-3 uppercase text-xl text-center bg-primary-600 text-white rounded-t-md font-semibold">
+        {/* <h2 className=" hidden lg:block w-[240px] py-3 uppercase text-xl text-center bg-primary-600 text-white rounded-t-md font-semibold">
           Categories
         </h2>
         <Navbar />
@@ -71,7 +71,7 @@ const Hero = () => {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="w-full">
           <Banner />
         </div>

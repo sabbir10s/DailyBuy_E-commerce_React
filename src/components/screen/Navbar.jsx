@@ -3,10 +3,13 @@ import ActiveLink from "../../hooks/ActiveLink";
 
 const Navbar = () => {
   return (
-    <nav className="hidden lg:block ml-36 ">
+    <nav className="hidden lg:block">
       <ul className="flex items-center gap-10 py-3 text-black">
         <li className="txtHover active font-medium">
           <ActiveLink to="/">Home</ActiveLink>
+        </li>
+        <li className="txtHover active font-medium">
+          <ActiveLink to="/categories">Shop</ActiveLink>
         </li>
         <li className="txtHover font-medium">
           {" "}

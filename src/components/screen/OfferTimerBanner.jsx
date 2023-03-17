@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import imgOffer from "../../assets/offer/offer_banner.png";
 import { FiArrowRight } from "react-icons/fi";
 import CountDownTimer from "./CountDownTimer";
+import '../../styles/OfferTimerBanner.css'
 const OfferTimerBanner = () => {
   const hoursMinSecs = { days: 2, hours: 1, minutes: 20, seconds: 40 };
   return (
-    <div className="bg-primary-50 pt-6 md:pt-0 mt-8 lg:mt-16">
+    <div className="bg-primary-50 pt-6 md:pt-0 mt-8 lg:mt-16 bgImage">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="mx-auto lg:mx-0">

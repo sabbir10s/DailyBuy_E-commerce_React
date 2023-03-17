@@ -34,7 +34,7 @@ const BestSales = () => {
     <>
       <div className=" mt-8 lg:mt-16 container">
         <div className="flex justify-between items-center mt-[25px] md:mt-[35px] lg:mt-[50px] mb-[16px] lg:mb-[29px]">
-          <h2 className="text-sm md:text-2xl lg:text-4xl font-semibold text-center lg:text-left">Recommended for you</h2>
+          <h2 className="text-sm md:text-2xl lg:text-4xl font-semibold text-center lg:text-left text-[#2E2E2E]">Recommended for you</h2>
           <Link
             to="/categories"
             className="text-gray-500 text-[10px] md:text-base uppercase flex items-center gap-1 hover:text-primary-600 duration-300"
