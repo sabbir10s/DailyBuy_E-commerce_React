@@ -31,20 +31,32 @@ const Banner = () => {
             </Link>
           </div>
         </div>
-        <div className="bg-gray-50  py-[31px] px-8 group_bg2">
-          <div className="space-y-2 text-black/75">
-            <h2 className="font-bold text-2xl">Breakfast & Dairy </h2>
-            <p className="text-base text-gray-500">Weekend discount up to 40%</p>
+        <div className="space-y-8 hidden md:block">
+          <div className="bg-gray-50  py-[31px] px-8 group_bg1">
+            <div className="space-y-2 text-black/75">
+              <h2 className="font-bold text-2xl">Fresh Grocery</h2>
+              <p className="text-base text-gray-500">Weekend discount up to 35%</p>
+            </div>
+            <div className="mt-5">
+              <Link to="/categories">
+                <PrimaryButton title="SHOP NOW" />
+              </Link>
+            </div>
           </div>
-          <div className="mt-5">
-            <Link to="/categories">
-              <PrimaryButton title="SHOP NOW" />
-            </Link>
+          <div className="bg-gray-50  py-[31px] px-8 group_bg2">
+            <div className="space-y-2 text-black/75">
+              <h2 className="font-bold text-2xl">Breakfast & Dairy </h2>
+              <p className="text-base text-gray-500">Weekend discount up to 40%</p>
+            </div>
+            <div className="mt-5">
+              <Link to="/categories">
+                <PrimaryButton title="SHOP NOW" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-   </>
+    </>
   );
 };
 
