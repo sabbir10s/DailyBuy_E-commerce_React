@@ -11,23 +11,20 @@ const AboutV2 = () => {
   return (
     <>
       <div className="mt-[100px] lg:mt-[52px] flex flex-col gap-[30px] md:gap-[40px] lg:gap-[80px]">
-      <div className='flex flex-col lg:flex-row items-center gap-[48px] container'>
-      <img
-        className='w-full lg:w-[550px] xl:w-full rounded-[10px]'
-        src={bannerImg}
-        alt=""/>
-      <div>
-        <h1 className='text-2xl md:text-3xl lg:text-4xl text-[#383838] font-bold'>A wonderful serenity has by taken possession</h1>
-        <p className='mt-[32px] text-sm lg:text-lg text-[#626463]'>A wonderful serenity
-          has taken possession of my entire soul, like these sweet mornings
-          <br className="hidden lg:block"/>
-          <br className="hidden lg:block"/>
-          of spring which I enjoy with my whole heart. I am alone, and feel the charm of
-          existence in this spot, which was created for the bliss of souls like mine. I am
-          so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil
-          existence, that I neglect my talents.</p>
-      </div>
-    </div>
+        <div className="flex flex-col lg:flex-row items-center gap-[48px] container">
+          <img className="w-full lg:w-[550px] xl:w-full rounded-[10px]" src={bannerImg} alt="" />
+          <div>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl text-[#383838] font-bold">A wonderful serenity has by taken possession</h1>
+            <p className="mt-[32px] text-sm lg:text-lg text-[#626463]">
+              A wonderful serenity has taken possession of my entire soul, like these sweet mornings
+              <br className="hidden lg:block" />
+              <br className="hidden lg:block" />
+              of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss
+              of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my
+              talents.
+            </p>
+          </div>
+        </div>
 
         <div className="bg-primary-500 text-white py-[64px]">
           <div className="container flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-14 lg:gap-0">
