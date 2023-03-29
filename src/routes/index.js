@@ -8,13 +8,10 @@ const BlogPage = lazy(() => import("../pages/BlogPage"));
 const ContactUs = lazy(() => import("../pages/ContactUs"));
 const Invoice = lazy(() => import("../pages/Invoice"));
 const FAQ = lazy(() => import("../pages/FAQ"));
-const TermsCondition = lazy(() => import("../pages/TermsCondition"));
+const TermsCondition = lazy(() => import("../components/screen/Authentication/TermsCondition"));
 const Cart = lazy(() => import("../pages/Cart"));
 const Wishlist = lazy(() => import("../pages/Wishlist"));
 const Checkout = lazy(() => import("../pages/Checkout"));
-const ForgotPassword = lazy(() => import("../pages/ForgotPassword"));
-const SignIn = lazy(() => import("../pages/SignIn"));
-const SignUp = lazy(() => import("../pages/SignUp"));
 const Categories = lazy(() => import("../pages/Categories"));
 const Layout = lazy(() => import("../layouts/Layout"));
 const Home = lazy(() => import("../pages/Home"));
@@ -68,10 +65,6 @@ const router = createBrowserRouter([
         element: <FAQ />,
       },
       {
-        path: "/termsCondition",
-        element: <TermsCondition />,
-      },
-      {
         path: "/invoice",
         element: <Invoice />,
       },
@@ -92,20 +85,8 @@ const router = createBrowserRouter([
         element: <Checkout />,
       },
       {
-        path: "/signIn",
-        element: <SignIn />,
-      },
-      {
-        path: "/signUp",
-        element: <SignUp />,
-      },
-      {
         path: "/profile",
         element: <Profile />,
-      },
-      {
-        path: "/forgotPassword",
-        element: <ForgotPassword />,
       },
       {
         path: "/terms",

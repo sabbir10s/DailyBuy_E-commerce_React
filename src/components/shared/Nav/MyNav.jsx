@@ -3,7 +3,6 @@ import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import logo from "../../../assets/logo/big_logo.png";
 import smallLogo from "../../../assets/logo/logo.png";
-import Modal from "../Modal";
 import {RiShoppingBagLine, RiHeartLine, RiUser3Line, RiSearchLine} from 'react-icons/ri';
 import {CgMenuLeftAlt} from 'react-icons/cg';
 import {AiFillCloseCircle} from 'react-icons/ai';
@@ -11,6 +10,7 @@ import {AiFillCloseCircle} from 'react-icons/ai';
 import Bottom from "./Bottom";
 import Sidebar from "./Sidebar";
 import Top from "./Top";
+import AuthenticationModal from "../AuthenticationModal";
 
 const MyNav = () => {
     const {cartItems} = useSelector((state) => state.cart);
@@ -109,7 +109,7 @@ const MyNav = () => {
             </div>
 }
             <Bottom/>
-            <Modal onClose={handleOnClose} visible={showModal}/>
+            <AuthenticationModal onClose={handleOnClose} visible={showModal}/>
             <Sidebar handleCloseSidebar={handleCloseSidebar} visible={showSidebar}/>
         </div>
     );

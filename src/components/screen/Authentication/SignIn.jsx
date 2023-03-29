@@ -1,6 +1,6 @@
 import React from "react";
-import { FullWidthButton } from "../components/theme/Button";
-import '../styles/SignSignUp.css'
+import '../../../styles/SignSignUp.css'
+import { FullWidthButton } from "../../theme/Button";
 const SignIn = ({setPath}) => {
   return (
     <div className="">

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
-import { FullWidthButton } from "../components/theme/Button";
-import '../styles/SignSignUp.css'
+import '../../../styles/SignSignUp.css'
+import { FullWidthButton } from "../../theme/Button";
 const ForgotPassword = ({setPath}) => {
   const [newPassword,
     setNewPassword] = useState(false);
