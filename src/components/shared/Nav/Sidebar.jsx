@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import ActiveLink from '../../../hooks/ActiveLink';
 import { RiHeartLine, RiUser3Line} from 'react-icons/ri';
-import Modal from '../Modal';
 import {Link} from 'react-router-dom';
+import AuthenticationModal from '../AuthenticationModal';
 
 const Sidebar = ({visible, handleCloseSidebar}) => {
     const [showModal,
@@ -64,7 +64,7 @@ const Sidebar = ({visible, handleCloseSidebar}) => {
                     </ul>
                 </div>
             </div>
-            <Modal onClose={handleOnClose} visible={showModal}/>
+            <AuthenticationModal onClose={handleOnClose} visible={showModal}/>
         </div>
     );
 };

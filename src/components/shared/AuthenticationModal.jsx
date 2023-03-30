@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import ForgotPassword from '../../pages/ForgotPassword';
-import SignIn from '../../pages/SignIn';
-import SignUp from '../../pages/SignUp';
-import TermsCondition from '../../pages/TermsCondition';
+import ForgotPassword from '../screen/Authentication/ForgotPassword';
+import SignIn from '../screen/Authentication/SignIn';
+import SignUp from '../screen/Authentication/SignUp';
+import TermsCondition from '../screen/Authentication/TermsCondition';
 
-const Modal = ({visible, onClose}) => {
+const AuthenticationModal = ({visible, onClose}) => {
     const [path, setPath] = useState('signIn')
   if (!visible) 
     return null
@@ -34,4 +34,4 @@ const Modal = ({visible, onClose}) => {
   );
 };
 
-export default Modal;
+export default AuthenticationModal;
