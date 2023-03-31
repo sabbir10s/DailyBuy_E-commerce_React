@@ -40,7 +40,7 @@ const cartSlice = createSlice({
         const nextCartItems = state.cartItems.filter((cartItem) => cartItem._id !== action.payload._id);
 
         state.cartItems = nextCartItems;
-        toast.error(`cart remove form cart`, {
+        toast.error(`item remove form cart`, {
           position: "top-right",
         });
       }
@@ -52,7 +52,7 @@ const cartSlice = createSlice({
 
       state.cartItems = nextCartItems;
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-      toast.error(`cart remove form cart`, {
+      toast.error(`item remove form cart`, {
         position: "top-right",
       });
     },
