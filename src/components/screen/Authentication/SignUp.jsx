@@ -1,7 +1,7 @@
 import React from "react";
-import Checkbox from "../components/theme/Checkbox";
-import '.././styles/SignSignUp.css'
-import { FullWidthButton } from "../components/theme/Button";
+import '../../../styles/SignSignUp.css'
+import { FullWidthButton } from "../../theme/Button";
+import Checkbox from "../../theme/Checkbox";
 const SignUp = ({setPath}) => {
   return (
     <div className="">
