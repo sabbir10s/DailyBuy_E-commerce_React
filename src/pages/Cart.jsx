@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import ProductCart from "../components/screen/ProductCart";
+import ProductCart from "../components/screen/Cart/ProductCart";
+
 
 const Cart = () => {
   return (
@@ -9,7 +10,7 @@ const Cart = () => {
         <title>DailyBuy - Cart</title>
         <meta charSet="utf-8" name="description" content="DailyBuy Cart Page" />
       </Helmet>
-      <ProductCart />
+      <ProductCart/>
     </div>
   );
 };
