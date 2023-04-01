@@ -4,8 +4,6 @@ import {addToCart, decreaseCart, removeFromCart} from '../../../redux/feature/ca
 
 const CartItem = ({item}) => {
     const {product_name,main_img_url, price, del_price, cartQuantity} = item
-    console.log(item);
-
     const total = price * cartQuantity;
     const dispatch = useDispatch();
     const handleRemoveItem = (cartItem) => {
@@ -52,16 +50,16 @@ const CartItem = ({item}) => {
                         <button
                             onClick={() => handleDecreaseCart(item)}
                             type="button"
-                            className=" w-5 md:w-6 lg:w-8 h-5 md:h-6 lg:h-8 text-xs md:text-base lg:text-xl font-semibold border border-primary-600 lg:border-0 bg-gray-50 rounded-[50%] text-primary-600 lg:text-black transition hover:opacity-75">
+                            className=" w-5 md:w-6 lg:w-8 h-5 md:h-6 lg:h-8 text-xs md:text-base lg:text-xl font-medium border border-primary-600 lg:border-0 bg-gray-50 rounded-[50%] text-primary-600 lg:text-black transition hover:opacity-75">
                             &minus;
                         </button>
 
-                        <span className="px-2 lg:px-4 lg:text-xl font-semibold">{cartQuantity}</span>
+                        <span className="px-2 lg:px-4 lg:text-base font-medium">{cartQuantity}</span>
 
                         <button
                             onClick={() => handleIncreaseCart(item)}
                             type="button"
-                            className=" w-5 md:w-6 lg:w-8 h-5 md:h-6 lg:h-8 text-xs md:text-base lg:text-xl font-semibold border border-primary-600 lg:border-0 bg-gray-50 rounded-[50%] text-primary-600 lg:text-black transition hover:opacity-75">
+                            className=" w-5 md:w-6 lg:w-8 h-5 md:h-6 lg:h-8 text-xs md:text-base lg:text-xl font-medium border border-primary-600 lg:border-0 bg-gray-50 rounded-[50%] text-primary-600 lg:text-black transition hover:opacity-75">
                             &#43;
                         </button>
                     </div>
