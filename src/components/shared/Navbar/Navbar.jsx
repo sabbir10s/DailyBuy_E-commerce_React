@@ -6,13 +6,12 @@ import smallLogo from "../../../assets/logo/logo.png";
 import {RiShoppingBagLine, RiHeartLine, RiUser3Line, RiSearchLine} from 'react-icons/ri';
 import {CgMenuLeftAlt} from 'react-icons/cg';
 import {AiFillCloseCircle} from 'react-icons/ai';
-// import Top from "./Top";
-import Bottom from "./Bottom";
 import Sidebar from "./Sidebar";
-import Top from "./Top";
 import AuthenticationModal from "../AuthenticationModal";
+import NavTop from "./NavTop";
+import NavBottom from "./NavBottom";
 
-const MyNav = () => {
+const Navbar = () => {
     const {cartItems} = useSelector((state) => state.cart);
     const [showModal,
         setShowModal] = useState(false);
@@ -36,7 +35,7 @@ const MyNav = () => {
 
     return (
         <div>
-            <Top/>
+            <NavTop/>
             <div
                 className="border border-gray-100/60 fixed lg:static top-0 z-50 bg-white w-full">
                 <div className="container ">
@@ -108,11 +107,11 @@ const MyNav = () => {
 
             </div>
 }
-            <Bottom/>
+            <NavBottom/>
             <AuthenticationModal onClose={handleOnClose} visible={showModal}/>
             <Sidebar handleCloseSidebar={handleCloseSidebar} visible={showSidebar}/>
         </div>
     );
 };
 
-export default MyNav;
+export default Navbar;
