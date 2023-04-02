@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import MyAccount from '../components/userProfile/MyAccount';
-import MyOrders from '../components/userProfile/MyOrders';
-import Password from '../components/userProfile/Password';
+import MyAccount from '../components/screen/userProfile/MyAccount';
+import MyOrders from '../components/screen/userProfile/MyOrders';
+import Password from '../components/screen/userProfile/Password';
+
 
 const Profile = () => {
     const [option, setOption] = useState('myAccount')

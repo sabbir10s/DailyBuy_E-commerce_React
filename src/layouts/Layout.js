@@ -1,17 +1,15 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/shared/Footer";
-import MyNav from "../components/shared/Nav/MyNav";
+import Navbar from "../components/shared/Navbar/Navbar";
+
 
 const Layout = () => {
-  // const location = useLocation();
   return (
     <div>
       <header>
         {/* <TopBar /> */}
-        {/* <TopSearchBar /> */}
-        <MyNav />
-        {/* {location.pathname !== "/" && <MenuBar />} */}
+        <Navbar />
       </header>
 
       {/* main */}
@@ -21,7 +19,6 @@ const Layout = () => {
 
       {/* footer */}
       <footer>
-        {/* <BottomBar /> */}
         <Footer />
       </footer>
     </div>

@@ -49,6 +49,9 @@ const Sidebar = ({visible, handleCloseSidebar}) => {
                         <li onClick={handleCloseSidebar} className="txtHover active font-medium">
                             <ActiveLink to="/">Home</ActiveLink>
                         </li>
+                        <li onClick={handleCloseSidebar} className="txtHover active font-medium">
+                            <ActiveLink to="/categories">Shop</ActiveLink>
+                        </li>
                         <li onClick={handleCloseSidebar} className="txtHover font-medium">
                             {" "}
                             <ActiveLink to="/blog">Blog</ActiveLink>
