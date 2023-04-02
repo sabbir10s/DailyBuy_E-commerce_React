@@ -235,9 +235,9 @@ const Checkout = () => {
                       <p className="text-black font-medium text-base">Total:</p>
                       <p className="text-primary-600 font-bold text-xl">${total + shipping}.00</p>
                     </div>
-                      <Link className="block mt-[20px]" to="/orders/12651564asdf">
-                        <FullWidthButton title='Place Order'/>
-                      </Link>{" "}
+                    <Link className="block mt-[20px]" to="/orders/12651564asdf">
+                      <FullWidthButton title="Place Order" />
+                    </Link>{" "}
                   </div>
                 </div>
               </div>
