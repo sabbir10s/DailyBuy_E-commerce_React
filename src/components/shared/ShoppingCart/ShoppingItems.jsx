@@ -26,13 +26,13 @@ const ShoppingItems = ({item}) => {
                         alt="product-img"/>
                 </div>
                 <div className=' col-span-2'>
-                    <h3 className='text-[14px]'>{name.slice(0, 20)}
+                    {/* <h3 className='text-[14px]'>{name.slice(0, 20)}
                      <span>
                         {
                             name.length>20 && <span>...</span>
                         }
                      </span>
-                    </h3>
+                    </h3> */}
                     <p className='text-[12px] text-gray-500'>Item Price ${price}</p>
                     <h2 className=' font-semibold mt-2'>${total}</h2>
                 </div>
