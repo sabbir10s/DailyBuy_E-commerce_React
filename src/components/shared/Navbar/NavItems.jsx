@@ -1,5 +1,5 @@
 import React from "react";
-import ActiveLink from "../../../hooks/ActiveLink";
+import ActiveLink from "../../theme/ActiveLink";
 
 const NavItems = () => {
   return (
