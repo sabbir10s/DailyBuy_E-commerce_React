@@ -26,7 +26,7 @@ const ShoppingCart = ({visible, handleCloseCart}) => {
             onClick={handleCloseModal}
             className='z-50 fixed inset-0 bg-black bg-opacity-25 flex items-center justify-end'>
             <div className='relative w-full md:w-1/2 lg:w-1/3'>
-                <div className='bg-white w-full h-screen flex flex-col justify-between'>
+                <div className='bg-white w-full h-screen overflow-x-scroll flex flex-col justify-between'>
                 <div>
                 <div className=' w-full flex justify-between bg-[#eef2ff] py-[20px] px-[15px]'>
                         <div className='flex items-center gap-2'>
