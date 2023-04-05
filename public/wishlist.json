@@ -1,7 +1,7 @@
 [
     {
         "_id": 1,
-        "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+        "name": "Nestle Original Coffee-Mate Coffee Creamer",
         "nickname": "Healthy Cashew Nuts",
         "product_code": "12314",
         "price": 100,
@@ -11,7 +11,7 @@
       },
     {
         "_id": 2,
-        "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+        "name": "Nestle Original Coffee-Mate Coffee Creamer",
         "nickname": "Healthy Cashew Nuts",
         "product_code": "12314",
         "price": 100,
@@ -21,7 +21,7 @@
       },
     {
         "_id": 2,
-        "product_name": "Nestle Original Coffee-Mate Coffee Creamer",
+        "name": "Nestle Original Coffee-Mate Coffee Creamer",
         "nickname": "Healthy Cashew Nuts",
         "product_code": "12314",
         "rating": 5,

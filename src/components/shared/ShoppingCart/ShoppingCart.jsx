@@ -15,7 +15,6 @@ const ShoppingCart = ({visible, handleCloseCart}) => {
     const {cartItems} = useSelector((state) => state.cart);
 
     const total = cartItems.reduce((total, item) => total + item.price * item.cartQuantity, 0);
-    // const shipping = 3;
 
     if (!visible) {
         return null
@@ -26,9 +25,10 @@ const ShoppingCart = ({visible, handleCloseCart}) => {
             id='container'
             onClick={handleCloseModal}
             className='z-50 fixed inset-0 bg-black bg-opacity-25 flex items-center justify-end'>
-            <div className='relative w-1/3'>
+            <div className='relative w-full md:w-1/2 lg:w-1/3'>
                 <div className='bg-white w-full h-screen flex flex-col justify-between'>
-                    <div className=' w-full flex justify-between bg-[#eef2ff] py-[20px] px-[15px]'>
+                <div>
+                <div className=' w-full flex justify-between bg-[#eef2ff] py-[20px] px-[15px]'>
                         <div className='flex items-center gap-2'>
                             <RiShoppingBagLine className="text-[24px]"/>
                             <h2 className="text-xl font-medium">
@@ -70,10 +70,11 @@ const ShoppingCart = ({visible, handleCloseCart}) => {
                             <></>
                         }
                     </div>
+                </div>
 
-                  <div className='flex justify-center mb-4'>
+                  <div onClick={handleCloseCart} className='flex justify-center mb-4'>
                         <Link to='/checkout' className='block w-full mx-4'>
-                        <button className='bg-primary-600 hover:bg-primary-700 duration-300 font-semibold text-primary-600 w-full rounded-[8px] flex items-center justify-between  px-2 py-4'>
+                        <button  className='bg-primary-600 hover:bg-primary-700 duration-300 font-semibold text-primary-600 w-full rounded-[8px] flex items-center justify-between  px-2 py-4'>
                             <span className='text-white'>Proceed To Checkout</span>
                             <span className='bg-white rounded-[8px] p-2'>${total}.00</span>
                         </button>
