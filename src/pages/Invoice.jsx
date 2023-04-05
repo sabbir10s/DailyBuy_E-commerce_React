@@ -5,7 +5,8 @@ import InvoiceTable from '../components/screen/Invoice/InvoiceTable';
 
 const Invoice = () => {
     return (
-        <> <Helmet>
+        <>
+     <Helmet>
         <title>DailyBuy - Invoice</title>
         <meta charSet="utf-8" name="description" content="DailyBuy Invoice Page" />
       </Helmet>
