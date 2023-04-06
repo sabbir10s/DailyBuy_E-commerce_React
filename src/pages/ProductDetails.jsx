@@ -19,7 +19,7 @@ import Reviews from "../components/screen/Review/Reviews";
 import ThemeSuspense from "../components/theme/ThemeSuspense";
 
 const ProductDetails = () => {
-
+    const [click, setClick] = useState(false)
     const [productData,
         setProductData] = useState([]);
 
@@ -72,6 +72,7 @@ const ProductDetails = () => {
         packaging_and_delivery,
         other_things_of_product
     } = productInfo;
+
 
     return (
         <div className="mt-20 lg:mt-0">
@@ -214,6 +215,7 @@ const ProductDetails = () => {
                     <div
                         className="flex items-center justify-between md:justify-start md:space-x-8">
                         <button
+                            id="description"
                             onClick={() => setActive("desc")}
                             className={` border outline-none border-gray-100 rounded-3xl py-2 px-8 shadow-custom font-semibold duration-300 transition ease-in-out text-sm ${active === "desc"
                             ? "bg-primary-600 text-white"
@@ -235,9 +237,16 @@ const ProductDetails = () => {
                                 <div className="text-sm leading-relaxed">
                                     <p className="hidden lg:block">{full_description}</p>
                                     <p className="block lg:hidden">
-                                        {full_description.slice(0, 300)}...
-                                        <span className="text-primary-600 font-semibold">More</span>
+                                        {
+                                            click && <a href="#description"><span>{full_description}</span> <span onClick={()=>setClick(false)} className="text-primary-600 font-semibold">show less</span></a>
+                                        }
+                                        {
+                                            !click && <div><span>{full_description.slice(0,300)}...</span>
+                                            <span onClick={()=>setClick(true)} className="text-primary-600 font-semibold inline">More</span>
+                                            </div>
+                                        }
                                     </p>
+                                   
                                 </div>
                                 <div className="hidden lg:block">
                                     <h3 className="text-2xl font-semibold mt-5 mb-3">Packaging & Delivery</h3>
