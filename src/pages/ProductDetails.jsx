@@ -236,7 +236,7 @@ const ProductDetails = () => {
                                 {" "}
                                 <div className="text-sm leading-relaxed">
                                     <p className="hidden lg:block">{full_description}</p>
-                                    <p className="block lg:hidden">
+                                    <div className="block lg:hidden">
                                         {
                                             click && <a href="#description"><span>{full_description}</span> <span onClick={()=>setClick(false)} className="text-primary-600 font-semibold">show less</span></a>
                                         }
@@ -245,7 +245,7 @@ const ProductDetails = () => {
                                             <span onClick={()=>setClick(true)} className="text-primary-600 font-semibold inline">More</span>
                                             </div>
                                         }
-                                    </p>
+                                    </div>
                                    
                                 </div>
                                 <div className="hidden lg:block">
@@ -280,11 +280,11 @@ const ProductDetails = () => {
                     className="container flex justify-between items-center mt-[25px] md:mt-[35px] lg:mt-[50px] mb-[16px] lg:mb-[29px]">
                     <h2
                         className="text-sm md:text-2xl lg:text-4xl font-semibold text-center lg:text-left">Related Product</h2>
-                    <button
+                    <Link to='/categories'
                         className="text-gray-500 text-[10px] md:text-base uppercase flex items-center gap-1 hover:text-primary-600 duration-300">
                         <span>View More</span>
                         <FiArrowRight/>
-                    </button>
+                    </Link>
                 </div>
                 <div
                     className="container grid grid-cols-2 lg:grid-cols-4 gap-[10px] md:gap-[20px]">

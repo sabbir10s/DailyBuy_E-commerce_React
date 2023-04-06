@@ -12,21 +12,21 @@ const Products = ({ product }) => {
     dispatch(addToCart(product));
   };
   return (
-    <div className="shadow-custom relative rounded-lg bg-gray-50 p-3 w-full cursor-pointer hover:bg-white duration-300 transition ease-in border border-gray-200/60 overflow-hidden">
+    <div className="shadow-custom relative rounded-lg bg-gray-50 p-3 w-full cursor-pointer hover:bg-white duration-300 transition ease-in border border-gray-200/60 overflow-h_idden">
       <div>
         <div className="bg-secondary-300 inline-block py-2 px-3 rounded-tl-2xl rounded-br-2xl text-white absolute top-3 left-3">
           <p>{product?.discount}% OFF</p>
         </div>
         <div
           onClick={() => setWishlist(!wishlist)}
-          className="bg-white hidden md:inline-block p-2 border border-gray-100 rounded-[50%] text-white absolute top-3 right-3 hover:scale-110 duration-300 transition"
+          className="bg-white h_idden md:inline-block p-2 border border-gray-100 rounded-[50%] text-white absolute top-3 right-3 hover:scale-110 duration-300 transition"
         >
           {!wishlist && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth={1.5}
+              strokeW_idth={1.5}
               stroke="currentColor"
               className="w-7 h-7 text-gray-500"
             >
@@ -42,7 +42,7 @@ const Products = ({ product }) => {
               xmlns="http://www.w3.org/2000/svg"
               fill="#FF5555"
               viewBox="0 0 24 24"
-              strokeWidth={1.5}
+              strokeW_idth={1.5}
               stroke="currentColor"
               className="w-7 h-7 text-[#FF5555]"
             >
@@ -54,12 +54,12 @@ const Products = ({ product }) => {
             </svg>
           )}
         </div>{" "}
-        <Link to={`/product/${product?.id}`}>
+        <Link to={`/product/${product?._id}`}>
           <div className="w-[300px] mx-auto h-[250px]">
             <img src={product?.main_img_url} className="w-full h-full object-center object-fill" alt="" />
           </div>{" "}
         </Link>
-        <Link to={`/product/${product?.id}`}>
+        <Link to={`/product/${product?._id}`}>
           <div className="space-y-3 lg:mt-1">
             <h3 className="text-black font-semibold text-[12px] md:text-[18px]">{product?.nickname}</h3>
             <div className="flex justify-between items-center">
@@ -71,13 +71,13 @@ const Products = ({ product }) => {
               </p>
               <div className="flex space-x-1 items-center">
                 <div className="flex items-center">
-                  {Array.from({ length: 4 }).map((_, idx) => (
+                  {Array.from({ length: 4 }).map((_, _idx) => (
                     <svg
-                      key={idx}
+                      key={_idx}
                       xmlns="http://www.w3.org/2000/svg"
                       fill="#FECA38"
                       viewBox="0 0 24 24"
-                      strokeWidth={1.5}
+                      strokeW_idth={1.5}
                       stroke="currentColor"
                       className="w-54 h-5 inline-block text-[#FECA38]"
                     >
@@ -92,7 +92,7 @@ const Products = ({ product }) => {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="#919EAB"
                     viewBox="0 0 24 24"
-                    strokeWidth={1.5}
+                    strokeW_idth={1.5}
                     stroke="currentColor"
                     className="w-54 h-5 inline-block text-[#919EAB]"
                   >

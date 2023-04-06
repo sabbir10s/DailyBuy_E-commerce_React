@@ -23,16 +23,16 @@ const NavItems = () => {
                     {" "}
                     <ActiveLink to="/contact">Contact us</ActiveLink>
                 </li>
-                <div class="relative group">
+                <div className="relative group">
                     <button
-                        class="flex items-center px-3 py-2 font-medium text-gray-700 hover:text-primary-600 focus:outline-none">
+                        className="flex items-center px-3 py-2 font-medium text-gray-700 hover:text-primary-600 focus:outline-none">
                         <span>pages</span>
-                        <svg class="w-4 h-4 ml-1 fill-current" viewBox="0 0 20 20">
+                        <svg className="w-4 h-4 ml-1 fill-current" viewBox="0 0 20 20">
                             <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z"/>
                         </svg>
                     </button>
                     <ul
-                        class="absolute left-0 mt-0 w-48 bg-white border border-gray-300 rounded-md shadow-lg hidden group-hover:block">
+                        className="absolute left-0 mt-0 w-48 bg-white border border-gray-300 rounded-md shadow-lg hidden group-hover:block">
                          
                           <li
                             className="block px-4 py-2">

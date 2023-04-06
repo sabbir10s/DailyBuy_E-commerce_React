@@ -20,7 +20,7 @@ const AuthenticationModal = ({visible, onClose}) => {
             path === "signIn" && <SignIn setPath={setPath}/>
           }
           {
-            path ==='forgetPassword' && <ForgotPassword setPath={setPath} />
+            path ==='forgetPassword' && <ForgotPassword setPath={setPath} onClose={onClose} />
           }
           {
             path ==='signUp' && <SignUp setPath={setPath} />
