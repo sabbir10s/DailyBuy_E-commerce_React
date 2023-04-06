@@ -22,7 +22,8 @@ const ProductCard = ({product}) => {
         discount,
         main_img_url,
         del_price,
-        rating
+        rating,
+        stock
     } = product;
     const handleProductDetails = () => {
         navigate(`/product/${_id}`);
@@ -77,6 +78,7 @@ const ProductCard = ({product}) => {
                     </div>
                     <div className="mt-3">
                         <SecondaryButton
+                            stock={stock}
                             handleAddToCart={handleAddToCart}
                             product={product}
                             title="Add to cart"
