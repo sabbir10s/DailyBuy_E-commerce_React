@@ -138,7 +138,7 @@
     "rating": 5,
     "review": 100,
     "discount": 20,
-    "stock": true,
+    "stock": false,
     "main_img_url": "https://i.ibb.co/dt78CZy/product-4.png",
     "small_img_url": [
       "https://i.ibb.co/thQdsZ1/product-20.png",
@@ -170,7 +170,7 @@
     "rating": 5,
     "review": 100,
     "discount": 20,
-    "stock": true,
+    "stock": false,
     "main_img_url": "https://i.ibb.co/B3sGjn7/product-5.png",
     "small_img_url": [
       "https://i.ibb.co/ySgyH8F/product-21.png",
@@ -362,7 +362,7 @@
     "rating": 5,
     "review": 100,
     "discount": 20,
-    "stock": true,
+    "stock": false,
     "main_img_url": "https://i.ibb.co/mtz0S3B/product-3.png",
     "small_img_url": [
       "https://i.ibb.co/ySgyH8F/product-21.png",

@@ -4,16 +4,9 @@ import InvoiceBanner from "../components/screen/Invoice/InvoiceBanner";
 import InvoiceTable from "../components/screen/Invoice/InvoiceTable";
 
 const Invoice = () => {
-<<<<<<< HEAD
-    return (
-        <>
-     <Helmet>
-=======
   return (
     <>
-      {" "}
       <Helmet>
->>>>>>> main
         <title>DailyBuy - Invoice</title>
         <meta charSet="utf-8" name="description" content="DailyBuy Invoice Page" />
       </Helmet>
