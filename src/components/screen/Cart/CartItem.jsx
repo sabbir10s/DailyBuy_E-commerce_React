@@ -3,7 +3,7 @@ import {useDispatch} from 'react-redux';
 import {addToCart, decreaseCart, removeFromCart} from '../../../redux/feature/cartSlice';
 
 const CartItem = ({item}) => {
-    const {product_name,main_img_url, price, del_price, cartQuantity} = item
+    const {name,main_img_url, price, del_price, cartQuantity} = item
     const total = price * cartQuantity;
     const dispatch = useDispatch();
     const handleRemoveItem = (cartItem) => {
@@ -30,11 +30,11 @@ const CartItem = ({item}) => {
                         </div>
                     </div>
                     <div className='hidden lg:block w-2/3'>
-                        {product_name}
+                        {name}
                     </div>
                 </div>
                 <div className='flex flex-col lg:mx-auto text-[12px] md:text-base'>
-                    <h2 className='lg:hidden '>{product_name
+                    <h2 className='lg:hidden '>{name
                             .slice(0, 16)}...</h2>
                     <div className='flex flex-col lg:flex-row lg:items-center lg:gap-1'>
                         <p className="text-primary-600 lg:text-gray-600  font-semibold">${price}.00</p>

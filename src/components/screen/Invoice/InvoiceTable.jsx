@@ -20,7 +20,7 @@ const InvoiceTable = () => {
             <>
             <div key={index} className="grid grid-cols-3 lg:grid-cols-5 justify-items-center text-[#383838] border-t-[1px] border-l">
               <div className="py-[19px] hidden lg:block">{index + 1}</div>
-              <div className="py-[19px] p-2">{order.product_name.slice(0, 25)}....</div>
+              <div className="py-[19px] p-2">{order.name.slice(0, 25)}....</div>
               <div className="py-[19px] hidden lg:block">{order.cartQuantity}</div>
               <div className="py-[19px]">${order.price}</div>
               <div className="py-[19px]">${order.cartQuantity * order.price}</div>
