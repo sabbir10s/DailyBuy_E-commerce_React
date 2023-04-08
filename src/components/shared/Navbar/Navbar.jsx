@@ -87,7 +87,7 @@ const Navbar = () => {
                                         className="absolute top-[-10px] left-[18px] text-[11px] text-white bg-primary-600 rounded-full h-[20px] w-[18px] flex items-center justify-center">
                                         {cartItems.length}
                                     </span>
-                                </button>
+                            </button>
                             <button className="hidden lg:block" onClick={() => setShowModal(true)}>
                                 <RiUser3Line className="text-[24px]"/>
                             </button>{" "}
