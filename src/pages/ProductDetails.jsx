@@ -169,22 +169,24 @@ const ProductDetails = () => {
                         <button
                           disabled={!stock}
                           onClick={() => handleAddToCart(productInfo)}
-                          className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px] disabled:bg-primary-600/50"
+                          className="bg-primary-600 hover:bg-primary-500 text-white border duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px] disabled:bg-gray-100 disabled:text-primary-600/70 disabled:cursor-not-allowed"
                         >
-                          Add to cart
+                          {stock ? `Add to cart` : `Sold Out!`}
                         </button>
                       </Link>
                     </div>{" "}
                     <div>
-                      <Link to="/checkout">
+                      {
+                        stock && <Link to="/checkout">
                         <button
                           disabled={!stock}
                           onClick={() => handleAddToCart(productInfo)}
-                          className="text-primary-600 hover:text-primary-800 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-800 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px] disabled:border-primary-600/50 disabled:text-primary-600/50"
+                          className="text-primary-600 hover:text-primary-800 bg-white hover:bg-primary-50 border border-primary-600 hover:border-primary-800 duration-300 py-[10px] lg:py-[13px] px-[30px] lg:px-[40px] rounded-[5px] disabled:border-primary-600/50 disabled:text-primary-600/50 disabled:cursor-not-allowed"
                         >
-                          Buy Now
+                         Buy Now
                         </button>
                       </Link>
+                      }
                     </div>
                   </div>
                 </div>
