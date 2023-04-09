@@ -2,10 +2,15 @@ import React from "react";
 import OrderInformation from "../components/screen/Order/OrderInformation";
 import OrderItem from "../components/screen/Order/OrderItem";
 import ProcessingSteps from "../components/screen/Order/ProcessingSteps";
+import { Helmet } from "react-helmet";
 
 const OrderTrack = () => {
   return (
     <div className="container w-full lg:w-3/4 mx-auto md:border rounded-[10px] bg-gray-50/10 md:p-8 mt-[100px] lg:mt-[35px] mb-[30px] md:shadow-custom">
+         <Helmet>
+        <title>DailyBuy - Order Track</title>
+        <meta charSet="utf-8" name="description" content="DailyBuy Order Track Page" />
+      </Helmet>
       <div className="flex justify-between">
         <div className="flex flex-col lg:flex-row items-center font-semibold lg:space-x-3 space-y-4 lg:space-y-0">
           <h2 className="text-sm lg:text-lg">Order Status :</h2>

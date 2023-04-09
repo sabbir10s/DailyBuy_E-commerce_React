@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import '../../../styles/SignSignUp.css'
 import {FullWidthButton} from "../../theme/Button";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 const ForgotPassword = ({setPath, onClose}) => {
     const [newPassword,
         setNewPassword] = useState(false);
@@ -42,14 +42,17 @@ const ForgotPassword = ({setPath, onClose}) => {
                         <div className="text-center pb-10">
                             {newPassword
                                 ? (
-                                  <Link to='/profile' onClick={onClose}>
-                                  <FullWidthButton title='Reset Password'>
-                                    
-                                  </FullWidthButton>
-                                  </Link>
-                                    
+                                    <Link to='/profile' onClick={onClose}>
+                                        <FullWidthButton title='Reset Password'/>
+                                    </Link>
+
                                 )
-                                : (<FullWidthButton setNewPassword={setNewPassword} title='Forget Password'/>)}
+                                : <button
+                                    type="submit"
+                                    onClick={() => setNewPassword(true)}
+                                    className="w-full py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out">
+                                    Forget Password
+                                </button>}
                             <div className="mt-8">
                                 <span>Already have account?</span>{" "}
                                 <button
