@@ -5,11 +5,10 @@ export const PrimaryButton = ({ title }) => {
     </button>
   );
 };
-export const FullWidthButton = ({ title, setNewPassword }) => {
+export const FullWidthButton = ({ title}) => {
   return (
     <button
       type="submit"
-      onClick={() => setNewPassword(true)}
       className="w-full py-[10px] rounded-[5px] text-[10px] md:text-[12px] lg:text-[18px] capitalize font-medium text-white bg-primary-600 hover:bg-primary-500 transition duration-300 ease-out"
     >
       {title}
