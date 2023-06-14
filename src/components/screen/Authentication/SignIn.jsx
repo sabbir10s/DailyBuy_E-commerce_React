@@ -10,7 +10,8 @@ const SignIn = ({setPath}) => {
                         className="absolute bottom-0 w-full h-full object-cover object-center"
                         src={bgImg}
                         alt=""/>
-              grid grid-cols-1 md:grid-cols-2 items-center h-[95vh] w-full  </div>
+                    grid grid-cols-1 md:grid-cols-2 items-center h-[95vh] w-full
+                </div>
                 <div className="p-4">
                     <h2 className="text-2xl font-semibold text-center mb-8 ">Login</h2>
                     <form onSubmit={(e) => e.preventDefault()} action="#" className="space-y-5">
