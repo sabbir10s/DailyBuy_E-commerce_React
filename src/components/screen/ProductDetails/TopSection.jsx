@@ -6,12 +6,9 @@ import Quantity from '../../shared/Quantity';
 import { ImWarning } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
-import bigImg from "../../../assets/products/product (1).png";
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../../redux/feature/cartSlice';
 const TopSection = ({productInfo}) => {
-    const [activeImg,
-        setActiveImg] = useState(bigImg);
     const [wishlist,
         setWishlist] = useState(false);
         const dispatch = useDispatch();
@@ -19,6 +16,7 @@ const TopSection = ({productInfo}) => {
             dispatch(addToCart(cartItem));
         };
     const {
+        main_img_url,
         small_img_url,
         name,
         price,
@@ -29,6 +27,8 @@ const TopSection = ({productInfo}) => {
         desc,
         details_benefit,
     } = productInfo;
+    const [activeImg,
+        setActiveImg] = useState(main_img_url);
     return (
         <div>
             <BreadCamp/>
