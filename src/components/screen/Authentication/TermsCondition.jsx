@@ -9,7 +9,7 @@ const TermsCondition = ({setPath}) => {
         <title>DailyBuy - Terms & Condition</title>
         <meta charSet="utf-8" name="description" content="DailyBuy Terms & Condition Page" />
       </Helmet>
-      <div className='container py-16 px-6 '>
+      <div className='container py-16 px-6 h-[85vh] w-full'>
                 <div className='w-full md:w-[650px] h-[400px] relative overflow-y-auto'>
                 <h1 className='text-[16px] md:text-[20px] lg:text-[25px] xl:text-[32px] font-semibold'>Welcome to the daily buy</h1>
                  <p className='text-[#626463] text-[16px] lg:-[18px] xl-[24px] mt-[12px]'>

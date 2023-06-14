@@ -1,14 +1,19 @@
 import React, {useState} from "react";
-import '../../../styles/SignSignUp.css'
 import {FullWidthButton} from "../../theme/Button";
 import {Link} from "react-router-dom";
+import bgImg from '../../../assets/auth/login.png'
 const ForgotPassword = ({setPath, onClose}) => {
     const [newPassword,
         setNewPassword] = useState(false);
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center h-[70vh] w-full">
-                <div className="w-[400px] lg:w-[430px] h-[70vh] hidden md:block bgImg"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center h-[85vh] w-full">
+                <div className="relative w-[400px] lg:w-[470px] h-full hidden md:block">
+                    <img
+                        className="absolute bottom-0 w-full h-full object-cover object-center"
+                        src={bgImg}
+                        alt=""/>
+                </div>
                 <div className="p-3 w-full">
                     <h2 className="text-2xl font-semibold text-center mb-10">{newPassword
                             ? "New Password"
