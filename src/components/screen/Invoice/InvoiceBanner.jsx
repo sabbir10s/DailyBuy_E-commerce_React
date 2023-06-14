@@ -1,10 +1,11 @@
 import React from "react";
-import "../../../styles/invoice.css";
+import bgImg from '../../../assets/invoice/bg.png'
 const InvoiceBanner = () => {
   return (
     <>
       <div className="container mt-[80px] lg:mt-[40px]">
-        <div className=" bg-primary-600 banner-bg rounded-[10px] text-white text-[14px] lg:text-[18px]">
+        <div className="relative bg-primary-600 rounded-[10px] text-white text-[14px] lg:text-[18px]">
+          <img className="absolute bottom-0 w-full h-full object-cover object-center" src={bgImg} alt="" />
           <div className="">
             <div className="flex flex-col md:flex-row justify-between p-[14px] md:p-[30px] lg:p-[71px] gap-[26px]">
               <div className="space-y-4">

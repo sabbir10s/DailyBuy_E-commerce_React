@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16 lg:mt-[24px]">
             <div className="flex items-center ">
-                <img className="relative rounded-[10px] w-full h-full object-cover object-center" src="https://i.ibb.co/26Rph4H/hero-1.png" alt=""/>
+                <img className="relative z-0 rounded-[10px] w-full h-full object-cover object-center" src="https://i.ibb.co/26Rph4H/hero-1.png" alt=""/>
                 <div className="absolute">
                     <div className="pl-[10px] md:pl-[15px] py-[35px]">
                         <p
@@ -39,7 +39,7 @@ const Banner = () => {
             <div className="space-y-8 hidden lg:block">
                 <div className="space-y-8 hidden md:block">
                     <div className="flex items-center">
-                        <img className="relative rounded-[10px]  w-full h-full object-cover object-center" src="https://i.ibb.co/YdczRp1/hero-2.png" alt=""/>
+                        <img className="relative z-0 rounded-[10px]  w-full h-full object-cover object-center" src="https://i.ibb.co/YdczRp1/hero-2.png" alt=""/>
                         <div className="absolute py-[31px] px-8 ">
                             <div className="space-y-2 text-black/75">
                                 <h2 className="font-bold text-2xl">Fresh Grocery</h2>
