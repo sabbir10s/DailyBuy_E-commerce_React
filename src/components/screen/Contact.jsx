@@ -11,7 +11,7 @@ const Contact = () => {
                     src={bgImg}
                     alt=""/>
                 <div
-                    className=" z-10 absolute bg-primary-700/80 w-full h-full flex items-center justify-center text-white">
+                    className=" z-[2] absolute bg-primary-700/80 w-full h-full flex items-center justify-center text-white">
                     <div>
                         <h1 className="text-[20px] md:text-[25px] lg:text-[32px] font-bold">Feel free contract with us</h1>
                         <p className="text-[12px] md:text-[16px] max-w-[400px] mx-auto mt-[8px]">

@@ -32,7 +32,7 @@ const NavItems = () => {
                         </svg>
                     </button>
                     <ul
-                        className="absolute left-0 mt-0 w-48 p-3 space-y-3 bg-white border border-gray-300 rounded-md shadow-lg hidden group-hover:block">
+                        className="absolute z-10 left-0 mt-0 w-48 p-3 space-y-3 bg-white border border-gray-300 rounded-md shadow-lg hidden group-hover:block">
                          
                           <li>
                               <ActiveLink to="/invoice">Invoice</ActiveLink>
