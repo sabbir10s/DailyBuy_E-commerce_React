@@ -20,7 +20,7 @@ const SignUp = ({setPath}) => {
                                 className="px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border"
                                 type="text"
                                 placeholder="Full Name"/>
-                        </div>{" "}
+                        </div>
                         <div className="text-center">
                             <input
                                 className="px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border"
@@ -32,20 +32,19 @@ const SignUp = ({setPath}) => {
                                 className="px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border"
                                 type="password"
                                 placeholder="Password"/>
-                        </div>{" "}
+                        </div>
                         <div className=" text-center">
                             <input
                                 className="px-4 py-3 rounded-lg w-full focus:border-primary-600 outline-none border"
                                 type="password"
                                 placeholder="Confirm Password"/>
-                        </div>{" "}
+                        </div>
                         <div className="flex items-center">
                             <span className="-mt-2">
-                                {" "}
                                 <Checkbox/>
                             </span>
                             <div className="flex items-center gap-1">
-                                <p>I agree to{" "}</p>
+                                <p>I agree to</p>
                                 <button
                                     onClick={() => setPath('terms')}
                                     className="text-primary-600 font-bold hover:underline cursor-pointer">
@@ -56,7 +55,7 @@ const SignUp = ({setPath}) => {
                         <div className="text-center">
                             <FullWidthButton title='Create Account'/>
                             <div className="mt-6">
-                                <span>Already have account?</span>{" "}
+                                <span>Already have account?</span>
                                 <span>
                                     <button
                                         onClick={() => setPath('signIn')}

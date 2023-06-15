@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProcessingSteps from "../components/screen/ProcessingSteps";
 import { useParams } from "react-router-dom";
-
 import axios from "axios";
 import { Helmet } from "react-helmet";
 import ThemeSuspense from "../components/theme/ThemeSuspense";
